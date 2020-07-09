@@ -11,5 +11,9 @@
 @import "./app";
 
 //----Custom----//
-// @import "./loader";
+@import "./loader";
 @import "./style";
+
+//----Components---- //
+@import "./footer.scss";
+@import "./wishlist.scss";
