@@ -1,0 +1,127 @@
+.ftr {
+  background-color: $color-footer-bg;
+  min-height: 32rem;
+  width: 100%;
+
+  &-card {
+    &-header {
+      margin-top: 0.5rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid $color-ftr-txt;
+      a {
+        color: $color-ftr-txt;
+        width: 100%;
+        display: block;
+        &:after {
+          content: "+";
+          font-size: 1.5rem;
+          position: absolute;
+          right: 2.5rem;
+          transition: transform 0.25s ease-in-out;
+        }
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+        &[aria-expanded="true"] {
+          &:after {
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+
+    &-data {
+      @include disc-text();
+      color: $color-ftr-txt;
+      margin: 1rem 0rem 1rem 0rem !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &-span {
+        @include disc-text();
+
+        color: $color-ftr-txt;
+      }
+
+      li {
+        margin: 0.5rem 2rem;
+
+        a {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: $color-ftr-txt;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-content {
+    margin-top: 3rem;
+    &-head {
+      @include Header-text-3();
+      color: $color-ftr-txt;
+      text-decoration: none;
+    }
+
+    &-data {
+      @include disc-text();
+      color: $color-ftr-txt;
+      margin: 1rem 0rem 1rem 0rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &-data1 {
+      @include disc-text();
+      color: $color-ftr-txt;
+    }
+  }
+
+  &-download-options {
+    height: 3rem;
+    width: 10rem;
+  }
+
+  &-divider {
+    border: 0.7px solid rgba(255, 255, 255, 0.5);
+    margin-top: 2rem;
+  }
+
+  &-foot {
+    margin-top: 3rem;
+
+    &-cp {
+      padding-bottom: 2rem;
+      color: $color-ftr-txt;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        color: $color-ftr-txt;
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}
+
+.footer {
+  &-ft {
+    padding-bottom: 2rem;
+  }
+  &-foot {
+    color: $color-ftr-txt;
+    cursor: pointer;
+  }
+}
+
+.footer-divider {
+  color: $color-ftr-txt;
+  margin: 0rem 1rem;
+}
