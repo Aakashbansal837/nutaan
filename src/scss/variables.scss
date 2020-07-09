@@ -1,45 +1,60 @@
-$ff-OpenSans : 'Open Sans',
-sans-serif,
-color-emoji;
-$ff-sans-serif : -apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol",
-"Noto Color Emoji";
+$ff-OpenSans: "Open Sans", sans-serif, color-emoji;
+$ff-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 //colors
-$ns-red           : red;
-$ns-black         : #000000;
-$ns-gray          : #77869c;
-$ns-dark-gray     : #485268;
-$ns-icy-white     : #ffffff;
+$ns-red: red;
+$ns-black: #000000;
+$ns-gray: #77869c;
+$ns-dark-gray: #485268;
+$ns-icy-white: #ffffff;
 $ns-separator-grey: #d2d3da;
 
-$ns-primary      : #0275d8;
+$ns-primary: #0275d8;
 $ns-primary-hover: #3198f3;
 
 //breakpoints value
-$ns-bp-xs : 0px; //--extra small
-$ns-bp-ms : 321px; //--xs small mobile
-$ns-bp-mm : 376px; //--xs medium mobile
-$ns-bp-ml : 426px; //--xs large mobile
-$ns-bp-sm : 576px; //--small
-$ns-bp-md : 768px; //--medium
-$ns-bp-lg : 992px; //--large
-$ns-bp-xl : 1200px; //--extra large
+$ns-bp-xs: 0px; //--extra small
+$ns-bp-ms: 321px; //--xs small mobile
+$ns-bp-mm: 376px; //--xs medium mobile
+$ns-bp-ml: 426px; //--xs large mobile
+$ns-bp-sm: 576px; //--small
+$ns-bp-md: 768px; //--medium
+$ns-bp-lg: 992px; //--large
+$ns-bp-xl: 1200px; //--extra large
 
 //bootstrap breakpoints
-$ns-bt-breakpoint : (
-  xs : $ns-bp-xs,
-  sm : $ns-bp-sm,
-  md : $ns-bp-md,
-  lg : $ns-bp-lg,
-  xl : $ns-bp-xl
+$ns-bt-breakpoint: (
+  xs: $ns-bp-xs,
+  sm: $ns-bp-sm,
+  md: $ns-bp-md,
+  lg: $ns-bp-lg,
+  xl: $ns-bp-xl,
 );
+
+// ----------- footer -------- //
+$color-footer-bg: #f8f8f8;
+$color-black: #212121;
+$color-white: #ffffff;
+
+$color-ftr-txt: #212a39;
+$primary-font: "Fira Sans";
+$size-dis-txt: 1rem; // 16px
+
+//font weights
+$weight-light: 400;
+$weight-mid: 600;
+$weight-heavy: 800;
+
+// opacity
+$opacity-light: 0.3;
+$opacity-mid: 0.55;
+$opacity-heavy: 0.75;
+$opacity-full: 1;
+
+//font-size
+$size-dis-txt: 1rem; // 16px
+$size-dis-head: 1.5rem; // 24px
+$size-dis-head-2: 1.25rem; // 20px
+$size-dis-head-3: 1.75rem; // 28px
