@@ -1,35 +1,42 @@
 $custom-breakpoints: (
-  ms  : $ns-bp-ms,   //--mobile small
-  mm  : $ns-bp-mm,   //--mobile medium
-  ml  : $ns-bp-ml,   //--mobile large
-  xs  : $ns-bp-xs,   //--extra small
-  sm  : $ns-bp-sm,   //--small
-  md  : $ns-bp-md,   //--medium
-  lg  : $ns-bp-lg,   //--large
-  xl  : $ns-bp-xl,   //--extra large
+  ms: $ns-bp-ms,
+  //--mobile small
+    mm: $ns-bp-mm,
+  //--mobile medium
+    ml: $ns-bp-ml,
+  //--mobile large
+    xs: $ns-bp-xs,
+  //--extra small
+    sm: $ns-bp-sm,
+  //--small
+    md: $ns-bp-md,
+  //--medium
+    lg: $ns-bp-lg,
+  //--large
+    xl: $ns-bp-xl,
+  //--extra large
 );
 @mixin media-above($bp, $breakpoints: $custom-breakpoints) {
-    @if map-has-key($breakpoints, $bp) {  
-      $bp-value: map-get($breakpoints, $bp);
-      @media (min-width: $bp-value) {
-        @content;
-      }
-    } @else {  
-      @warn 'Invalid breakpoint: #{$bp}.';
-    }
-}
-
-@mixin media-below($bp, $breakpoints: $custom-breakpoints) {
-  @if map-has-key($breakpoints, $bp) {  
+  @if map-has-key($breakpoints, $bp) {
     $bp-value: map-get($breakpoints, $bp);
-    @media (max-width: ($bp-value - 1)) {
+    @media (min-width: $bp-value) {
       @content;
     }
-  } @else {  
+  } @else {
     @warn 'Invalid breakpoint: #{$bp}.';
   }
 }
 
+@mixin media-below($bp, $breakpoints: $custom-breakpoints) {
+  @if map-has-key($breakpoints, $bp) {
+    $bp-value: map-get($breakpoints, $bp);
+    @media (max-width: ($bp-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$bp}.';
+  }
+}
 
 @mixin media-between($lower, $upper, $breakpoints: $custom-breakpoints) {
   @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
@@ -46,4 +53,24 @@ $custom-breakpoints: (
       @warn 'Your upper breakpoint was invalid: #{$upper}.';
     }
   }
+}
+
+// -----footer mixins ------//
+@mixin disc-text() {
+  font-family: $primary-font;
+  color: $color-ftr-txt;
+  font-size: $size-dis-txt;
+  font-weight: $weight-light;
+}
+@mixin max-ht-wd($ht, $wd) {
+  max-width: $wd;
+  max-height: $ht;
+  height: 100%;
+  width: 100%;
+}
+@mixin Header-text-3() {
+  font-family: $primary-font;
+  color: $color-black;
+  font-size: $size-dis-head-2;
+  font-weight: $weight-mid; //
 }
