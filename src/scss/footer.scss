@@ -2,7 +2,7 @@
   background-color: $color-footer-bg;
   min-height: 32rem;
   width: 100%;
-
+  padding-top: 2rem;
   &-card {
     &-header {
       margin-top: 0.5rem;
@@ -32,7 +32,7 @@
     }
 
     &-data {
-      @include disc-text();
+      @include footer-text();
       color: $color-ftr-txt;
       margin: 1rem 0rem 1rem 0rem !important;
       white-space: nowrap;
@@ -40,7 +40,7 @@
       text-overflow: ellipsis;
 
       &-span {
-        @include disc-text();
+        @include footer-text();
 
         color: $color-ftr-txt;
       }
@@ -65,13 +65,13 @@
   &-content {
     margin-top: 3rem;
     &-head {
-      @include Header-text-3();
+      @include footer-heading();
       color: $color-ftr-txt;
       text-decoration: none;
     }
 
     &-data {
-      @include disc-text();
+      @include footer-text();
       color: $color-ftr-txt;
       margin: 1rem 0rem 1rem 0rem;
       white-space: nowrap;
@@ -79,49 +79,33 @@
       text-overflow: ellipsis;
     }
     &-data1 {
-      @include disc-text();
+      @include footer-heading();
+      padding-top: 10%;
       color: $color-ftr-txt;
+
+      &-spcg {
+        margin-top: 2rem;
+      }
     }
   }
 
-  &-download-options {
-    height: 3rem;
-    width: 10rem;
-  }
+  &-logo {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.1rem solid #cecece;
+    border-radius: 0.5rem;
+    @include max-ht-wd($ht: 4rem, $wd: 4rem);
+    min-width: 4rem;
+    min-height: 4rem;
 
-  &-divider {
-    border: 0.7px solid rgba(255, 255, 255, 0.5);
-    margin-top: 2rem;
+    i {
+      margin-left: 33%;
+      margin-top: 30%;
+      font-size: 1.5rem;
+      opacity: $opacity-light;
+    }
   }
 
   &-foot {
     margin-top: 3rem;
-
-    &-cp {
-      padding-bottom: 2rem;
-      color: $color-ftr-txt;
-      justify-content: center;
-      align-items: center;
-
-      i {
-        color: $color-ftr-txt;
-        margin-right: 0.75rem;
-      }
-    }
   }
-}
-
-.footer {
-  &-ft {
-    padding-bottom: 2rem;
-  }
-  &-foot {
-    color: $color-ftr-txt;
-    cursor: pointer;
-  }
-}
-
-.footer-divider {
-  color: $color-ftr-txt;
-  margin: 0rem 1rem;
 }
