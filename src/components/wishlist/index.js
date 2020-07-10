@@ -4,8 +4,7 @@ import Footer from "../common/footer";
 
 const Wishlist = () => {
   return (
-    <div>
-      <h1>Hello Wishlist</h1>
+    <div className="wishlist">
       <Footer />
     </div>
   );
