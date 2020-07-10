@@ -34,6 +34,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
+
               <div
                 id="accordion"
                 role="tablist"
@@ -94,24 +95,25 @@ const Footer = () => {
                 <div className="ftr-content-head">Tranding Searches</div>
                 <div className="coloumn ">
                   <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
-                    <div className="ftr-content-data">
-                      Launch of Gyanodaya Coffee Table Book
-                    </div>
+                    <div className="ftr-content-data">Home</div>
                   </div>
                   <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
-                    <div className="ftr-content-data">
-                      Enabling The Rural Youth To Grasp The
-                    </div>
+                    <div className="ftr-content-data">Apparel</div>
                   </div>
                   <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
-                    <div className="ftr-content-data">
-                      Gyanodaya: New Hopes for Kasturba Gandhi
-                    </div>
+                    <div className="ftr-content-data">Accesories</div>
                   </div>
                   <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
-                    <div className="ftr-content-data">
-                      Gyanodaya: Eckovation Join Hands with Ada
-                    </div>
+                    <div className="ftr-content-data">Hampers</div>
+                  </div>
+                  <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
+                    <div className="ftr-content-data">Wishlist</div>
+                  </div>
+                  <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
+                    <div className="ftr-content-data">Shopping Bag</div>
+                  </div>
+                  <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
+                    <div className="ftr-content-data">Contact Us</div>
                   </div>
                 </div>
               </div>
@@ -131,7 +133,7 @@ const Footer = () => {
                       aria-controls="collapseTwo"
                       className="ftr-content-head"
                     >
-                      LATEST BLOGS
+                      Trending Searches
                     </a>
                   </div>
                 </div>
@@ -144,18 +146,25 @@ const Footer = () => {
                   <div className="ftr-card">
                     <ul className="ftr-card-data">
                       <li>
-                        <a href="#">Launch of Gyanodaya Coffee Table Book</a>
+                        <a href="#">Home</a>
                       </li>
                       <li>
-                        <a href="#">Enabling The Rural Youth To Grasp The</a>
+                        <a href="#">Apparel</a>
                       </li>
                       <li>
-                        <a href="#">Gyanodaya: New Hopes for Kasturba Gandhi</a>
+                        <a href="#">Accesories</a>
                       </li>
                       <li>
-                        <a href="#">
-                          Gyanodaya: Eckovation Join Hands with Ada
-                        </a>
+                        <a href="#">Hampers</a>
+                      </li>
+                      <li>
+                        <a href="#">Wishlist</a>
+                      </li>
+                      <li>
+                        <a href="#">Shopping Bag</a>
+                      </li>
+                      <li>
+                        <a href="#">Contact Us</a>
                       </li>
                     </ul>
                   </div>
@@ -165,48 +174,51 @@ const Footer = () => {
             <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <div className="container">
                 <div className="coloumn ">
-                  <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
-                    <div className="row">
-                      <div className="col-1">
-                        <img
-                          className="ftr-content-data1-ic2"
-                          //   src={AddressIcon}
-                          alt="addr"
-                        />
-                      </div>
-                      <div className="col-11">
-                        <div className="ftr-content-data1">
-                          Godda, Jharkhand
+                  <div className=" col-lg-12 col-md-12 col-sm-12 col-xs-12 px-0">
+                    <div className="ftr-content-data1-spcg">
+                      <div className="row">
+                        <div className="col-3">
+                          <div className="ftr-logo">
+                            <i className="fa fa-home" aria-hidden="true"></i>
+                          </div>
+                        </div>
+
+                        <div className="col-9">
+                          <div className="ftr-content-data1">
+                            Doorstep services
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
+                </div>
+                <div className=" col-lg-12 col-md-12 col-sm-12 col-xs-12 px-0">
+                  <div className="ftr-content-data1-spcg">
                     <div className="row">
-                      <div className="col-1">
-                        <img
-                          className="ftr-content-data1-ic2"
-                          //   src={ContactUsIcon}
-                          alt="ph"
-                        />
+                      <div className="col-3">
+                        <div className="ftr-logo">
+                          <i className="fa fa-scissors" aria-hidden="true"></i>
+                        </div>
                       </div>
-                      <div className="col-11">
-                        <div className="ftr-content-data1">+91-9266677335</div>
+                      <div className="col-9">
+                        <div className="ftr-content-data1">
+                          Fitting At Your Home
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
-                    <div className="row">
-                      <div className="col-1">
-                        <img
-                          className="ftr-content-data1-ic3"
-                          //   src={EmailIcon}
-                          alt="email"
-                        />
-                      </div>
-                      <div className="col-11">
-                        <div className="ftr-content-data1">
-                          info@eckovation.com
+                  <div className=" col-lg-12 col-md-12 col-sm-12 col-xs-12 px-0">
+                    <div className="ftr-content-data1-spcg">
+                      <div className="row">
+                        <div className="col-3">
+                          <div className="ftr-logo">
+                            <i className="fa fa-smile-o" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                        <div className="col-9">
+                          <div className="ftr-content-data1">
+                            Consult Our Designers
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -219,60 +231,30 @@ const Footer = () => {
       </div>
 
       <div className="container">
-        <div className="ftr-divider"></div>
-      </div>
-
-      <div className="container">
         <div className="ftr-foot">
           <div className="row">
-            <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-              <center className="ftr-foot-cp">
-                <i className="fa fa-copyright" aria-hidden="true" />
-                2020 Eckovation Solutions Private Limited
-              </center>
-            </div>
-
-            {/* <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <center className="ftr-foot-icons">
-                  <div className="row">
-                    <div className="col-1"></div>
-                    <div className="col-2">
-                      <i
-                        className="fa fa-facebook-square fa-lg"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <div className="col-2">
-                      <i className="fa fa-twitter fa-lg" aria-hidden="true" />
-                    </div>
-                    <div className="col-2">
-                      <i className="fa fa-instagram fa-lg" aria-hidden="true" />
-                    </div>
-                    <div className="col-2">
-                      <i
-                        className="fa fa-youtube-play fa-lg"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <div className="col-2">
-                      <i
-                        className="fa fa-linkedin-square fa-lg"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <div className="col-1"></div>
+            <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+              <div className="ftr-content-head">Address</div>
+              <div className="coloumn ">
+                <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
+                  <div className="ftr-content-data">
+                    49/5 Karl Mark Sarani
+                    <br /> Kolkata - 700023
                   </div>
-                </center>
-              </div> */}
-
-            {/* <div className="col-lg-1 col-md-1 d-none d-md-block"></div> */}
-            <center className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <span className="footer-foot"> Terms of Service</span>
-              <span className="footer-divider"> | </span>
-              <span className="footer-foot"> Site Map </span>
-              <span className="footer-divider"> | </span>
-              <span className="footer-foot"> Privacy Policy </span>
-            </center>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+              <div className="ftr-content-head">Contact</div>
+              <div className="coloumn ">
+                <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
+                  <div className="ftr-content-data">+91 8562851814 </div>
+                </div>
+                <div className=" col-lg-12 col-md-12 col-sm-6 col-xs-6 px-0">
+                  <div className="ftr-content-data">Amitsaha990@gmail.com</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
