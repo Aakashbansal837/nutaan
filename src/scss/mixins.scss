@@ -70,7 +70,6 @@ $custom-breakpoints: (
   font-weight: $weight-mid;
   opacity: $opacity-heavy;
   padding-bottom: 0.5rem;
-  cursor: pointer;
 }
 @mixin footer-text() {
   font-family: $primary-font;
@@ -78,5 +77,4 @@ $custom-breakpoints: (
   font-size: $size-ftr-txt;
   font-weight: $weight-light;
   opacity: $opacity-mid;
-  cursor: pointer;
 }

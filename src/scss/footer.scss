@@ -60,6 +60,10 @@
         }
       }
     }
+
+    &-spcg {
+      margin-bottom: 2rem;
+    }
   }
 
   &-content {
@@ -84,7 +88,7 @@
       color: $color-ftr-txt;
 
       &-spcg {
-        margin-top: 2rem;
+        margin-bottom: 2rem;
       }
     }
   }
@@ -96,6 +100,7 @@
     @include max-ht-wd($ht: 4rem, $wd: 4rem);
     min-width: 4rem;
     min-height: 4rem;
+    opacity: $opacity-mid;
 
     i {
       margin-left: 33%;
