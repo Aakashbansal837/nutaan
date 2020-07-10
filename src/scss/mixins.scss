@@ -56,21 +56,27 @@ $custom-breakpoints: (
 }
 
 // -----footer mixins ------//
-@mixin disc-text() {
-  font-family: $primary-font;
-  color: $color-ftr-txt;
-  font-size: $size-dis-txt;
-  font-weight: $weight-light;
-}
+
 @mixin max-ht-wd($ht, $wd) {
   max-width: $wd;
   max-height: $ht;
   height: 100%;
   width: 100%;
 }
-@mixin Header-text-3() {
+@mixin footer-heading() {
   font-family: $primary-font;
   color: $color-black;
-  font-size: $size-dis-head-2;
-  font-weight: $weight-mid; //
+  font-size: $size-ftr-head;
+  font-weight: $weight-mid;
+  opacity: $opacity-heavy;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+@mixin footer-text() {
+  font-family: $primary-font;
+  color: $color-ftr-txt;
+  font-size: $size-ftr-txt;
+  font-weight: $weight-light;
+  opacity: $opacity-mid;
+  cursor: pointer;
 }
