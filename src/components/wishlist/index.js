@@ -1,10 +1,11 @@
 import React from "react";
-import "../../scss/index.scss";
 import Footer from "../common/footer";
+import Navbar from "../common/navbar";
 
 const Wishlist = () => {
   return (
     <div className="wishlist">
+      <Navbar />
       <Footer />
     </div>
   );
