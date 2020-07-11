@@ -180,13 +180,13 @@ const Footer = () => {
                     <div className=" col-lg-12 col-md-12 col-sm-12 col-xs-12 px-0">
                       <div className="ftr-content-data1-spcg">
                         <div className="row">
-                          <div className="col-3">
+                          <div className="col-3 col-md-5 col-lg-3">
                             <div className="ftr-logo">
                               <i className="fa fa-home" aria-hidden="true"></i>
                             </div>
                           </div>
 
-                          <div className="col-9">
+                          <div className="col-9 col-md-7 col-lg-9">
                             <div className="ftr-content-data1">
                               Doorstep services
                             </div>
@@ -198,7 +198,7 @@ const Footer = () => {
                   <div className=" col-lg-12 col-md-12 col-sm-12 col-xs-12 px-0">
                     <div className="ftr-content-data1-spcg">
                       <div className="row">
-                        <div className="col-3">
+                        <div className="col-3 col-md-5 col-lg-3">
                           <div className="ftr-logo">
                             <i
                               className="fa fa-scissors"
@@ -206,7 +206,7 @@ const Footer = () => {
                             ></i>
                           </div>
                         </div>
-                        <div className="col-9">
+                        <div className="col-9 col-md-7 col-lg-9">
                           <div className="ftr-content-data1">
                             Fitting At Your Home
                           </div>
@@ -216,7 +216,7 @@ const Footer = () => {
                     <div className=" col-lg-12 col-md-12 col-sm-12 col-xs-12 px-0">
                       <div className="ftr-content-data1-spcg">
                         <div className="row">
-                          <div className="col-3">
+                          <div className="col-3 col-md-5 col-lg-3">
                             <div className="ftr-logo">
                               <i
                                 className="fa fa-smile-o"
@@ -224,7 +224,7 @@ const Footer = () => {
                               ></i>
                             </div>
                           </div>
-                          <div className="col-9">
+                          <div className="col-9 col-md-7 col-lg-9">
                             <div className="ftr-content-data1">
                               Consult Our Designers
                             </div>
