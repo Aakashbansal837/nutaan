@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactComponent as NbCollapse } from "../../images/navbar-collapse.svg";
 import { ReactComponent as Logo } from "../../images/logo.svg";
+import { ReactComponent as Bag } from "../../images/bag.svg";
 
 const Navbar = () => {
   const [active, setActive] = React.useState(false);
@@ -16,25 +17,26 @@ const Navbar = () => {
           <ul className="nvbr-menu">
             <li>
               <a href="/home" className="nvbr-link">
-                Home
+                Categories
               </a>
             </li>
             <li>
               <a href="/aboutUs" className="nvbr-link">
-                About Us
+                Hampers
+              </a>
+            </li>
+            <li>
+              <input className="nvbr-srch" placeholder="Search here" />
+            </li>
+            <li>
+              <a href="#" className="nvbr-link">
+                <Bag className="nvbr-bag" />
+                Bag
               </a>
             </li>
             <li>
               <a href="#" className="nvbr-link">
-                Blogs
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://gyanodaya.eckovation.com/static/#/login"
-                className="btn-main"
-              >
-                Log In
+                Profile
               </a>
             </li>
           </ul>
@@ -82,21 +84,23 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="/aboutUs" className="nvbr-sm-link">
-                  About Us
+                <a href="/categories" className="nvbr-sm-link">
+                  Categories
                 </a>
               </li>
               <li>
                 <a href="#" className="nvbr-sm-link">
-                  Blogs
+                  Hampers
                 </a>
               </li>
               <li>
-                <a
-                  href="https://gyanodaya.eckovation.com/static/#/login"
-                  className="nvbr-sm-link"
-                >
-                  Log In
+                <a href="#" className="nvbr-sm-link">
+                  Bag
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nvbr-sm-link">
+                  Profile
                 </a>
               </li>
             </ul>

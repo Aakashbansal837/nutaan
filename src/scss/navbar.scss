@@ -17,7 +17,9 @@
 
   &-logo {
     font-family: $primary-font !important;
-    @include max-ht-wd($ht: 47.24px, $wd: 162px);
+    @include max-ht-wd($ht: 1.375rem, $wd: 6.375rem);
+    min-width: 6rem;
+    min-height: 1rem;
   }
 
   &-menu {
@@ -33,9 +35,9 @@
   &-link {
     font-weight: $weight-mid;
     opacity: $opacity-heavy;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 1.5rem 1.5rem;
-    color: $color-dark;
+    color: $color-black;
     margin-right: 1rem;
     transition: all 0.3s ease-out;
     text-decoration: none;
@@ -43,6 +45,27 @@
     &:hover {
       text-decoration: none;
     }
+  }
+
+  &-srch {
+    border: 0rem;
+    border-radius: 1.25rem;
+    font-size: 1rem;
+    opacity: $opacity-mid;
+    @include max-ht-wd($ht: 2.5rem, $wd: 25rem);
+    min-width: 10rem;
+    min-height: 2.5rem;
+    background-color: $color-srch-bg;
+    padding-left: 1rem;
+
+    &:focus {
+      transition: all 250ms ease-in;
+      border: 0.1rem solid $color-dark;
+    }
+  }
+  &-bag {
+    margin-right: 0.5rem;
+    opacity: $opacity-heavy;
   }
 }
 
@@ -78,7 +101,7 @@
     background-color: $color-white;
     position: absolute;
     width: 65%;
-    background-color: $color-yellow;
+    background-color: $color-slider;
     clip-path: polygon(0 0, 100% 0, 45% 100%, 0% 100%);
     z-index: 100;
   }
@@ -89,7 +112,7 @@
     background-color: $color-white;
     position: absolute;
     width: 100%;
-    background-color: $color-yellow;
+    background-color: $color-slider;
     z-index: 99;
   }
   &-menu {
@@ -126,26 +149,6 @@
   font-family: $primary-font;
   color: $color;
   text-align: center;
-}
-
-.btn-main {
-  color: white;
-  &:link {
-    display: inline-block;
-    padding: 0.7rem 1rem;
-    border-radius: 0.3rem;
-    width: $button-width;
-    font-size: 1.1rem;
-    @include link-style($color-white);
-    background-color: $color-box-1;
-    transition: 0.3s;
-  }
-
-  &:hover {
-    background-color: darken($color-box-1, 7%);
-    color: darken($color-text-light, 9%);
-    box-shadow: 0 2px 6px 0 rgba(33, 42, 57, 0.25);
-  }
 }
 
 @keyframes slide-in-left {
