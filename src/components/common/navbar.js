@@ -2,6 +2,7 @@ import React from "react";
 import { ReactComponent as NbCollapse } from "../../images/navbar-collapse.svg";
 import { ReactComponent as Logo } from "../../images/logo.svg";
 import { ReactComponent as Bag } from "../../images/bag.svg";
+import UserImage from "../../images/user.png";
 
 const Navbar = () => {
   const [active, setActive] = React.useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="nvbr">
       <div className="d-none d-md-block">
-        <div className=" container nvbr-container">
+        <div className=" container nvbr-container px-0">
           <a href="/home">
             <Logo className="nvbr-logo" />
           </a>
@@ -31,13 +32,42 @@ const Navbar = () => {
             <li>
               <a href="#" className="nvbr-link">
                 <Bag className="nvbr-bag" />
-                Bag
+                <span className="nvbr-bag-txt">Bag</span>
               </a>
             </li>
             <li>
               <a href="#" className="nvbr-link">
                 Profile
               </a>
+            </li>
+            <li className="nav-item avatar dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src={UserImage}
+                  className="rounded-circle nvbr-usr-img z-depth-0"
+                  alt="avatar image"
+                />
+              </a>
+              <div
+                className="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a className="dropdown-item" href="#">
+                  Action
+                </a>
+                <a className="dropdown-item" href="#">
+                  Another action
+                </a>
+                <a className="dropdown-item" href="#">
+                  Something else here
+                </a>
+              </div>
             </li>
           </ul>
         </div>
