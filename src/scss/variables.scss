@@ -37,6 +37,9 @@ $ns-bt-breakpoint: (
 $color-footer-bg: #f8f8f8;
 $color-black: #212121;
 $color-white: #ffffff;
+$color-dark: #353535;
+$color-slider: #353535;
+$color-srch-bg: rgba(207, 214, 228, 0.12);
 
 $color-ftr-txt: #212a39;
 $primary-font: "Fira Sans";
@@ -56,3 +59,8 @@ $opacity-full: 1;
 //font-size
 $size-ftr-txt: 1rem; // 16px
 $size-ftr-head: 1rem; // 16px
+
+// button
+$button-width: 112px;
+$color-box-1: #15aac5; //green
+$color-text-light: #f1f3f1; //light-gray
