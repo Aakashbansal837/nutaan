@@ -1,0 +1,197 @@
+.nvbr {
+  position: fixed !important;
+  width: 100%;
+  z-index: 980;
+  background-color: $color-white;
+  box-shadow: 0 4px 8px 0 rgba(33, 42, 57, 0.15);
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-logo {
+    font-family: $primary-font !important;
+    @include max-ht-wd($ht: 47.24px, $wd: 162px);
+  }
+
+  &-menu {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-link {
+    font-weight: $weight-mid;
+    opacity: $opacity-heavy;
+    font-size: 1.1rem;
+    padding: 1.5rem 1.5rem;
+    color: $color-dark;
+    margin-right: 1rem;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.nvbr-sm {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &-cl {
+    height: 1.3rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  &-active {
+    left: 0px;
+    animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  &-non-active {
+    left: -20rem;
+    animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  &-slider {
+    animation: navbar-fade-1 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  &-slider-2 {
+    animation: navbar-fade-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  &-data {
+    left: 0rem;
+    height: 100vh;
+    background-color: $color-white;
+    position: absolute;
+    width: 65%;
+    background-color: $color-yellow;
+    clip-path: polygon(0 0, 100% 0, 45% 100%, 0% 100%);
+    z-index: 100;
+  }
+  &-bg {
+    opacity: 0.6;
+    left: 0rem;
+    height: 100vh;
+    background-color: $color-white;
+    position: absolute;
+    width: 100%;
+    background-color: $color-yellow;
+    z-index: 99;
+  }
+  &-menu {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+      margin-top: 1rem;
+    }
+  }
+
+  &-link {
+    font-weight: $weight-mid;
+    font-size: 1.1rem;
+    padding: 1.5rem 1.5rem;
+    color: $color-white;
+    margin-right: 1rem;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin link-style($color) {
+  text-decoration: none;
+  font-family: $primary-font;
+  color: $color;
+  text-align: center;
+}
+
+.btn-main {
+  color: white;
+  &:link {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    border-radius: 0.3rem;
+    width: $button-width;
+    font-size: 1.1rem;
+    @include link-style($color-white);
+    background-color: $color-box-1;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    background-color: darken($color-box-1, 7%);
+    color: darken($color-text-light, 9%);
+    box-shadow: 0 2px 6px 0 rgba(33, 42, 57, 0.25);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    display: block;
+    transform: translateX(-20rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-20rem);
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes navbar-fade-1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  1% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes navbar-fade-2 {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
