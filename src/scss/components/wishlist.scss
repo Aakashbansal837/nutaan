@@ -1,0 +1,74 @@
+.wishlist {
+  padding-top: 5rem;
+  &-center {
+    background-color: $color-white;
+
+    &-heading {
+      margin-top: 4rem;
+      font-size: 1.5rem;
+      font-weight: $weight-mid;
+      opacity: 0.95;
+
+      &-count {
+        font-size: 1.25rem;
+        font-weight: $weight-mid;
+        opacity: $opacity-light;
+      }
+    }
+  }
+
+  &-card {
+    margin: 1rem 0rem 1rem 0rem;
+
+    &-img {
+      // @include max-ht-wd($ht: 22.5rem, $wd: 16.875rem);
+      height: 100%;
+      width: 100%;
+      border: 0.8px solid #cecece;
+    }
+
+    &-body {
+      border: 0.8px solid #cecece;
+    }
+
+    &-title {
+      font-weight: $weight-mid;
+      font-size: 0.875rem;
+      line-height: 0.875rem;
+    }
+
+    &-text {
+      font-size: 0.625rem;
+      line-height: 0.75rem;
+    }
+
+    &-button {
+      font-size: 0.75rem;
+      border: 0.8px solid #cecece;
+      text-align: center;
+      color: $color-red;
+      padding: 1rem;
+      border-radius: 0rem;
+      font-weight: $weight-mid;
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .wishlist {
+    &-card {
+      margin: 0.5rem 0rem 0rem 0rem;
+    }
+
+    &-center {
+      &-heading {
+        margin-top: 2rem;
+      }
+    }
+
+    &-container {
+      padding: 0px;
+    }
+  }
+}
