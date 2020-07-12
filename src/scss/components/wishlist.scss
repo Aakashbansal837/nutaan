@@ -20,6 +20,13 @@
   &-card {
     margin: 1rem 0rem 1rem 0rem;
 
+    &-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      height: 2.5rem;
+    }
+
     &-img {
       // @include max-ht-wd($ht: 22.5rem, $wd: 16.875rem);
       height: 100%;
