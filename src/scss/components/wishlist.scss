@@ -11,19 +11,19 @@
 
       &-count {
         font-size: 1.25rem;
-        font-weight: $weight-mid;
+        font-weight: $weight-light;
         opacity: $opacity-light;
       }
     }
   }
 
   &-card {
-    margin: 1rem 0rem 1rem 0rem;
+    margin: 1rem 0.2rem 1rem 0.2rem;
 
     &-close {
       position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
+      top: 1.4rem;
+      right: 1.4rem;
       height: 2.5rem;
     }
 
@@ -31,7 +31,6 @@
       // @include max-ht-wd($ht: 22.5rem, $wd: 16.875rem);
       height: 100%;
       width: 100%;
-      border: 0.8px solid #cecece;
     }
 
     &-body {
@@ -66,6 +65,13 @@
   .wishlist {
     &-card {
       margin: 0.5rem 0rem 0rem 0rem;
+
+      &-close {
+        height: 2rem;
+        width: 2rem;
+        top: 0.7rem;
+        right: 0.7rem;
+      }
     }
 
     &-center {

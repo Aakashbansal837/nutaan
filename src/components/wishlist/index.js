@@ -17,12 +17,10 @@ const ImageContainer = (props) => {
   return (
     <div className="wishlist-card">
       <div className="card">
-        <div
+        <Close
           onClick={() => props.RemoveItem(props.item)}
           className="wishlist-card-close"
-        >
-          <Close />
-        </div>
+        />
         <img
           className="wishlist-card-img"
           src={props.item.img}
@@ -128,7 +126,7 @@ const Wishlist = () => {
       <Navbar />
       <div className="wishlist">
         <div className="wishlist-center">
-          <div className="container">
+          <div className="container px-1">
             <div className="wishlist-center-heading">
               Wishlist &nbsp;&nbsp;&nbsp;&nbsp;
               <span className="wishlist-center-heading-count">64 Items</span>
