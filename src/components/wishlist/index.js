@@ -11,11 +11,18 @@ import Img7 from "../../images/Wishlist/7.png";
 import Img8 from "../../images/Wishlist/8.png";
 import Img9 from "../../images/Wishlist/9.png";
 import Img10 from "../../images/Wishlist/10.png";
+import { ReactComponent as Close } from "../../images/close.svg";
 
 const ImageContainer = (props) => {
   return (
     <div className="wishlist-card">
       <div className="card">
+        <div
+          onClick={() => props.RemoveItem(props.item)}
+          className="wishlist-card-close"
+        >
+          <Close />
+        </div>
         <img
           className="wishlist-card-img"
           src={props.item.img}
@@ -36,7 +43,7 @@ const ImageContainer = (props) => {
 };
 
 const Wishlist = () => {
-  const Imagelist = [
+  var [Imagelist, setImageList] = React.useState([
     {
       img: Img1,
       name: "Chumbak",
@@ -109,7 +116,13 @@ const Wishlist = () => {
       disc: "Kurta with Palazzos and Dupatta",
       price: "₹ 1,899",
     },
-  ];
+  ]);
+
+  const RemoveItem = (data) => {
+    console.log("data : ", Imagelist);
+    var list = Imagelist.filter((item) => item !== data);
+    setImageList(list);
+  };
   return (
     <div>
       <Navbar />
@@ -124,7 +137,7 @@ const Wishlist = () => {
               {Imagelist.map((item) => {
                 return (
                   <div className="col-6 col-md-4 col-lg-3 wishlist-container">
-                    <ImageContainer item={item} />
+                    <ImageContainer item={item} RemoveItem={RemoveItem} />
                   </div>
                 );
               })}
