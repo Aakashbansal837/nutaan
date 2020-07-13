@@ -6,6 +6,7 @@
   box-shadow: 0 4px 8px 0 rgba(33, 42, 57, 0.15);
 
   &-container {
+    margin: 0 1rem 0 4rem;
     display: flex;
     flex-direction: row;
     height: 80px;
@@ -19,7 +20,7 @@
     font-family: $primary-font !important;
     @include max-ht-wd($ht: 1.375rem, $wd: 6.375rem);
     min-width: 6rem;
-    min-height: 1rem;
+    min-height: 2.3rem;
   }
 
   &-menu {
@@ -53,7 +54,7 @@
     font-size: 1rem;
     opacity: $opacity-mid;
     @include max-ht-wd($ht: 2.5rem, $wd: 25rem);
-    min-width: 10rem;
+    min-width: 25rem;
     min-height: 2.5rem;
     background-color: $color-srch-bg;
     padding-left: 1rem;
@@ -72,7 +73,7 @@
   }
 
   &-usr-img {
-    height: 3.5rem;
+    height: 3rem;
   }
 }
 
@@ -207,13 +208,30 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
   .nvbr {
+    &-srch {
+      min-width: 10rem;
+    }
     &-bag {
       margin-right: 0rem;
     }
     &-bag-txt {
       padding-left: 1rem;
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1118px) {
+  .nvbr {
+    &-srch {
+      min-width: 20rem;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .nvbr {
+    &-srch {
+      margin: 0rem 2rem 0rem 7rem;
     }
   }
 }
