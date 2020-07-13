@@ -35,11 +35,6 @@ const Navbar = () => {
                 <span className="nvbr-bag-txt">Bag</span>
               </a>
             </li>
-            <li>
-              <a href="#" className="nvbr-link">
-                Profile
-              </a>
-            </li>
             <li className="nav-item avatar dropdown">
               <a
                 className="nav-link dropdown-toggle"
