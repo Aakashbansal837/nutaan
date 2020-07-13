@@ -12,6 +12,14 @@ body {
   margin: 0;
   // font-family: $ff-OpenSans;
   font-family: $primary-font;
+
+  //hidden scrollbar
+  // for chrome
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 :root {
