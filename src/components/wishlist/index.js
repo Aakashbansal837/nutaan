@@ -12,7 +12,34 @@ import Img8 from "../../images/Wishlist/8.png";
 import Img9 from "../../images/Wishlist/9.png";
 import Img10 from "../../images/Wishlist/10.png";
 import { ReactComponent as Close } from "../../images/close.svg";
+import { Button } from "@material-ui/core";
 
+const DummyData = [
+  {
+    img: Img4,
+    name: "Chumbak",
+    disc: "Block Printed Cotton Saree",
+    price: "₹ 2,499",
+  },
+  {
+    img: Img5,
+    name: "Biba",
+    disc: "Kurta with Palazzos and Dupatta",
+    price: "₹ 1,899",
+  },
+  {
+    img: Img7,
+    name: "Chumbak",
+    disc: "Block Printed Cotton Saree",
+    price: "₹ 2,499",
+  },
+  {
+    img: Img9,
+    name: "Biba",
+    disc: "Kurta with Palazzos and Dupatta",
+    price: "₹ 1,899",
+  },
+];
 const ImageContainer = (props) => {
   return (
     <div className="wishlist-card">
@@ -24,7 +51,7 @@ const ImageContainer = (props) => {
         <img
           className="wishlist-card-img"
           src={props.item.img}
-          alt="wishlist Image"
+          alt="wishlist card"
         />
 
         <div className="card-body wishlist-card-body">
@@ -32,9 +59,9 @@ const ImageContainer = (props) => {
           <p className="card-text wishlist-card-text">{props.item.disc}</p>
           <p className="card-text wishlist-card-title">{props.item.price}</p>
         </div>
-        <button className="btn btn-outlined wishlist-card-button">
+        <utton className="btn btn-outlined wishlist-card-button">
           Add to Bag
-        </button>
+        </utton>
       </div>
     </div>
   );
@@ -115,12 +142,20 @@ const Wishlist = () => {
       price: "₹ 1,899",
     },
   ]);
+  var [loading, setLoading] = React.useState(false);
 
   const RemoveItem = (data) => {
-    console.log("data : ", Imagelist);
     var list = Imagelist.filter((item) => item !== data);
     setImageList(list);
   };
+  const LoadMoreData = () => {
+    setLoading(true);
+    setTimeout(function () {
+      setImageList(Imagelist.concat(DummyData));
+      setLoading(false);
+    }, 3000);
+  };
+
   return (
     <div>
       <Navbar />
@@ -129,7 +164,9 @@ const Wishlist = () => {
           <div className="container px-1">
             <div className="wishlist-center-heading">
               Wishlist &nbsp;&nbsp;&nbsp;&nbsp;
-              <span className="wishlist-center-heading-count">64 Items</span>
+              <span className="wishlist-center-heading-count">
+                {Imagelist.length}
+              </span>
             </div>
             <div className="row">
               {Imagelist.map((item) => {
@@ -139,6 +176,27 @@ const Wishlist = () => {
                   </div>
                 );
               })}
+            </div>
+            <div className="row">
+              <div className="col-12">
+                <center className="wishlist-loadmore">
+                  {loading ? (
+                    <div>
+                      <div class="spinner-border text-secondary" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <Button
+                      onClick={() => LoadMoreData()}
+                      className="wishlist-loadmore-btn"
+                      color="primary"
+                    >
+                      Load More
+                    </Button>
+                  )}
+                </center>
+              </div>
             </div>
           </div>
         </div>
