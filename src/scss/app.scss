@@ -22,6 +22,11 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+// bootstrap card
+.card {
+  border-radius: 0px;
+}
+
 :root {
   --ns-black: #{$ns-black};
   --ns-primary: #{$ns-primary};
