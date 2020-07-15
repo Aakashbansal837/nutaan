@@ -165,7 +165,7 @@ const Wishlist = () => {
             <div className="wishlist-center-heading">
               Wishlist &nbsp;&nbsp;&nbsp;&nbsp;
               <span className="wishlist-center-heading-count">
-                {Imagelist.length}
+                {Imagelist.length} Items
               </span>
             </div>
             <div className="row">
@@ -190,7 +190,7 @@ const Wishlist = () => {
                     <Button
                       onClick={() => LoadMoreData()}
                       className="wishlist-loadmore-btn"
-                      color="primary"
+                      color="secondary"
                     >
                       Load More
                     </Button>
