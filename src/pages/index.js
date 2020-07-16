@@ -25,55 +25,6 @@ class BasePage extends React.Component {
           >
             Learn React
           </a>
-          <div
-            style={{ width: "100%", height: "500px", background: "#ffffff" }}
-            className="center-all"
-          >
-            <Button
-              variant="contained"
-              color="primary"
-              style={{ height: "48px" }}
-            >
-              Testing
-            </Button>
-            &nbsp;&nbsp;
-            {/* <Button variant="contained" color="secondary">Testing</Button> */}
-            <FormControl>
-              <Select
-                labelId="demo-simple-select-outlined-label"
-                id="demo-simple-select-outlined"
-                variant="outlined"
-                MenuProps={{
-                  anchorOrigin: {
-                    vertical: "bottom",
-                    horizontal: "left",
-                  },
-                  transformOrigin: {
-                    vertical: "top",
-                    horizontal: "left",
-                  },
-                  getContentAnchorEl: null,
-                }}
-              >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-
-          <Typography variant="h1">Testing</Typography>
-          <Typography variant="h2">Testing</Typography>
-          <Typography variant="h3">Testing</Typography>
-          <Typography variant="h4">Testing</Typography>
-          <Typography variant="h5">Testing</Typography>
-          <Typography variant="h6">Testing</Typography>
-          <h1>Testing</h1>
-          <h2>Testing</h2>
-          <h3>Testing</h3>
-          <h4>Testing</h4>
-          <h5>Testing</h5>
-          <h6>Testing</h6>
         </header>
       </div>
     );

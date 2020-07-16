@@ -1,6 +1,7 @@
 import React from "react";
 import Index from "./pages/index";
 import Wishlist from "./components/wishlist";
+import ProductListing from "./pages/ProductListing";
 import { Route, BrowserRouter, withRouter } from "react-router-dom";
 import { withSnackbar } from "notistack";
 
@@ -10,6 +11,7 @@ function Router(props) {
       {/* ----Route Code---- */}
       <Route exact path="/" component={() => <Index {...props} />} />
       <Route exact path="/wishlist" component={() => <Wishlist {...props} />} />
+      <Route exact path="/product-listing" component={() => <ProductListing {...props} />} />
       {/* ------------------ */}
     </BrowserRouter>
   );
