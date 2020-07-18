@@ -10,6 +10,11 @@ function Router(props) {
       {/* ----Route Code---- */}
       <Route exact path="/" component={() => <Index {...props} />} />
       <Route exact path="/wishlist" component={() => <Wishlist {...props} />} />
+      <Route
+        exact
+        path="/shopping-bag"
+        component={() => <Wishlist {...props} />}
+      />
       {/* ------------------ */}
     </BrowserRouter>
   );
