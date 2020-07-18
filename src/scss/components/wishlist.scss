@@ -1,5 +1,5 @@
 .wishlist {
-  padding-top: 5rem;
+  @include PaddingNav();
   &-center {
     background-color: $color-white;
 
