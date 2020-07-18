@@ -78,3 +78,7 @@ $custom-breakpoints: (
   font-weight: $weight-light;
   opacity: $opacity-mid;
 }
+
+@mixin PaddingNav {
+  padding-top: 5rem;
+}
