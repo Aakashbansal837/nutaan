@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Footer from "../components/common/footer";
 import Navbar from "../components/common/navbar";
-import { Breadcrumbs, Typography } from '@material-ui/core';
+import { Breadcrumbs, Typography, Hidden } from '@material-ui/core';
 import ProductListingFilter from '../components/product/ProductListingFilter';
 import ProductItemListing from '../components/product/ProductItemListing';
 
@@ -27,18 +27,20 @@ class ProductListing extends React.Component {
     return (
       <div>
         <Navbar />
-        <div className="nt-prd-lst-ctnr" style={{ minHeight: "500px" }}>
-          <PrdListBreadcrumbs />
-          <div className="w-100 nt-prd-list-ttl-ctnr">
-            <span className="head">Designer Wear Stuff -</span>
-            <span className="tail"> 108 items found</span>
-          </div>
+        <div className="nt-prd-lst-ctnr">
+          <Hidden smDown>
+            <PrdListBreadcrumbs />
+            <div className="w-100 nt-prd-list-ttl-ctnr">
+              <span className="head">Designer Wear Stuff -</span>
+              <span className="tail"> 108 items found</span>
+            </div>
+          </Hidden>
           <div className="nt-prd-list-itm-main-ctnr">
-            <div className="row">
-              <div className="col-3 col-lg-3 nt-prd-fltr-wrpr">
+            <div className="row nt-prd-list-itm-main-row">
+              <div className="col-12 col-12 col-sm-12 col-md-3 col-lg-3 nt-prd-fltr-wrpr">
                 <ProductListingFilter/>
               </div>
-              <div className="col-9 col-lg-9">
+              <div className="col-12 col-sm-12 col-md-9 col-lg-9 nt-prd-list-itm-main-col">
                 <ProductItemListing/>
               </div>
             </div>

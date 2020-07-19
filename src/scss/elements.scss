@@ -1,0 +1,15 @@
+//heart checkbox
+.nt-e-heart-chk{
+    background: #ffffff !important;
+    box-shadow: 0 0 8px 0 rgba(33, 42, 57, 0.15);
+    .MuiSvgIcon-root{
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+    .icon-unchk{
+        color: rgba(34, 43, 58, 0.3);
+    }
+    .icon-chk{
+        color: #ED695F;
+    }
+}
