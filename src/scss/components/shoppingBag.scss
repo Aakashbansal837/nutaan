@@ -1,3 +1,81 @@
 .shopping {
   @include PaddingNav();
+
+  &-heading {
+    @include Component-heading();
+  }
+  &-normal {
+    border: $border-card;
+    margin: 1.5rem;
+    border-radius: 0.5rem;
+    &-img {
+      @include max-ht-wd($ht: 13.5rem, $wd: 10.125rem);
+      border-bottom-left-radius: 0.5rem;
+      border-top-left-radius: 0.5rem;
+    }
+
+    &-data {
+      height: 11rem;
+      padding-top: 1.5rem;
+
+      &-heading {
+        font-size: 1.25rem;
+        font-weight: $weight-mid;
+      }
+      &-disc {
+        font-size: 1rem;
+        font-weight: $weight-mid;
+        opacity: $opacity-mid;
+      }
+      &-choice {
+        margin-top: 1rem;
+        &-txt {
+          background-color: rgba(206, 206, 206, 0.25);
+          border-radius: 2px;
+          max-width: 5rem;
+          font-size: 0.875rem;
+          padding: 0.3rem 1rem;
+          margin-right: 0.75rem;
+          font-weight: $weight-light;
+          display: inline;
+        }
+      }
+
+      &-price {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.25rem;
+        font-weight: $weight-mid;
+      }
+
+      &-prevP {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1rem;
+        font-weight: $weight-mid;
+        opacity: $opacity-light;
+      }
+    }
+  }
+
+  &-divider {
+    border-bottom: 0.75px solid rgba(33, 42, 57, 0.25) !important;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+  }
+  &-btn {
+    &-move {
+      color: $color-red !important;
+      height: 3.5rem;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: $weight-mid;
+    }
+    &-remove {
+      height: 3.5rem;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: $weight-mid;
+    }
+  }
 }
