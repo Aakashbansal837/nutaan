@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Footer from "../components/common/footer";
 import Navbar from "../components/common/navbar";
 import { Breadcrumbs, Typography, Hidden } from '@material-ui/core';
-import ProductListingFilter from '../components/product/ProductListingFilter';
+import ProductListingFilter from '../components/filter/ProductListingFilter';
 import ProductItemListing from '../components/product/ProductItemListing';
 
 function PrdListBreadcrumbs(props) {

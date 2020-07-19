@@ -4,6 +4,8 @@ import FormGroup from '@material-ui/core/FormGroup';
 import { Checkbox, Hidden } from '@material-ui/core';
 import { ReactComponent as FilterIcon } from '../../images/filter.svg';
 import { ReactComponent as SortIcon } from '../../images/sort.svg';
+import SortFilterPop from './SortFilterPop';
+import FullFilterPop from './FullFilterPop';
 
 var categories = [
   'Plain Saree',
@@ -32,17 +34,39 @@ class ProductListingFilter extends React.Component {
       categories: categories,
       brands: brands,
       color: color,
-      checkedItem: {
-
-      }
+      openFullFilter : false,
+      openSortFilter : false
     };
   }
 
+  handleFullFilter = ()=>{
+    return this.setState({
+      openSortFilter : false,
+      openFullFilter : !this.state.openFullFilter
+    })
+  }
 
+  handleSortFilter = ()=>{
+    return this.setState({
+      openSortFilter : !this.state.openSortFilter,
+      openFullFilter : false
+    })
+  }
 
   render() {
     return (
       <React.Fragment>
+        
+        <FullFilterPop
+          open={this.state.openFullFilter}
+          {...this}
+        />
+        
+        <SortFilterPop
+          open={this.state.openSortFilter}
+          {...this}
+        />
+
         <Hidden smDown>
           <div className="row">
             <div className="col-6 nt-prd-fltr-ttl nt-prd-lst-itm-pd">
@@ -149,7 +173,7 @@ class ProductListingFilter extends React.Component {
           <div className="row m-0 nt-prd-list-mb-fltr-ctnr">
             <div className="col-6 p-0">
               <div className="nt-prd-list-mb-fltr-btn">
-                  <div className="w-100 center">
+                  <div className="w-100 center" onClick={this.handleFullFilter}>
                     <span>
                       <FilterIcon className="nt-prd-list-mb-fltr-icon"/>
                     </span>
@@ -161,7 +185,7 @@ class ProductListingFilter extends React.Component {
             </div>
             <div className="col-6 p-0">
               <div className="nt-prd-list-mb-fltr-btn">
-                  <div className="w-100 center">
+                  <div className="w-100 center" onClick={this.handleSortFilter}>
                     <span>
                       <SortIcon className="nt-prd-list-mb-fltr-icon"/>
                     </span>
