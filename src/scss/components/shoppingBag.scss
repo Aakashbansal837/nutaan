@@ -6,7 +6,7 @@
   }
   &-normal {
     border: $border-card;
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     border-radius: 0.5rem;
     &-img {
       @include max-ht-wd($ht: 13.5rem, $wd: 10.125rem);
@@ -62,20 +62,127 @@
     border-bottom: 0.75px solid rgba(33, 42, 57, 0.25) !important;
     margin-top: 1rem;
     margin-bottom: 0rem;
+    &-2 {
+      border-bottom: 0.75px dashed rgba(33, 42, 57, 0.25) !important;
+      margin-top: 1rem;
+      opacity: $opacity-mid;
+    }
   }
   &-btn {
     &-move {
       color: $color-red !important;
-      height: 3.5rem;
+      border-radius: 0rem !important;
+      height: 3.3rem;
       width: 100%;
       font-size: 1rem;
       font-weight: $weight-mid;
     }
     &-remove {
-      height: 3.5rem;
+      height: 3.3rem;
+      border-radius: 0rem !important;
       width: 100%;
       font-size: 1rem;
       font-weight: $weight-mid;
+    }
+  }
+}
+
+.bill {
+  margin-top: 1.5rem;
+  border: $border-card;
+  // height: 34.125rem;
+  border-radius: 0.5rem;
+  background-color: $color-white;
+  &-head {
+    font-size: 1.25rem;
+    font-weight: $weight-mid;
+    padding: 1.5rem 0rem 1rem 0rem;
+  }
+  &-coupon {
+    border: $border-card;
+    &-input {
+      border: hidden;
+      height: 100%;
+      width: 70%;
+      font-size: 1rem;
+      padding-left: 1rem;
+    }
+  }
+  &-btn {
+    width: 30%;
+    height: 100%;
+    font-size: 1rem !important;
+    color: $color-red !important;
+    &-2 {
+      width: 100%;
+      background-color: $color-red !important;
+      height: 100%;
+    }
+    &-div {
+      margin: 2rem 0rem 1rem 0rem;
+      width: 100%;
+    }
+  }
+
+  &-data {
+    &-txt {
+      text-align: left;
+      &-dark {
+        margin-top: 1rem;
+        font-weight: $weight-mid;
+        text-align: left;
+      }
+    }
+    &-amt {
+      text-align: right;
+      &-dark {
+        font-weight: $weight-mid;
+        margin-top: 1rem;
+
+        text-align: right;
+      }
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .bill {
+    &-head {
+      font-size: 1rem;
+    }
+    &-coupon {
+      &-input {
+        font-size: 0.75rem;
+        padding-left: 0.5rem;
+        width: 60%;
+      }
+    }
+    &-btn {
+      width: 40%;
+    }
+
+    &-data {
+      &-txt {
+        font-size: 0.85rem;
+        &-dark {
+          font-size: 0.85rem;
+        }
+      }
+      &-amt {
+        font-size: 0.85rem;
+        &-dark {
+          font-size: 0.85rem;
+        }
+      }
     }
   }
 }
