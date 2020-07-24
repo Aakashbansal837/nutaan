@@ -9,13 +9,15 @@
     margin: 1.5rem 0rem;
     border-radius: 0.5rem;
     &-img {
+      height: 100%;
+      width: 100%;
       @include max-ht-wd($ht: 13.5rem, $wd: 10.125rem);
       border-bottom-left-radius: 0.5rem;
       border-top-left-radius: 0.5rem;
     }
 
     &-data {
-      height: 11rem;
+      max-height: 11rem;
       padding-top: 1.5rem;
 
       &-heading {
@@ -92,7 +94,6 @@
 .bill {
   margin-top: 1.5rem;
   border: $border-card;
-  // height: 34.125rem;
   border-radius: 0.5rem;
   background-color: $color-white;
   &-head {
@@ -102,12 +103,17 @@
   }
   &-coupon {
     border: $border-card;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5rem;
     &-input {
       border: hidden;
       height: 100%;
       width: 70%;
       font-size: 1rem;
       padding-left: 1rem;
+      &::placeholder {
+        opacity: $opacity-mid;
+      }
     }
   }
   &-btn {
@@ -151,9 +157,14 @@
 @media only screen and (max-width: 600px) {
   .shopping {
     &-normal {
+      &-img {
+        border-bottom-left-radius: 0rem;
+        @include max-ht-wd($ht: 8rem, $wd: 6rem);
+      }
       &-data {
+        padding-top: 0.2rem;
         &-heading {
-          font-size: 1rem;
+          font-size: 0.875rem;
         }
         &-disc {
           font-size: 0.75rem;
@@ -162,13 +173,15 @@
           text-overflow: ellipsis !important;
         }
         &-choice {
+          margin-top: 0.5rem;
+
           &-txt {
             font-size: 0.75rem;
           }
         }
 
         &-prc {
-          margin-top: 1.8rem;
+          margin-top: 0.8rem;
         }
         &-price {
           font-size: 1rem;
@@ -188,6 +201,9 @@
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   .shopping {
     &-normal {
+      &-img {
+        border-bottom-left-radius: 0rem;
+      }
       &-data {
         &-heading {
           font-size: 1.1rem;
