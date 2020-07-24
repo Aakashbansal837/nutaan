@@ -1,0 +1,12 @@
+.shopping {
+  &-divider {
+    border-bottom: 0.75px solid rgba(33, 42, 57, 0.25) !important;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    &-2 {
+      border-bottom: 0.75px dashed rgba(33, 42, 57, 0.25) !important;
+      margin-top: 1rem;
+      opacity: $opacity-mid;
+    }
+  }
+}
