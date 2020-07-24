@@ -6,10 +6,10 @@ const NormalCard = ({ data }) => {
     <div className="shopping-normal">
       <div className="container">
         <div className="row">
-          <div className="col-4 col-sm-3 col-md-3 col-lg-3 px-0">
+          <div className="col-3 col-sm-3 col-md-3 col-lg-3 px-0">
             <img className="shopping-normal-img" src={data.img} alt="item" />
           </div>
-          <div className="col-8 col-sm-8 col-md-9 col-lg-9">
+          <div className="col-9 col-sm-9 col-md-9 col-lg-9 px-0">
             <div className="shopping-normal-data">
               <div className="container">
                 <div className="row">
