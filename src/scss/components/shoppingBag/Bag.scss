@@ -59,36 +59,6 @@
       }
     }
   }
-
-  &-divider {
-    border-bottom: 0.75px solid rgba(33, 42, 57, 0.25) !important;
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    &-2 {
-      border-bottom: 0.75px dashed rgba(33, 42, 57, 0.25) !important;
-      margin-top: 1rem;
-      opacity: $opacity-mid;
-    }
-  }
-  &-btn {
-    &-move {
-      color: $color-red !important;
-      border-radius: 0rem !important;
-      height: 3.5rem;
-      width: 100%;
-      font-size: 1rem;
-      font-weight: $weight-mid;
-      border-bottom-left-radius: 0.5rem !important;
-    }
-    &-remove {
-      height: 3.5rem;
-      border-radius: 0rem !important;
-      width: 100%;
-      font-size: 1rem;
-      font-weight: $weight-mid;
-      border-bottom-right-radius: 0.5rem !important;
-    }
-  }
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -200,14 +170,6 @@
         &-prevP {
           font-size: 0.875rem;
         }
-      }
-    }
-    &-btn {
-      &-move {
-        height: 2.3rem;
-      }
-      &-remove {
-        height: 2.3rem;
       }
     }
   }
