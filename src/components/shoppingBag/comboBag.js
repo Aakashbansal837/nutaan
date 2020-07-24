@@ -4,7 +4,7 @@ import BillingCard from "./BillingCard";
 import ShoppingBanner from "./shoppingBanner";
 import ComboCard from "./comboCard";
 
-const NormalBag = ({ combo, normal }) => {
+const ComboBG = ({ combo, normal }) => {
   var [comboBag, changeComboBag] = React.useState(combo);
   var [bag, changeBag] = React.useState(normal);
   return (
@@ -34,4 +34,4 @@ const NormalBag = ({ combo, normal }) => {
   );
 };
 
-export default NormalBag;
+export default ComboBG;
