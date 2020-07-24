@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import NormalBag from "../components/shoppingBag/comboBag";
+import ComboBG from "../components/shoppingBag/comboBag";
 import Navbar from "../components/common/navbar";
 import Footer from "../components/common/footer";
 import Img1 from "../images/Wishlist/1.png";
@@ -13,26 +13,30 @@ class ComboBag extends React.Component {
     super(props);
     this.state = {
       combo: [
-        [
-          {
-            name: "Rust Orange",
-            img: Img7,
-            disc: "Women Pink Handblock Bird Print Straight Kurta",
-            size: "M",
-            qty: "1",
-            price: "₹ 1799",
-            prevP: "₹ 1999",
-          },
-          {
-            name: "Rust Orange",
-            img: Img9,
-            disc: "Women Pink Handblock Bird Print Straight Kurta",
-            size: "M",
-            qty: "1",
-            price: "₹ 1799",
-            prevP: "₹ 1999",
-          },
-        ],
+        {
+          name: "Chic college combo",
+          disc: "Women Pink Handblock Bird Print Straight Kurta",
+          price: "₹ 1799",
+          prevP: "₹ 1999",
+          color: "Purple Haze",
+          size: "Medium",
+          pack: [
+            {
+              name: "Rust Orange",
+              img: Img7,
+              disc: "Women Pink Handblock Bird Print Straight Kurta",
+              size: "M",
+              price: "₹ 1799",
+            },
+            {
+              name: "Rust Orange",
+              img: Img9,
+              disc: "Women Pink Handblock Bird Print Straight Kurta",
+              size: "M",
+              price: "₹ 1799",
+            },
+          ],
+        },
       ],
       normal: [
         {
@@ -52,7 +56,7 @@ class ComboBag extends React.Component {
     return (
       <div>
         <Navbar />
-        <NormalBag combo={this.state.combo} normal={this.state.normal} />
+        <ComboBG combo={this.state.combo} normal={this.state.normal} />
         <Footer />
       </div>
     );
