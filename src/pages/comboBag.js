@@ -3,10 +3,8 @@ import { connect } from "react-redux";
 import ComboBG from "../components/shoppingBag/comboBag";
 import Navbar from "../components/common/navbar";
 import Footer from "../components/common/footer";
-import Img1 from "../images/Wishlist/1.png";
 import Img9 from "../images/Wishlist/9.png";
 import Img7 from "../images/Wishlist/7.png";
-import Img4 from "../images/Wishlist/4.png";
 
 class ComboBag extends React.Component {
   constructor(props) {
