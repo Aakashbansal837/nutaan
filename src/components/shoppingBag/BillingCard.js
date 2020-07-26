@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 
-const NormalCard = ({ item }) => {
+const NormalCard = ({ PlaceOrderClicked, OrderPlaced }) => {
   return (
     <div className="bill">
       <div className="container">
@@ -65,13 +65,18 @@ const NormalCard = ({ item }) => {
                 </div>
                 <div className="col-12">
                   <div className="bill-btn-div">
-                    <Button
-                      className="bill-btn-2"
-                      color="secondary"
-                      variant="contained"
-                    >
-                      Place Order
-                    </Button>
+                    {OrderPlaced ? (
+                      ""
+                    ) : (
+                      <Button
+                        className="bill-btn-2"
+                        color="secondary"
+                        variant="contained"
+                        onClick={() => PlaceOrderClicked()}
+                      >
+                        Place Order
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
