@@ -30,14 +30,27 @@ class ShoppingBag extends React.Component {
           prevP: "₹ 1999",
         },
       ],
+      orderPlaced: true,
     };
   }
+
+  PlaceOrderClicked = () => {
+    this.setState({ orderPlaced: true });
+  };
+  ChangeOrderClicked = () => {
+    this.setState({ orderPlaced: false });
+  };
 
   render() {
     return (
       <div>
         <Navbar />
-        <NormalBag items={this.state.data} />
+        <NormalBag
+          items={this.state.data}
+          ChangeOrderClicked={() => this.ChangeOrderClicked()}
+          PlaceOrderClicked={() => this.PlaceOrderClicked()}
+          OrderPlaced={this.state.orderPlaced}
+        />
         <Footer />
       </div>
     );
