@@ -2,12 +2,15 @@ import React from "react";
 import NormalCard from "./normalCard";
 import BillingCard from "./BillingCard";
 import ShoppingBanner from "./shoppingBanner";
-import AddressCard from "./AddressCard";
+import AddressCard from "./AddressCard/index";
 const NormalBag = ({
   items,
   ChangeOrderClicked,
   PlaceOrderClicked,
   OrderPlaced,
+  addr,
+  ChangeSelectedAddress,
+  selectedAddress,
 }) => {
   var [bag, changeBag] = React.useState(items);
   return (
@@ -22,6 +25,9 @@ const NormalBag = ({
               <AddressCard
                 ChangeOrderClicked={() => ChangeOrderClicked()}
                 count={bag.length}
+                addr={addr}
+                ChangeSelectedAddress={ChangeSelectedAddress}
+                selectedAddress={selectedAddress}
               />
             ) : (
               <div className="column">
