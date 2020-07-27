@@ -16,10 +16,10 @@ const AddressStack = ({
     <div className="shopping-addr-adr">
       <div className="container">
         <div className="row">
-          <div className="col-1">
+          <div className="col-2 col-sm-1 col-md-1 col-lg-1">
             <div className="shopping-addr-adr-nmbr">2</div>
           </div>
-          <div className="col-11">
+          <div className="col-10 col-sm-11 col-md-11 col-lg-11">
             <div className="shopping-addr-adr-main-head">SELECT ADDRESS</div>
           </div>
           {addr.map((ad, index) => {
