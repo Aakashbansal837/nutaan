@@ -1,0 +1,91 @@
+$custom-breakpoints: (
+  ms: $ns-bp-ms,
+  //--mobile small
+    mm: $ns-bp-mm,
+  //--mobile medium
+    ml: $ns-bp-ml,
+  //--mobile large
+    xs: $ns-bp-xs,
+  //--extra small
+    sm: $ns-bp-sm,
+  //--small
+    md: $ns-bp-md,
+  //--medium
+    lg: $ns-bp-lg,
+  //--large
+    xl: $ns-bp-xl,
+  //--extra large
+);
+@mixin media-above($bp, $breakpoints: $custom-breakpoints) {
+  @if map-has-key($breakpoints, $bp) {
+    $bp-value: map-get($breakpoints, $bp);
+    @media (min-width: $bp-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$bp}.';
+  }
+}
+
+@mixin media-below($bp, $breakpoints: $custom-breakpoints) {
+  @if map-has-key($breakpoints, $bp) {
+    $bp-value: map-get($breakpoints, $bp);
+    @media (max-width: ($bp-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$bp}.';
+  }
+}
+
+@mixin media-between($lower, $upper, $breakpoints: $custom-breakpoints) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  } @else {
+    @if (map-has-key($breakpoints, $lower) == false) {
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+    @if (map-has-key($breakpoints, $upper) == false) {
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
+  }
+}
+
+// -----footer mixins ------//
+
+@mixin max-ht-wd($ht, $wd) {
+  max-width: $wd;
+  max-height: $ht;
+  height: 100%;
+  width: 100%;
+}
+@mixin footer-heading() {
+  font-family: $primary-font;
+  color: $color-black;
+  font-size: $size-ftr-head;
+  font-weight: $weight-mid;
+  opacity: $opacity-heavy;
+  padding-bottom: 0.5rem;
+}
+@mixin footer-text() {
+  font-family: $primary-font;
+  color: $color-ftr-txt;
+  font-size: $size-ftr-txt;
+  font-weight: $weight-light;
+  opacity: $opacity-mid;
+}
+
+@mixin PaddingNav() {
+  padding-top: 5rem;
+}
+
+@mixin Component-heading() {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: $weight-mid;
+  opacity: 0.95;
+}

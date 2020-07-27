@@ -1,0 +1,65 @@
+.shopping-pmt {
+  border: $border-card;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem 0rem 0rem 0rem;
+
+  &-nmbr {
+    color: $color-white;
+    background: $color-red;
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 2rem;
+    height: 2rem;
+    width: 2rem;
+  }
+  &-head {
+    font-size: 1rem;
+    font-weight: $weight-mid;
+    color: $color-red;
+    line-height: 2rem;
+  }
+
+  &-main {
+    height: 21.06rem;
+    background-color: rgba(206, 206, 206, 0.5);
+    opacity: $opacity-heavy;
+  }
+
+  &-opt {
+    width: 100%;
+    height: 3.75rem;
+    // border: $border-card;
+
+    &-btn {
+      width: 100%;
+      height: 100%;
+      border-radius: 0rem !important;
+      background-color: rgba(206, 206, 206, 0.5);
+      &-1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 0rem !important;
+        background-color: $color-white !important;
+      }
+    }
+  }
+
+  &-data {
+    height: 17rem;
+    padding: 4rem;
+
+    &-btn {
+      width: 100%;
+    }
+
+    &-cont {
+      width: 100%;
+      &-btn {
+        background-color: $color-red !important;
+        width: 90%;
+        margin-top: 3rem;
+      }
+    }
+  }
+}

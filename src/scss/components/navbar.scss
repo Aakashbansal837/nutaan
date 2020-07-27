@@ -1,0 +1,237 @@
+.nvbr {
+  position: fixed !important;
+  width: 100%;
+  z-index: 980;
+  background-color: $color-white;
+  box-shadow: 0 4px 8px 0 rgba(33, 42, 57, 0.15);
+
+  &-container {
+    margin: 0 1rem 0 4rem;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-logo {
+    font-family: $primary-font !important;
+    @include max-ht-wd($ht: 1.375rem, $wd: 6.375rem);
+    min-width: 6rem;
+    min-height: 2.3rem;
+  }
+
+  &-menu {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-link {
+    font-weight: $weight-mid;
+    opacity: $opacity-heavy;
+    font-size: 1rem;
+    padding: 1.5rem 1.5rem;
+    color: $color-black;
+    margin-right: 1rem;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &-srch {
+    border: 0rem;
+    border-radius: 1.25rem;
+    font-size: 1rem;
+    opacity: $opacity-mid;
+    @include max-ht-wd($ht: 2.5rem, $wd: 25rem);
+    min-width: 25rem;
+    min-height: 2.5rem;
+    background-color: $color-srch-bg;
+    padding-left: 1rem;
+
+    &:focus {
+      transition: all 250ms ease-in;
+      border: 0.1rem solid $color-dark;
+    }
+  }
+  &-bag {
+    margin-right: 0.5rem;
+    opacity: $opacity-heavy;
+  }
+  &-bag-txt {
+    padding-left: 0rem;
+  }
+
+  &-usr-img {
+    height: 3rem;
+  }
+}
+
+.nvbr-sm {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &-cl {
+    height: 1.3rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  &-active {
+    left: 0px;
+    animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  &-non-active {
+    left: -20rem;
+    animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  &-slider {
+    animation: navbar-fade-1 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  &-slider-2 {
+    animation: navbar-fade-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  &-data {
+    left: 0rem;
+    height: 100vh;
+    background-color: $color-white;
+    position: absolute;
+    width: 65%;
+    background-color: $color-slider;
+    clip-path: polygon(0 0, 100% 0, 45% 100%, 0% 100%);
+    z-index: 100;
+  }
+  &-bg {
+    opacity: 0.6;
+    left: 0rem;
+    height: 100vh;
+    background-color: $color-white;
+    position: absolute;
+    width: 100%;
+    background-color: $color-slider;
+    z-index: 99;
+  }
+  &-menu {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+      margin-top: 1rem;
+    }
+  }
+
+  &-link {
+    font-weight: $weight-mid;
+    font-size: 1.1rem;
+    padding: 1.5rem 1.5rem;
+    color: $color-white;
+    margin-right: 1rem;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin link-style($color) {
+  text-decoration: none;
+  font-family: $primary-font;
+  color: $color;
+  text-align: center;
+}
+
+@keyframes slide-in-left {
+  0% {
+    display: block;
+    transform: translateX(-20rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-20rem);
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes navbar-fade-1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  1% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes navbar-fade-2 {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .nvbr {
+    &-srch {
+      min-width: 10rem;
+    }
+    &-bag {
+      margin-right: 0rem;
+    }
+    &-bag-txt {
+      padding-left: 1rem;
+    }
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1118px) {
+  .nvbr {
+    &-srch {
+      min-width: 20rem;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .nvbr {
+    &-srch {
+      margin: 0rem 2rem 0rem 7rem;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.shopping {
+  &-btn {
+    &-move {
+      color: $color-red !important;
+      border-radius: 0rem !important;
+      height: 3.5rem;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: $weight-mid;
+      border-bottom-left-radius: 0.5rem !important;
+    }
+    &-remove {
+      height: 3.5rem;
+      border-radius: 0rem !important;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: $weight-mid;
+      border-bottom-right-radius: 0.5rem !important;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .shopping {
+    &-btn {
+      &-move {
+        height: 2.3rem;
+      }
+      &-remove {
+        height: 2.3rem;
+      }
+    }
+  }
+}
