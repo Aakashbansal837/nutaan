@@ -30,7 +30,7 @@ class ShoppingBag extends React.Component {
           prevP: "₹ 1999",
         },
       ],
-      orderPlaced: true,
+      orderPlaced: false,
       addr: [
         {
           name: "Aakash",
