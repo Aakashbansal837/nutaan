@@ -3,6 +3,8 @@ import { Button, Radio } from "@material-ui/core";
 import MyOrders from "./myOrders";
 import AddressStack from "./addressStack";
 import SelectedAddrCard from "./selectedAddrCard";
+import Payment from "./payment";
+import PaymentMode from "./paymentMode";
 
 const AddressCard = ({
   ChangeOrderClicked,
@@ -39,6 +41,19 @@ const AddressCard = ({
                 AddressValueSelected={AddressValueSelected}
               />
             )}
+          </div>
+
+          {!addrSelected ? (
+            <div className="col-12 px-0">
+              <div className="shopping-addr-newAdd">
+                <Button className="shopping-addr-newAdd-btn" color="secondary">
+                  Add new Address
+                </Button>
+              </div>
+            </div>
+          ) : null}
+          <div className="col-12 px-0">
+            {addrSelected ? <PaymentMode /> : <Payment />}
           </div>
         </div>
       </div>
