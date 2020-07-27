@@ -13,7 +13,7 @@ const AddressCard = ({
   ChangeSelectedAddress,
   selectedAddress,
 }) => {
-  const [addrSelected, addrSelectedChange] = React.useState(false);
+  const [addrSelected, addrSelectedChange] = React.useState(true);
 
   const AddressValueSelected = (value) => {
     addrSelectedChange(value);
