@@ -11,6 +11,7 @@ const NormalBag = ({
   addr,
   ChangeSelectedAddress,
   selectedAddress,
+  LoggedIn,
 }) => {
   var [bag, changeBag] = React.useState(items);
   return (
@@ -41,6 +42,7 @@ const NormalBag = ({
             <BillingCard
               PlaceOrderClicked={() => PlaceOrderClicked()}
               OrderPlaced={OrderPlaced}
+              LoggedIn={LoggedIn}
             />
           </div>
           <div className="col-12 ">
