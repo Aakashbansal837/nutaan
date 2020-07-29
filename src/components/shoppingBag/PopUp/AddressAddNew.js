@@ -3,7 +3,7 @@ import { Button } from "@material-ui/core";
 
 const AddressPopUpAddNew = ({ PlaceOrderClicked }) => {
   return (
-    <div>
+    <div style={{ height: "100%" }}>
       <Button
         className="shopping-addr-newAdd-btn"
         data-toggle="modal"
@@ -44,89 +44,82 @@ const AddressPopUpAddNew = ({ PlaceOrderClicked }) => {
               <div className="container">
                 <div className="row">
                   <div className="col-12 px-0">
-                    <div className="popup-login-body">
+                    <div className="popup-addr-data-1">
+                      <span className="popup-addr-data-head">Contact Info</span>
+                    </div>
+                  </div>
+                  <div className="col-12 px-0">
+                    <div className="popup-addr-data">
                       <input
-                        className="popup-login-input"
-                        placeholder="Phone or Email Id"
+                        className="popup-addr-data-input"
                         type="text"
+                        placeholder="Full Name"
                       />
                     </div>
                   </div>
                   <div className="col-12 px-0">
-                    <div className="popup-login-body">
+                    <div className="popup-addr-data">
                       <input
-                        className="popup-login-input"
-                        placeholder="Password"
-                        type="password"
+                        className="popup-addr-data-input"
+                        type="text"
+                        placeholder="Contact Number"
                       />
                     </div>
                   </div>
                   <div className="col-12 px-0">
-                    <div className="popup-login-body">
-                      <Button
-                        className="popup-login-btn-1"
-                        color="secondary"
-                        variant="contained"
-                        onClick={() => PlaceOrderClicked()}
-                        data-dismiss="modal"
-                      >
-                        Login
-                      </Button>
+                    <div className="popup-addr-data-1">
+                      <span className="popup-addr-data-head">Address</span>
                     </div>
                   </div>
                   <div className="col-12 px-0">
-                    <div className="popup-login-body">
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-4 px-0">
-                            <div className="popup-login-strike"></div>
-                          </div>
-                          <div className="col-4 px-0">
-                            <div className="popup-login-strike-txt">
-                              or Login using
-                            </div>
-                          </div>
-                          <div className="col-4 px-0">
-                            <div className="popup-login-strike"></div>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="popup-addr-data">
+                      <input
+                        className="popup-addr-data-input"
+                        type="text"
+                        placeholder="Pincode"
+                      />
                     </div>
                   </div>
-
-                  <div className="col-12 col-sm-12 col-md-6 col-lg-6 px-0">
-                    <div className="popup-login-body">
-                      <Button
-                        className="popup-login-btn-2"
-                        color="primary"
-                        variant="contained"
-                        onClick={() => PlaceOrderClicked()}
-                        data-dismiss="modal"
-                      >
-                        FaceBook
-                      </Button>
+                  <div className="col-12 px-0">
+                    <div className="popup-addr-data-2">
+                      <textarea
+                        className="popup-addr-data-textarea"
+                        type="text"
+                        placeholder="Full Address"
+                      ></textarea>
                     </div>
                   </div>
-                  <div className="col-12 col-sm-12 col-md-6 col-lg-6 px-0">
-                    <div className="popup-login-body">
+                  <div className="col-6 pl-0">
+                    <div className="popup-addr-data">
+                      <input
+                        className="popup-addr-data-input"
+                        type="text"
+                        placeholder="City"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-6 px-0">
+                    <div className="popup-addr-data">
+                      <input
+                        className="popup-addr-data-input"
+                        type="text"
+                        placeholder="State"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-12 px-0">
+                    <div className="popup-addr-data">
                       <Button
-                        className="popup-login-btn-3"
+                        className="popup-addr-data-btn"
                         color="secondary"
-                        variant="outlined"
-                        onClick={() => PlaceOrderClicked()}
-                        data-dismiss="modal"
+                        variant="contained"
                       >
-                        Google
+                        Add Address
                       </Button>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="modal-footer">
-              <span className="popup-login-ftr-fp">Forgot Password</span>
-              <span className="popup-login-ftr-newusr">New here?</span>
-              <span className="popup-login-ftr-create">Create an account</span>
             </div>
           </div>
         </div>
