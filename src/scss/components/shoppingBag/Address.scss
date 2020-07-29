@@ -1,0 +1,136 @@
+@mixin ShoppingStyling() {
+  border: $border-card;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem 0rem;
+}
+
+.shopping-addr {
+  &-ordr {
+    @include ShoppingStyling();
+    &-nmbr {
+      color: $color-red;
+      background: rgba(237, 105, 95, 0.1);
+      border-radius: 1rem;
+      text-align: center;
+      margin-top: 0.5rem;
+      line-height: 2rem;
+      height: 2rem;
+      width: 2rem;
+    }
+    &-main {
+      &-head {
+        font-size: 1rem;
+        font-weight: $weight-mid;
+      }
+      &-txt {
+        font-size: 0.875rem;
+      }
+    }
+    &-btn {
+      margin-top: 0.3rem;
+      &-1 {
+        color: $color-red !important;
+        height: 100%;
+        width: 100%;
+        border: $border-card !important;
+      }
+    }
+  }
+  &-adr {
+    @include ShoppingStyling();
+
+    &-nmbr {
+      color: $color-white;
+      background: $color-red;
+      border-radius: 1rem;
+      text-align: center;
+      line-height: 2rem;
+      height: 2rem;
+      width: 2rem;
+    }
+
+    &-main {
+      &-head {
+        font-size: 1rem;
+        font-weight: $weight-mid;
+        color: $color-red;
+        line-height: 2rem;
+      }
+    }
+
+    &-dt {
+      font-size: 0.875rem;
+      width: 100%;
+      margin-top: 1.5rem;
+
+      &-name {
+        font-size: 1rem;
+        font-weight: $weight-mid;
+      }
+      &-phone {
+        font-size: 0.875rem;
+        font-weight: $weight-mid;
+      }
+      &-fullAddr {
+        font-size: 0.875rem;
+        margin-top: 0.875rem;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+      }
+      &-edit {
+        font-size: 0.875rem;
+        font-weight: $weight-mid;
+        text-align: center;
+        color: $color-red;
+        cursor: pointer;
+      }
+
+      &-btn {
+        margin: 1rem 0rem;
+        width: 10rem;
+        height: 2.5rem;
+        button {
+          background-color: $color-red !important;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &-newAdd {
+    margin-top: 1.5rem;
+    border: $border-card-dashed;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 3rem;
+    &-btn {
+      width: 100%;
+      height: 100%;
+      color: $color-red !important;
+    }
+  }
+
+  &-pay {
+    @include ShoppingStyling();
+
+    &-nmbr {
+      color: $color-red;
+      background: rgba(237, 105, 95, 0.1);
+      border-radius: 1rem;
+      text-align: center;
+      line-height: 2rem;
+      height: 2rem;
+      width: 2rem;
+    }
+
+    &-main {
+      &-head {
+        font-size: 1rem;
+        font-weight: $weight-mid;
+        line-height: 2rem;
+        opacity: $opacity-mid;
+      }
+    }
+  }
+}
