@@ -1,0 +1,87 @@
+.modal-dialog {
+  max-width: 25rem;
+}
+
+.popup {
+  &-login {
+    &-head {
+      font-size: 20px;
+      font-weight: $weight-mid;
+      &-sub {
+        font-size: 0.875rem;
+      }
+    }
+    &-body {
+      width: 100%;
+      height: 2.5rem;
+      margin: 0.5rem 0rem;
+    }
+    &-input {
+      height: 100%;
+      width: 100%;
+      border: $border-card;
+      font-size: 0.875rem;
+      padding-left: 1rem;
+      &::placeholder {
+        opacity: $opacity-mid;
+      }
+    }
+    &-btn {
+      &-1 {
+        width: 100%;
+        background-color: $color-red !important;
+        height: 100%;
+      }
+      &-2 {
+        width: 95%;
+        height: 100%;
+      }
+      &-3 {
+        width: 95%;
+        color: $color-red !important;
+        height: 100%;
+        float: right;
+      }
+    }
+    &-strike {
+      height: 0rem;
+      width: 100%;
+      margin-top: 0.5rem;
+      border: $border-card;
+
+      &-txt {
+        font-size: 0.875rem;
+        text-align: center;
+      }
+    }
+    &-ftr {
+      &-fp {
+        color: $color-red !important;
+        margin-right: auto;
+        font-size: 0.875rem;
+      }
+      &-newusr {
+        font-size: 0.875rem;
+      }
+      &-create {
+        color: $color-red !important;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .popup {
+    &-login {
+      &-btn {
+        &-2 {
+          width: 100%;
+        }
+        &-3 {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
