@@ -25,9 +25,19 @@ const LoginCheck = () => {
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h3 className="modal-title" id="exampleModalLongTitle">
-                Login To Continue
-              </h3>
+              <div>
+                <span
+                  className="modal-title popup-login-head"
+                  id="exampleModalLongTitle"
+                >
+                  Login To Continue
+                </span>
+                <br />
+                <span className="popup-login-head-sub">
+                  We need this info to deliver your order
+                </span>
+              </div>
+
               <button
                 type="button"
                 className="close"
@@ -37,18 +47,87 @@ const LoginCheck = () => {
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div className="modal-body">...</div>
+            <div className="modal-body">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12 px-0">
+                    <div className="popup-login-body">
+                      <input
+                        className="popup-login-input"
+                        placeholder="Phone or Email Id"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-12 px-0">
+                    <div className="popup-login-body">
+                      <input
+                        className="popup-login-input"
+                        placeholder="Password"
+                        type="password"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-12 px-0">
+                    <div className="popup-login-body">
+                      <Button
+                        className="popup-login-btn-1"
+                        color="secondary"
+                        variant="contained"
+                      >
+                        Login
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="col-12 px-0">
+                    <div className="popup-login-body">
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-4 px-0">
+                            <div className="popup-login-strike"></div>
+                          </div>
+                          <div className="col-4 px-0">
+                            <div className="popup-login-strike-txt">
+                              or Login using
+                            </div>
+                          </div>
+                          <div className="col-4 px-0">
+                            <div className="popup-login-strike"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-12 col-sm-12 col-md-6 col-lg-6 px-0">
+                    <div className="popup-login-body">
+                      <Button
+                        className="popup-login-btn-2"
+                        color="primary"
+                        variant="contained"
+                      >
+                        FaceBook
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="col-12 col-sm-12 col-md-6 col-lg-6 px-0">
+                    <div className="popup-login-body">
+                      <Button
+                        className="popup-login-btn-3"
+                        color="secondary"
+                        variant="outlined"
+                      >
+                        Google
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" className="btn btn-primary">
-                Save changes
-              </button>
+              <span className="popup-login-ftr-fp">Forgot Password</span>
+              <span className="popup-login-ftr-newusr">New here?</span>
+              <span className="popup-login-ftr-create">Create an account</span>
             </div>
           </div>
         </div>
