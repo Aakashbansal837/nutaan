@@ -1,1 +1,16 @@
+.modal-dialog {
+  max-width: 25rem;
+}
+.modal-content {
+  border: $border-card;
+  border-radius: 0.5rem;
+}
+.modal-header {
+  border-bottom: 0 none;
+}
+
+.modal-footer {
+  border-top: 0 none;
+}
+
 @import "./LoginCheck.scss";
