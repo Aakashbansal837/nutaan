@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 
-const LoginCheck = () => {
+const LoginCheck = ({ PlaceOrderClicked }) => {
   return (
     <div>
       <Button
@@ -74,6 +74,8 @@ const LoginCheck = () => {
                         className="popup-login-btn-1"
                         color="secondary"
                         variant="contained"
+                        onClick={() => PlaceOrderClicked()}
+                        data-dismiss="modal"
                       >
                         Login
                       </Button>
@@ -105,6 +107,8 @@ const LoginCheck = () => {
                         className="popup-login-btn-2"
                         color="primary"
                         variant="contained"
+                        onClick={() => PlaceOrderClicked()}
+                        data-dismiss="modal"
                       >
                         FaceBook
                       </Button>
@@ -116,6 +120,8 @@ const LoginCheck = () => {
                         className="popup-login-btn-3"
                         color="secondary"
                         variant="outlined"
+                        onClick={() => PlaceOrderClicked()}
+                        data-dismiss="modal"
                       >
                         Google
                       </Button>
