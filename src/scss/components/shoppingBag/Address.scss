@@ -134,3 +134,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .shopping-addr {
+    &-adr {
+      &-dt {
+        &-edit {
+          padding-top: 1.5rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
