@@ -40,23 +40,21 @@ const NormalCard = ({ data }) => {
                   <div className="col-12 ">
                     <div className="shopping-divider" />
                   </div>
-                  <div className="d-none d-md-block col-md-7 col-lg-7 pr-0">
-                    <Button className="shopping-btn-move">
-                      MOVE TO WISHLIST
-                    </Button>
+                  <div className="d-none d-md-block col-md-6 col-lg-4 pr-0">
+                    <div className="shopping-btn-move">MOVE TO WISHLIST</div>
                   </div>
-                  <div className="d-none d-md-block col-md-5 col-lg-5 pl-0">
-                    <Button className="shopping-btn-remove">Remove</Button>
+                  <div className="d-none d-md-block col-md-3 col-lg-3 pl-0">
+                    <div className="shopping-btn-remove">Remove</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="col-6 d-block d-md-none px-0">
-            <Button className="shopping-btn-move">MOVE TO WISHLIST</Button>
+            <div className="shopping-btn-move">MOVE TO WISHLIST</div>
           </div>
           <div className="col-6 d-block d-md-none px-0">
-            <Button className="shopping-btn-remove">Remove</Button>
+            <div className="shopping-btn-remove">Remove</div>
           </div>
         </div>
       </div>
