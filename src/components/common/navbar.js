@@ -70,7 +70,7 @@ const Navbar = () => {
       <div className="d-sm-block d-md-none">
         <div className="container nvbr-sm">
           <div className="row">
-            <div className="col-2">
+            {/* <div className="col-2">
               <span
                 onClick={() => {
                   setActive(!active);
@@ -79,8 +79,8 @@ const Navbar = () => {
               >
                 <NbCollapse className="nvbr-sm-cl" />
               </span>
-            </div>
-            <div className="col-8">
+            </div> */}
+            <div className="col-12">
               <center>
                 <a href="/home">
                   <Logo className="nvbr-logo" />
