@@ -26,7 +26,7 @@
       }
       &-disc {
         font-size: 1rem;
-        font-weight: $weight-mid;
+        font-weight: $weight-light;
         opacity: $opacity-mid;
       }
       &-choice {
@@ -64,7 +64,13 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .shopping {
+    &-heading {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+    }
     &-normal {
+      margin: 0.75rem 0rem;
+
       &-img {
         border-bottom-left-radius: 0rem;
         @include max-ht-wd($ht: 8rem, $wd: 6rem);
@@ -109,6 +115,8 @@
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   .shopping {
     &-normal {
+      margin: 0.75rem 0rem;
+
       &-img {
         border-bottom-left-radius: 0rem;
       }
