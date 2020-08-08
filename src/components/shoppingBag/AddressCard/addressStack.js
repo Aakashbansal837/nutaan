@@ -29,7 +29,7 @@ const AddressStack = ({
                 <div className="shopping-addr-adr-dt">
                   <div className="container">
                     <div className="row">
-                      <div className="col-1 px-0">
+                      <div className="col-1 px-2">
                         <Radio
                           checked={selectedValue === index.toString()}
                           onChange={(e) => handleChange(e)}
