@@ -1,25 +1,34 @@
 import React from "react";
 import ThreeItemCorousal from "../Corousal/ThreeItem";
-import ProductSpecs from "./ProductSpecs";
+import ComboSpecs from "./ComboSpecs";
 import DeliveryOption from "./DeliveryOption";
 import DoorStepService from "./DoorstepService";
 
-const ProductDisc = ({ item }) => {
+const ComboDisc = ({ item }) => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-12">
-          <div className="product-detail-item-name">{item.name}</div>
+        <div className="col-12 col-sm-12 col-md-7 col-lg-8 pr-0">
+          <div className="combo-detail-item-name">
+            {item.name}{" "}
+            <span className="combo-detail-item-cmb">Combo Product</span>
+          </div>
+          {/* </div>
+        <div className="col-12 col-sm-12 col-md-7 col-lg-8"> */}
+          <div className="combo-detail-item-disc">{item.disc}</div>
         </div>
-        <div className="col-12 col-sm-12 col-md-7 col-lg-8">
-          <div className="product-detail-item-disc">{item.disc}</div>
-        </div>
-        <div className="col-12 col-sm-12 col-md-5 col-lg-4">
-          <div className="product-detail-item-price">
-            <span className="product-detail-item-price-current">
+        <div className="col-12 col-sm-12 col-md-5 col-lg-4 pr-0">
+          <div className="combo-detail-item-right">
+            <span className="combo-detail-item-right-cmb">Combo Price</span>
+            <span className="combo-detail-item-right-cmb-dt ">
+              Saving ₹798 with this combo
+            </span>
+          </div>
+          <div className="combo-detail-item-price">
+            <span className="combo-detail-item-price-current">
               {item.price}
             </span>
-            <span className="product-detail-item-price-prev">
+            <span className="combo-detail-item-price-prev">
               was
               <strong> &nbsp;{item.prevP} &nbsp;</strong>
               before
@@ -31,7 +40,7 @@ const ProductDisc = ({ item }) => {
   );
 };
 
-const Product = ({ item }) => {
+const ComboProduct = ({ item }) => {
   return (
     <div className="product-detail">
       <div className="container">
@@ -44,7 +53,7 @@ const Product = ({ item }) => {
       {/*disc for big screen */}
 
       <div className="d-none d-md-block">
-        <ProductDisc item={item} />
+        <ComboDisc item={item} />
       </div>
       <div className="container">
         <div className="row">
@@ -55,13 +64,13 @@ const Product = ({ item }) => {
       </div>
       {/* disc for smaller screen */}
       <div className="d-block d-md-none">
-        <ProductDisc item={item} />
+        <ComboDisc item={item} />
       </div>
 
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
-            <ProductSpecs data={item} />
+            <ComboSpecs data={item} />
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
             <DeliveryOption ItemColor={item.color} ItemSize={item.size} />
@@ -75,4 +84,4 @@ const Product = ({ item }) => {
   );
 };
 
-export default Product;
+export default ComboProduct;
