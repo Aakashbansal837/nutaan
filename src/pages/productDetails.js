@@ -22,6 +22,21 @@ class ProductDetails extends React.Component {
         material: "Machine Wash",
         season: "Summer",
         fit: "Skinny",
+        color: [
+          "#FF6060",
+          "#77E0C9",
+          "#79CCEC",
+          "#FF9956",
+          "#FF9956",
+          "#FF9956",
+          "#FF9956",
+        ],
+        size: [
+          ["s", "5"],
+          ["m", "2"],
+          ["l", "0"],
+          ["xl", "10"],
+        ],
       },
     };
   }
