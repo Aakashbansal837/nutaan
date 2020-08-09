@@ -10,8 +10,8 @@ class ComboDetails extends React.Component {
     super(props);
     this.state = {
       item: {
-        name: "Rust Orange",
-        disc: "Women Pink Handblock Bird Print Straight Kurta",
+        name: "Western Bridal Combo",
+        disc: "Red blouse, Embroidered Lehenga, Floral Dupatta",
         price: "₹ 1699",
         prevP: "₹ 2199",
         neck: "Round Neck",
