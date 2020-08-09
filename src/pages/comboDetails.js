@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import Product from "../components/productDetails";
 import Navbar from "../components/common/navbar";
 import Footer from "../components/common/footer";
+import ComboProduct from "../components/productDetails/Combo";
 
 class ComboDetails extends React.Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class ComboDetails extends React.Component {
     return (
       <div>
         <Navbar />
-        <Product item={this.state.item} />
+        <ComboProduct item={this.state.item} />
         <Footer />
       </div>
     );
