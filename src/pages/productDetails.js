@@ -12,6 +12,16 @@ class ProductDetails extends React.Component {
         disc: "Women Pink Handblock Bird Print Straight Kurta",
         price: "₹ 1699",
         prevP: "₹ 2199",
+        neck: "Round Neck",
+        shape: "Straight",
+        length: "Calf Length",
+        sleeve: "No Sleeves",
+        slit: "Sleeves",
+        print: "Ethnic Motifs",
+        occasion: "Daily",
+        material: "Machine Wash",
+        season: "Summer",
+        fit: "Skinny",
       },
     };
   }
