@@ -36,7 +36,7 @@ const Product = ({ item }) => {
     <div className="product-detail">
       <div className="container">
         <div className="row">
-          <div className="col-12 ">
+          <div className="d-none d-md-block col-12 ">
             <div className="product-detail-stepper">{`Women  >  Ethnic Wear  >  Designer Wear  >  Designer Saree`}</div>
           </div>
         </div>
