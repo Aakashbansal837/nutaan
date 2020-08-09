@@ -137,7 +137,7 @@ const DeliveryOption = ({ ItemColor, ItemSize }) => {
                 <input
                   type="text"
                   className="bill-coupon-input"
-                  placeholder="Enter code here"
+                  placeholder="Enter Pincode"
                 />
                 <Button color="Secondary" className="bill-btn">
                   Apply
