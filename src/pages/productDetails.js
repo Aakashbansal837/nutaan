@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import Product from "../components/productDetails";
 import Navbar from "../components/common/navbar";
 import Footer from "../components/common/footer";
@@ -51,4 +53,9 @@ class ProductDetails extends React.Component {
   }
 }
 
-export default ProductDetails;
+const mapStateToProps = (state) => ({
+  loading: state.app.apiLoading,
+});
+const mapDispatchToProps = {};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);
