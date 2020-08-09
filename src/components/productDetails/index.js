@@ -64,7 +64,7 @@ const Product = ({ item }) => {
             <ProductSpecs data={item} />
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
-            <DeliveryOption data={[item.color, item.size]} />
+            <DeliveryOption ItemColor={item.color} ItemSize={item.size} />
           </div>
           <div className="col-12">
             <DoorStepService />
