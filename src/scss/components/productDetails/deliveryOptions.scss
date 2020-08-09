@@ -84,7 +84,7 @@
       font-size: 0.875rem;
       border-bottom-left-radius: 0.2rem;
       border-bottom-right-radius: 0.2rem;
-      background-color: $color-red-light;
+      background-color: $color-red-lighter;
       text-align: center;
       &-none {
         opacity: 0;
@@ -117,7 +117,7 @@
 
   &-offer {
     margin-top: 1rem;
-    background-color: $color-red-light;
+    background-color: $color-red-lighter;
     border: 1px dashed $color-red;
     min-height: 12.5rem;
     border-radius: 0.5rem;
