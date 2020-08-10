@@ -8,7 +8,6 @@ const FiveItemCorousal = ({ images }) => {
     <OwlCarousel
       loop
       margin={10}
-      nav
       autoplay
       autoplayTimeout="1000"
       responsiveClass

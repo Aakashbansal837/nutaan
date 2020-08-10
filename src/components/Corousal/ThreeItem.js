@@ -6,10 +6,9 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 const ThreeItemCorousal = ({ images }) => {
   return (
     <OwlCarousel
-      // className="threeItemCorousal"
+      className="threeItemCorousal"
       loop
       margin={10}
-      nav
       responsiveClass="true"
       autoplay="true"
       autoplayTimeout="2000"
