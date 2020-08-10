@@ -71,7 +71,7 @@ const ComboProduct = ({ item }) => {
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
-            <ComboSpecs data={item} />
+            <ComboSpecs data={item.data} />
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
             <DeliveryOption ItemColor={item.color} ItemSize={item.size} />
