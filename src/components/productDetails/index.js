@@ -3,6 +3,7 @@ import ThreeItemCorousal from "../Corousal/ThreeItem";
 import ProductSpecs from "./ProductSpecs";
 import DeliveryOption from "./DeliveryOption";
 import DoorStepService from "./DoorstepService";
+import FiveItemCorousal from "../Corousal/FiveItem";
 
 const ProductDisc = ({ item }) => {
   return (
@@ -68,6 +69,14 @@ const Product = ({ item }) => {
           </div>
           <div className="col-12">
             <DoorStepService />
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <FiveItemCorousal images={item.images} />
           </div>
         </div>
       </div>
