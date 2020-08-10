@@ -6,6 +6,8 @@ import ComboBag from "./pages/comboBag";
 
 import { Route, BrowserRouter, withRouter } from "react-router-dom";
 import { withSnackbar } from "notistack";
+import ProductDetails from "./pages/productDetails";
+import ComboDetails from "./pages/comboDetails";
 
 function Router(props) {
   return (
@@ -26,6 +28,16 @@ function Router(props) {
         exact
         path="/combo-bag"
         component={() => <ComboBag {...props} />}
+      />
+      <Route
+        exact
+        path="/product-details"
+        component={() => <ProductDetails {...props} />}
+      />
+      <Route
+        exact
+        path="/combo-details"
+        component={() => <ComboDetails {...props} />}
       />
       {/* ------------------ */}
     </BrowserRouter>

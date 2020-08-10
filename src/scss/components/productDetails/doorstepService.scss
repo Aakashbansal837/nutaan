@@ -1,0 +1,94 @@
+@mixin ProductDoorStepSmallStep($wd) {
+  display: inline-block;
+  height: 4rem;
+  font-size: 0.75rem;
+  width: $wd;
+  text-align: center;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.product-detail-doorstep {
+  margin: 2rem 0;
+  border: 1px solid #979797;
+
+  &-head {
+    font-size: 1.125rem;
+    font-weight: $weight-mid;
+    color: $color-red;
+    margin-top: 1rem;
+    text-align: left;
+  }
+  &-disc {
+    font-size: 0.75rem;
+    opacity: $opacity-mid;
+  }
+
+  &-step {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    border-radius: 100%;
+    height: 7rem;
+    width: 7rem;
+    color: $color-red;
+    background-color: $color-red-lighter;
+    padding-top: 1.75rem;
+
+    &-arrow {
+      margin-top: 3.25rem;
+      height: 1rem;
+      margin-left: 0.2rem;
+
+      & i {
+        opacity: $opacity-mid;
+      }
+    }
+  }
+
+  &-smallStep {
+    width: 100%;
+    &-1 {
+      @include ProductDoorStepSmallStep($wd: 30%);
+      border-bottom: 0.75rem solid $color-red-light;
+    }
+    &-2 {
+      @include ProductDoorStepSmallStep($wd: 40%);
+      clip-path: polygon(15% 0%, 85% 0%, 103% 100%, -3% 100%);
+      background-color: $color-red-light;
+    }
+    &-3 {
+      @include ProductDoorStepSmallStep($wd: 30%);
+      border-bottom: 0.75rem solid $color-red-light;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .product-detail-doorstep {
+    background-color: $color-red-lighter;
+    border: 1px solid $color-red;
+    border-radius: 0.5rem;
+
+    &-head {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .product-detail-doorstep {
+    &-step {
+      font-size: 0.85rem;
+      height: 6rem;
+      width: 6rem;
+      margin: 1rem 0;
+      padding-top: 1.5rem;
+
+      &-arrow {
+        margin-top: 2.75rem;
+      }
+    }
+  }
+}

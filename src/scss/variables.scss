@@ -40,6 +40,8 @@ $color-white: #ffffff;
 $color-dark: #353535;
 $color-slider: #353535;
 $color-red: #ed695f;
+$color-red-lighter: rgba(237, 105, 95, 0.06);
+$color-red-light: rgba(237, 105, 95, 0.12);
 $color-srch-bg: rgba(207, 214, 228, 0.12);
 
 $color-ftr-txt: #212a39;
@@ -68,4 +70,6 @@ $color-text-light: #f1f3f1; //light-gray
 
 // card border
 $border-card: 0.8px solid rgba(206, 206, 206, 0.75);
+$border-red: 1px solid rgba(237, 105, 95, 0.5);
+$border-card-red: 2.4px solid rgba(237, 105, 95, 0.5);
 $border-card-dashed: 0.8px dashed rgba(206, 206, 206, 0.75);

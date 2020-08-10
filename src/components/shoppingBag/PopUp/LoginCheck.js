@@ -11,7 +11,7 @@ const LoginCheck = ({ PlaceOrderClicked }) => {
         color="secondary"
         variant="contained"
       >
-        Place Order (NL)
+        Place Order
       </Button>
 
       <div
