@@ -107,6 +107,14 @@
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .combo-detail-spec {
+    &-open {
+      padding-left: 0rem;
+    }
+
+    &-img {
+      height: 6.5rem;
+      width: 4.625rem;
+    }
     &-data {
       &-head {
         font-size: 1rem;
