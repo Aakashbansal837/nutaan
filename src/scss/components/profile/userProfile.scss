@@ -1,3 +1,16 @@
 .profile {
   @include PaddingNav();
+
+  &-header {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: $weight-mid;
+  }
+  &-main {
+    margin: 1rem 0 4rem 0;
+    width: 100%;
+    height: 32.5625rem;
+    border: $border-card;
+    border-radius: 0.5rem;
+  }
 }
