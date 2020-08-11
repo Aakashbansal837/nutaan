@@ -1,10 +1,8 @@
 import React from "react";
-
-const ProfileOptions = () => {
-  return <div></div>;
-};
+import ProfileOptions from "./ProfileOptions";
 
 const Profile = () => {
+  const [active, setActive] = React.useState(1);
   return (
     <div className="profile">
       <div className="container">
@@ -17,9 +15,16 @@ const Profile = () => {
               <div className="container">
                 <div className="row">
                   <div className="col-3 px-0">
-                    <ProfileOptions />
+                    <ProfileOptions
+                      active={active}
+                      setActive={(value) => {
+                        setActive(value);
+                      }}
+                    />
                   </div>
-                  <div className="col-9 "></div>
+                  <div className="col-9 ">
+                    <h1>{active}</h1>
+                  </div>
                 </div>
               </div>
             </div>
