@@ -9,8 +9,58 @@
   &-main {
     margin: 1rem 0 4rem 0;
     width: 100%;
-    height: 32.5625rem;
+    max-height: 32.5625rem;
     border: $border-card;
     border-radius: 0.5rem;
+  }
+  &-options {
+    background-color: $color-card-bg;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    &-option {
+      width: 100%;
+      border: $border-card;
+      padding: 1rem 0;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: $color-black;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &-0 {
+        border-top-left-radius: 0.5rem;
+      }
+
+      &-1 {
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+      &-2 {
+        padding: 1rem 0;
+        border-bottom-left-radius: 0.5rem;
+        &-btn {
+          width: 90%;
+          background-color: $color-red !important;
+        }
+      }
+
+      &-selected {
+        width: 100%;
+        border-right: $border-card;
+        padding: 0.7rem 0;
+        background-color: $color-white;
+        cursor: pointer;
+
+        &-1 {
+          font-size: 1rem;
+          padding: 0.3rem 0 0.3rem 1rem;
+          border-left: 0.2rem solid $color-red;
+        }
+      }
+    }
   }
 }
