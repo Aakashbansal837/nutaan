@@ -14,7 +14,7 @@ const Profile = () => {
             <div className="profile-main">
               <div className="container">
                 <div className="row">
-                  <div className="col-3 px-0">
+                  <div className="col-12 col-sm-12 col-md-3 col-lg-3 px-0">
                     <ProfileOptions
                       active={active}
                       setActive={(value) => {
@@ -22,7 +22,7 @@ const Profile = () => {
                       }}
                     />
                   </div>
-                  <div className="col-9 ">
+                  <div className="d-none d-md-block col-9 ">
                     <h1>{active}</h1>
                   </div>
                 </div>
