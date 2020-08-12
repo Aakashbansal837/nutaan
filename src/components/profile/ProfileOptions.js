@@ -18,8 +18,8 @@ const ProfileOptions = ({ active, setActive }) => {
             <div
               className={
                 active == 1
-                  ? "profile-options-option-selected profile-options-option-0"
-                  : "profile-options-option profile-options-option-0"
+                  ? "d-none d-md-block profile-options-option-selected profile-options-option-0"
+                  : "d-none d-md-block profile-options-option profile-options-option-0"
               }
               onClick={() => setActive(1)}
             >
