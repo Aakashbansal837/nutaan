@@ -8,7 +8,7 @@ const MyAccount = () => {
           <div className="col-12">
             <div className="profile-account-head">Basic Account Info</div>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6">
             <div className="profile-account-main">
               <div className="profile-account-main-head">
                 Personal Info <span> Edit</span>
@@ -25,7 +25,7 @@ const MyAccount = () => {
             </div>
           </div>
 
-          <div className="col-6">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6">
             <div className="profile-account-main">
               <div className="profile-account-main-head">
                 Address Book <span> Edit</span>
@@ -42,7 +42,7 @@ const MyAccount = () => {
             </div>
           </div>
 
-          <div className="col-6">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6">
             <div className="profile-account-main">
               <div className="profile-account-main-head">
                 Saved Cards <span> Edit</span>
