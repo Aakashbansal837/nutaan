@@ -1,5 +1,10 @@
 import React from "react";
 import ProfileOptions from "./ProfileOptions";
+import MyAccount from "./MyAccount";
+import MyOrder from "./MyOrder";
+import Addresses from "./Addresses";
+import PaymentDetails from "./paymentDetails";
+import PersonalInfo from "./PersonalInfo";
 
 const Profile = () => {
   const [active, setActive] = React.useState(1);
@@ -23,7 +28,17 @@ const Profile = () => {
                     />
                   </div>
                   <div className="d-none d-md-block col-9 ">
-                    <h1>{active}</h1>
+                    {active == 1 ? (
+                      <MyAccount />
+                    ) : active == 3 ? (
+                      <MyOrder />
+                    ) : active == 4 ? (
+                      <Addresses />
+                    ) : active == 5 ? (
+                      <PaymentDetails />
+                    ) : active == 6 ? (
+                      <PersonalInfo />
+                    ) : null}
                   </div>
                 </div>
               </div>
