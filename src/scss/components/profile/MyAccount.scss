@@ -1,2 +1,33 @@
 .profile-account {
+  &-head {
+    font-size: 0.875rem;
+    opacity: $opacity-mid;
+    margin-top: 1rem;
+  }
+
+  &-main {
+    margin-top: 1rem;
+    border: $border-card;
+    border-radius: 0.3rem;
+    &-head {
+      font-weight: $weight-mid;
+      padding: 0.5rem 1rem;
+      border-bottom: $border-card;
+      span {
+        float: right;
+        color: $color-red;
+      }
+    }
+    &-data {
+      font-size: 0.875rem;
+      padding: 1rem 1rem;
+
+      &-hd {
+        font-weight: $weight-light;
+      }
+      &-dt {
+        opacity: $opacity-mid;
+      }
+    }
+  }
 }
