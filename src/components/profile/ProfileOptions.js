@@ -3,12 +3,10 @@ import { Button } from "@material-ui/core";
 
 const ProfileOptions = ({ active, setActive }) => {
   const options = [
-    [2, "wishlist"],
     [3, "My Orders"],
     [4, "Addresses"],
     [5, "Payment Details"],
     [6, "Personal Info"],
-    [7, "Nutaan Credit"],
   ];
   return (
     <div className="profile-options">
@@ -33,6 +31,11 @@ const ProfileOptions = ({ active, setActive }) => {
                 My account
               </div>
             </div>
+            <div className="profile-options-option">
+              <a href="/wishlist">
+                <div className="profile-options-option-1">Wishlist</div>
+              </a>
+            </div>
 
             {options.map((opt) => (
               <div
@@ -54,6 +57,9 @@ const ProfileOptions = ({ active, setActive }) => {
                 </div>
               </div>
             ))}
+            <div className="profile-options-option">
+              <div className="profile-options-option-1">Nutaan Credit</div>
+            </div>
 
             <div className="profile-options-option-2">
               <center>
