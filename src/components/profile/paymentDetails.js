@@ -22,16 +22,26 @@ const PaymentDetails = () => {
         <div className="row">
           <div className="col-12">
             <div className="profile-payment-head">
-              <span className="profile-payment-head-text">
-                Manage your saved Cards or add a new one
-              </span>
-              <Button
-                variant="contained"
-                color="secondary"
-                className="profile-payment-head-btn"
-              >
-                Add a Card
-              </Button>
+              <div className="container">
+                <div className="row">
+                  <div className="col-12 col-sm-12 col-md-12 col-lg-8">
+                    <div className="profile-payment-head-text">
+                      Manage your saved Cards or add a new one
+                    </div>
+                  </div>
+                  <div className="col-12 col-sm-12 col-md-12 col-lg-4 px-0">
+                    <div className="profile-payment-head-btn">
+                      <Button
+                        variant="contained"
+                        color="secondary"
+                        className="profile-payment-head-btn-button"
+                      >
+                        Add a Card
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
