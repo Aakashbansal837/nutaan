@@ -36,7 +36,7 @@ const PaymentDetails = () => {
           </div>
 
           {CardData.map((dt) => (
-            <div className="col-6">
+            <div className="col-12 col-sm-12 col-md-12 col-lg-6">
               <div className="profile-payment-main">
                 <div className="container">
                   <div className="row">
