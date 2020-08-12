@@ -9,7 +9,7 @@
   &-main {
     margin: 1rem 0 4rem 0;
     width: 100%;
-    max-height: 32.5625rem;
+    min-height: 32.5625rem;
     border: $border-card;
     border-radius: 0.5rem;
   }
@@ -17,6 +17,7 @@
     background-color: $color-card-bg;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+
     &-option {
       width: 100%;
       border: $border-card;
@@ -61,6 +62,14 @@
           border-left: 0.2rem solid $color-red;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .profile {
+    &-options {
+      background-color: $color-white;
     }
   }
 }
