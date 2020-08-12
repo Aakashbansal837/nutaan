@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 
-const ProfileOptions = ({ active, setActive }) => {
+const ProfileOptions = ({ active, changeOption }) => {
   const options = [
     [3, "My Orders"],
     [4, "Addresses"],
@@ -19,7 +19,7 @@ const ProfileOptions = ({ active, setActive }) => {
                   ? "d-none d-md-block profile-options-option-selected profile-options-option-0"
                   : "d-none d-md-block profile-options-option profile-options-option-0"
               }
-              onClick={() => setActive(1)}
+              onClick={() => changeOption(1)}
             >
               <div
                 className={
@@ -44,7 +44,7 @@ const ProfileOptions = ({ active, setActive }) => {
                     ? "profile-options-option-selected"
                     : "profile-options-option"
                 }
-                onClick={() => setActive(opt[0])}
+                onClick={() => changeOption(opt[0])}
               >
                 <div
                   className={
