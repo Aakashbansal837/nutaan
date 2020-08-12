@@ -2,13 +2,14 @@
   &-head {
     font-size: 0.875rem;
     opacity: $opacity-mid;
-    margin-top: 1rem;
+    margin: 1rem 0;
   }
 
   &-main {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     border: $border-card;
     border-radius: 0.3rem;
+
     &-head {
       font-weight: $weight-mid;
       padding: 0.5rem 1rem;
