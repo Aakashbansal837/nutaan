@@ -7,7 +7,7 @@ import PaymentDetails from "./paymentDetails";
 import PersonalInfo from "./PersonalInfo";
 
 const Profile = () => {
-  const [active, setActive] = React.useState(1);
+  const [active, setActive] = React.useState(6);
   return (
     <div className="profile">
       <div className="container">
