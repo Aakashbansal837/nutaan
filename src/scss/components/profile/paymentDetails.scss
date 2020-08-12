@@ -1,0 +1,49 @@
+.profile-payment {
+  &-head {
+    margin-top: 1rem;
+    font-weight: 0.875rem;
+    &-text {
+      opacity: $opacity-mid;
+    }
+
+    &-btn {
+      float: right;
+      width: 25%;
+      background-color: $color-red !important;
+      color: $color-white !important;
+    }
+  }
+
+  &-main {
+    border: $border-card;
+    border-radius: 0.3rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    &-title {
+      font-size: 0.75rem;
+      opacity: $opacity-mid;
+      &-hidden {
+        opacity: 0;
+        font-size: 0.75rem;
+      }
+    }
+
+    &-data {
+      font-size: 1rem;
+      font-weight: $weight-mid;
+      margin-bottom: 1rem;
+    }
+
+    &-option {
+      border-top: $border-card;
+      padding: 0.5rem 1rem;
+
+      span {
+        font-size: 0.875rem;
+        margin-right: 1rem;
+        cursor: pointer;
+        font-weight: $weight-mid;
+      }
+    }
+  }
+}
