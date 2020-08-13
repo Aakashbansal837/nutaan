@@ -9,7 +9,7 @@
   &-main {
     margin: 1rem 0 4rem 0;
     width: 100%;
-    min-height: 32.5625rem;
+    min-height: 30rem;
     border: $border-card;
     border-radius: 0.5rem;
   }
@@ -17,6 +17,8 @@
     background-color: $color-card-bg;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+    height: 100%;
+    min-height: 30rem;
 
     &-option {
       width: 100%;
@@ -43,6 +45,8 @@
       &-2 {
         padding: 1rem 0;
         border-bottom-left-radius: 0.5rem;
+
+        vertical-align: bottom;
         &-btn {
           width: 90%;
           background-color: $color-red !important;
