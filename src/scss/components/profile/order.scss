@@ -1,0 +1,104 @@
+.profile-order {
+  &-head {
+    margin: 1rem;
+    &-text {
+      font-size: 0.875rem;
+      opacity: $opacity-mid;
+      padding-top: 0.5rem;
+    }
+
+    &-filter {
+      &-text {
+        font-size: 0.875rem;
+        padding-top: 0.5rem;
+      }
+
+      &-data {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  &-main {
+    border: $border-card;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    &-head {
+      padding: 1rem 0 0.5rem 0;
+      border-bottom: $border-card;
+      &-title {
+        font-size: 0.875rem;
+        opacity: $opacity-mid;
+        text-transform: uppercase;
+      }
+      &-data {
+        font-size: 0.875rem;
+        padding-bottom: 0.5rem;
+      }
+      &-btn {
+        width: 100%;
+        &-button {
+          width: 100%;
+          color: $color-red !important;
+          border: $border-card !important;
+        }
+      }
+    }
+
+    &-content {
+      margin: 1rem 0;
+      &-img {
+        height: 6rem;
+        width: 4.5rem;
+        margin-bottom: 0.5rem;
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 0.3rem;
+        }
+      }
+
+      &-name {
+        font-size: 0.875rem;
+        font-weight: $weight-mid;
+      }
+      &-disc {
+        font-size: 0.875rem;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+      }
+
+      &-detail {
+        font-size: 0.875rem;
+        span {
+          margin-right: 2rem;
+        }
+      }
+      &-price {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: $weight-mid;
+      }
+
+      &-track {
+        &-status {
+          font-size: 0.875rem;
+          &-disc {
+            font-size: 0.875rem;
+            opacity: 0.5rem;
+          }
+        }
+        &-btn {
+          margin-top: 0.5rem;
+          width: 100%;
+          &-button {
+            width: 100%;
+            font-size: 0.875rem !important;
+          }
+        }
+      }
+    }
+  }
+}
