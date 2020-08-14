@@ -5,42 +5,6 @@ import Img2 from "../../images/order/2.png";
 import Img3 from "../../images/order/3.png";
 import Img4 from "../../images/order/4.png";
 
-const OrderHead = () => {
-  return (
-    <div className="profile-order-head">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-8 col-md-8 col-lg-7 px-0">
-            <div className="profile-order-head-text">
-              View your order history here
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-4 col-lg-5 px-0">
-            <div className="profile-order-head-filter">
-              <div className="container">
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-12 col-lg-6 px-0">
-                    <div className="profile-order-head-filter-text">
-                      <b>4 orders</b> placed in
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-12 col-lg-6 px-0">
-                    <select className="custom-select profile-order-head-filter-data">
-                      <option selected>last week</option>
-                      <option value="1">last month</option>
-                      <option value="2">last quarter</option>
-                      <option value="3">last year</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 const OrderDetailsHead = ({ viewOrderDetails }) => {
   return (
     <div className="profile-order-head">
@@ -62,6 +26,42 @@ const OrderDetailsHead = ({ viewOrderDetails }) => {
     </div>
   );
 };
+const OrderHead = () => {
+  return (
+    <div className="profile-order-head">
+      <div className="container">
+        <div className="row">
+          <div className="d-none d-md-block col-md-8 col-lg-7 px-0">
+            <div className="profile-order-head-text">
+              View your order history here
+            </div>
+          </div>
+          <div className="col-12 col-sm-12 col-md-4 col-lg-5 px-0">
+            <div className="profile-order-head-filter">
+              <div className="container">
+                <div className="row">
+                  <div className="col-8 col-sm-8 col-md-12 col-lg-6 px-0">
+                    <div className="profile-order-head-filter-text">
+                      <b>4 orders</b> placed in
+                    </div>
+                  </div>
+                  <div className="col-4 col-sm-4 col-md-12 col-lg-6 px-0">
+                    <select className="custom-select profile-order-head-filter-data">
+                      <option selected>last week</option>
+                      <option value="1">last month</option>
+                      <option value="2">last quarter</option>
+                      <option value="3">last year</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const OrderData = ({ orders, viewOrderDetails }) => {
   return (
@@ -71,23 +71,23 @@ const OrderData = ({ orders, viewOrderDetails }) => {
           <div className="profile-order-main-head">
             <div className="container">
               <div className="row">
-                <div className="col-3 col-sm-3 col-md-4 col-lg-2">
+                <div className="col-5 col-sm-4 col-md-4 col-lg-2">
                   <div className="profile-order-main-head-title">placed on</div>
                   <div className="profile-order-main-head-data">
                     {or.placedOn}
                   </div>
                 </div>
-                <div className="col-3 col-sm-3 col-md-4 col-lg-2">
+                <div className="d-none d-md-block col-md-4 col-lg-2">
                   <div className="profile-order-main-head-title">ship to</div>
                   <div className="profile-order-main-head-data">
                     {or.shipTO}
                   </div>
                 </div>
-                <div className="col-5 col-sm-5 col-md-4 col-lg-5">
+                <div className="d-none d-sm-block col-sm-3 col-md-4 col-lg-5">
                   <div className="profile-order-main-head-title">Total</div>
                   <div className="profile-order-main-head-data">{or.total}</div>
                 </div>
-                <div className="col-12 col-sm-12 col-md-12 col-lg-3">
+                <div className="col-7 col-sm-5 col-md-12 col-lg-3">
                   <div className="profile-order-main-head-btn">
                     <Button
                       className="profile-order-main-head-btn-button"
@@ -150,7 +150,7 @@ const OrderData = ({ orders, viewOrderDetails }) => {
                                 Track Item
                               </button>
                             </div>
-                            <div className="col-6 col-sm-6 col-md-6 col-lg-7 pl-0">
+                            <div className="col-6 col-sm-6 col-md-6 col-lg-6 pl-0">
                               <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
                                 Request Fitting
                               </button>
@@ -549,7 +549,7 @@ const MyOrder = () => {
               <OrderDetailsHead viewOrderDetails={setViewDetail} />
             )}
           </div>
-          <div className="col-12 px-0">
+          <div className="col-12 ">
             {viewDetail == -1 ? (
               <OrderData
                 orders={orders}
