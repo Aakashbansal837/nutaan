@@ -537,7 +537,7 @@ const MyOrder = () => {
     },
   ];
 
-  const [viewDetail, setViewDetail] = React.useState(0);
+  const [viewDetail, setViewDetail] = React.useState(-1);
   return (
     <div className="profile-order">
       <div className="container">
