@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import Navbar from "../components/common/navbar";
+import ProfileNavbar from "../components/profile/ProfileNavbar";
+
 import Footer from "../components/common/footer";
 import Profile from "../components/profile";
 
@@ -13,7 +14,7 @@ class UserProfile extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <ProfileNavbar />
         <Profile />
         <Footer />
       </div>
