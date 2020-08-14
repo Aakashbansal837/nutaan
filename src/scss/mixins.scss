@@ -89,3 +89,9 @@ $custom-breakpoints: (
   font-weight: $weight-mid;
   opacity: 0.95;
 }
+
+@mixin Text-OverFlow() {
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}

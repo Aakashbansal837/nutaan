@@ -46,9 +46,7 @@
       @include footer-text();
       color: $color-ftr-txt;
       margin: 1rem 0rem 1rem 0rem !important;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      @include Text-OverFlow();
 
       &-span {
         @include footer-text();
@@ -60,9 +58,7 @@
         margin: 0.5rem 2rem;
 
         a {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          @include Text-OverFlow();
           color: $color-ftr-txt;
           text-decoration: none;
           &:hover {
@@ -89,9 +85,7 @@
       @include footer-text();
       color: $color-ftr-txt;
       margin: 1rem 0rem 1rem 0rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      @include Text-OverFlow();
     }
     &-data1 {
       @include footer-heading();

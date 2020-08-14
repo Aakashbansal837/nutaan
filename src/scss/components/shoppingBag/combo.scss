@@ -129,9 +129,7 @@
         }
         &-disc {
           font-size: 0.75rem;
-          overflow: hidden !important;
-          white-space: nowrap !important;
-          text-overflow: ellipsis !important;
+          @include Text-OverFlow();
         }
         &-choice {
           margin-top: 0.5rem;
@@ -163,9 +161,7 @@
           }
           &-disc {
             font-size: 0.75rem;
-            overflow: hidden !important;
-            white-space: nowrap !important;
-            text-overflow: ellipsis !important;
+            @include Text-OverFlow();
           }
           &-choice {
             margin-top: 0.5rem;
@@ -206,9 +202,7 @@
         }
         &-disc {
           font-size: 0.9rem;
-          overflow: hidden !important;
-          white-space: nowrap !important;
-          text-overflow: ellipsis !important;
+          @include Text-OverFlow();
         }
         &-choice {
           &-txt {
@@ -237,9 +231,7 @@
           }
           &-disc {
             font-size: 0.9rem;
-            overflow: hidden !important;
-            white-space: nowrap !important;
-            text-overflow: ellipsis !important;
+            @include Text-OverFlow();
           }
           &-choice {
             &-txt {
