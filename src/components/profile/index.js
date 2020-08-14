@@ -9,6 +9,11 @@ import PersonalInfo from "./PersonalInfo";
 const Profile = () => {
   const [active, setActive] = React.useState(1);
   const [option, setOption] = React.useState(0);
+  const [user, setUser] = React.useState({
+    name: "user name",
+    phone: "9876-543-210",
+    email: "adamsmith@gmail.com",
+  });
   const SelectionChanged = (option) => {
     setActive(option);
     setOption(1);
@@ -17,8 +22,12 @@ const Profile = () => {
     <div className="profile">
       <div className="container">
         <div className="row">
-          <div className="col-12 ">
+          <div className="d-none d-md-block col-12 ">
             <div className="profile-header">My Profile</div>
+          </div>
+          <div className="d-block d-md-none col-12">
+            <div className="profile-header-small-ph">{user.phone}</div>
+            <div className="profile-header-small-email">{user.email}</div>
           </div>
           <div className="col-12">
             <div className="profile-main">
