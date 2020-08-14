@@ -16,6 +16,7 @@
 @import "./style";
 
 //----Components---- //
+@import "./elements";
 @import "./components/footer.scss";
 @import "./components/wishlist.scss";
 @import "./components/navbar.scss";
@@ -24,3 +25,4 @@
 @import "./components/productDetails/index.scss";
 @import "./components/Corousal/index.scss";
 @import "./components/profile/index.scss";
+@import "./product";
