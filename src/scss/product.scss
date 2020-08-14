@@ -1,5 +1,5 @@
 .nt-prd-lst-ctnr {
-  padding: 40px 110px;
+  padding: 120px 110px 40px 110px;
   @include media-below(lg) {
     padding: 40px 80px;
   }
@@ -9,12 +9,12 @@
 }
 
 .nt-prd-brd-txt {
-  font-size  : 14px;
-  color      : #212A39;
-  font-size  : 14px;
+  font-size: 14px;
+  color: #212a39;
+  font-size: 14px;
   line-height: 16.8px;
-  opacity    : 0.75249;
-  text-align : left;
+  opacity: 0.75249;
+  text-align: left;
 }
 
 .nt-prd-lst-itm-pd {
@@ -23,9 +23,9 @@
 
 .nt-prd-list-ttl-ctnr {
   padding-top: 21px;
-  font-size  : 20px;
+  font-size: 20px;
   line-height: 24px;
-  text-align : left;
+  text-align: left;
 
   .head {
     font-weight: 600;
@@ -53,11 +53,11 @@
 }
 
 .nt-prd-fltr-ttl {
-  color      : #212A39;
-  font-size  : 16px;
+  color: #212a39;
+  font-size: 16px;
   line-height: 19.2px;
-  opacity    : 0.75249;
-  text-align : left;
+  opacity: 0.75249;
+  text-align: left;
   font-weight: 600;
 
   &.nt-small {
@@ -67,12 +67,12 @@
 }
 
 .nt-prf-fltr-itm-ttl {
-  color        : #212A39;
-  font-size    : 14px;
-  line-height  : 16.8px;
-  opacity      : 0.75249;
-  text-align   : left;
-  font-weight  : 600;
+  color: #212a39;
+  font-size: 14px;
+  line-height: 16.8px;
+  opacity: 0.75249;
+  text-align: left;
+  font-weight: 600;
   margin-bottom: 15px;
 }
 
@@ -82,41 +82,41 @@
 
 .nt-prd-lst-chkbox {
   margin-left: -6px !important;
-  padding    : 4px !important;
+  padding: 4px !important;
 }
 
 .nt-prd-lst-fltr-ctnr .MuiSvgIcon-root {
   height: 20px !important;
-  width : 20px !important;
+  width: 20px !important;
 }
 
 .nt-prd-lst-chkbox .MuiSvgIcon-root {
   height: 20px !important;
-  width : 20px !important;
+  width: 20px !important;
 }
 
 .nt-prd-lst-chkbox.Mui-checked {
-  color: #ED695F !important;
+  color: #ed695f !important;
 }
 
 .nt-prd-lst-chkbox-value {
-  color      : rgba(33, 42, 57, 0.75249);
-  font-size  : 14px;
+  color: rgba(33, 42, 57, 0.75249);
+  font-size: 14px;
   line-height: 16px;
-  text-align : left;
-  display    : inline-block;
+  text-align: left;
+  display: inline-block;
 }
 
 .nt-prd-lst-chkbox-clr-box {
-  height       : 18px;
-  width        : 18px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
-  display      : inline-block;
-  margin-left  : 16px;
-  margin-right : 8px;
+  display: inline-block;
+  margin-left: 16px;
+  margin-right: 8px;
 }
 
-.nt-prd-list-mb-fltr-ctnr{
+.nt-prd-list-mb-fltr-ctnr {
   z-index: 999;
   bottom: 0;
   width: 100%;
@@ -124,16 +124,16 @@
   box-shadow: 0 4px 8px 0 rgba(33, 42, 57, 0.15);
 }
 
-.nt-prd-list-mb-fltr-btn{
+.nt-prd-list-mb-fltr-btn {
   height: 48px;
   background-color: #ffffff;
   @include center-all;
   border-right: 0.2px solid;
   border-left: 0px solid;
-  border-color: #CECECE;
+  border-color: #cecece;
 }
-.nt-prd-list-mb-fltr-txt{
-  color: #212A39;
+.nt-prd-list-mb-fltr-txt {
+  color: #212a39;
   font-size: 12px;
   line-height: 14.4px;
   text-align: left;
@@ -142,17 +142,17 @@
 }
 
 //product item
-.nt-prd-list-itm-main-row{
+.nt-prd-list-itm-main-row {
   @include media-below(md) {
     margin: 0 !important;
   }
-  .nt-prd-list-itm-main-col{
+  .nt-prd-list-itm-main-col {
     @include media-below(md) {
       padding: 0 !important;
     }
   }
 }
-.nt-prd-lst-itm-row{
+.nt-prd-lst-itm-row {
   @include media-below(md) {
     margin: 0px;
   }
@@ -165,7 +165,7 @@
   }
 }
 
-.nt-prd-itm-fav-ctnr{
+.nt-prd-itm-fav-ctnr {
   position: absolute !important;
   right: 13px;
   top: 13px;
@@ -173,11 +173,11 @@
 
 .nt-prd-itm-ctnr {
   // width        : 270px;
-  width        : 100%;
+  width: 100%;
   border-radius: 5px;
-  cursor       : pointer;
-  @include media-above(md){
-    float      : right;
+  cursor: pointer;
+  @include media-above(md) {
+    float: right;
   }
   @include media-below(md) {
     border-radius: 0px;
@@ -186,34 +186,34 @@
 
 .nt-prd-itm-img-ctnr {
   // height                 : 360px;
-  min-height             : 160px;
-  width                  : 100%;
-  background-color       : rgba(33, 42, 57, 0.25);
-  background-position    : center;
-  background-size        : 100%;
-  border-top-left-radius : 4px;
+  min-height: 160px;
+  width: 100%;
+  background-color: rgba(33, 42, 57, 0.25);
+  background-position: center;
+  background-size: 100%;
+  border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  overflow               : hidden;
-  position               : relative;
+  overflow: hidden;
+  position: relative;
   @include media-below(md) {
     border-radius: 0;
   }
 }
-.nt-prd-itm-image{
+.nt-prd-itm-image {
   width: 100%;
 }
 
 .nt-prf-itm-meta-ctnr {
-  background-color          : #FFFFFF;
-  border                    : 0.8px solid #CECECE;
-  width                     : 100%;
-  height                    : 95px;
-  padding                   : 12px 16px;
-  border-bottom-left-radius : 4px;
+  background-color: #ffffff;
+  border: 0.8px solid #cecece;
+  width: 100%;
+  height: 95px;
+  padding: 12px 16px;
+  border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   @include media-below(md) {
-    height : 76px;
-    padding : 8px;
+    height: 76px;
+    padding: 8px;
     border-radius: 0;
     border-right-width: 0.4px;
     border-left-width: 0.4px;
@@ -221,10 +221,10 @@
 }
 
 .nt-prf-itm-meta-ttl {
-  color      : #212A39;
-  font-size  : 16px;
+  color: #212a39;
+  font-size: 16px;
   line-height: 19.2px;
-  text-align : left;
+  text-align: left;
   font-weight: 600;
   @include media-below(md) {
     font-size: 12px;
@@ -232,27 +232,27 @@
 }
 
 .nt-prf-itm-meta-desc {
-  color      : #212A39;
-  font-size  : 14px;
+  color: #212a39;
+  font-size: 14px;
   line-height: 16.8px;
-  text-align : left;
-  margin-top : 6px;
+  text-align: left;
+  margin-top: 6px;
   @include media-below(md) {
     font-size: 10px;
-    margin-top : 4px;
+    margin-top: 4px;
   }
 }
 
 .nt-prf-itm-meta-price {
-  color      : #212A39;
-  font-size  : 16px;
+  color: #212a39;
+  font-size: 16px;
   line-height: 19.2px;
-  width      : 50px;
-  text-align : left;
+  width: 50px;
+  text-align: left;
   font-weight: 600;
-  margin-top : 8px;
+  margin-top: 8px;
   @include media-below(md) {
     font-size: 12px;
-    margin-top : 4px;
+    margin-top: 4px;
   }
 }
