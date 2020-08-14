@@ -5,6 +5,16 @@
     margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: $weight-mid;
+
+    &-small {
+      &-ph {
+        font-weight: $weight-mid;
+      }
+      &-email {
+        font-size: 0.75rem;
+        opacity: $opacity-mid;
+      }
+    }
   }
   &-main {
     margin: 1rem 0 4rem 0;
