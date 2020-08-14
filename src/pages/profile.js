@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import ProfileNavbar from "../components/profile/ProfileNavbar";
+import ProfileOptionNavbar from "../components/profile/ProfileOptionNavbar";
 
 import Footer from "../components/common/footer";
 import Profile from "../components/profile";
@@ -8,14 +9,48 @@ import Profile from "../components/profile";
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      hide: true,
+      selectedOption: "none",
+      active: 1,
+      option: 0,
+    };
   }
 
+  changeHide = (value) => {
+    this.setState({ hide: value, option: 0 });
+  };
+
+  changeOption = (value) => {
+    this.setState({ selectedOption: value, hide: false });
+  };
+  setActive = (value) => {
+    this.setState({ active: value });
+  };
+
+  setOption = (value) => {
+    this.setState({ option: value });
+  };
   render() {
     return (
       <div>
-        <ProfileNavbar />
-        <Profile />
+        {this.state.hide ? (
+          <ProfileNavbar />
+        ) : (
+          <ProfileOptionNavbar
+            selectedOption={this.state.selectedOption}
+            changeHide={(value) => {
+              this.changeHide(value);
+            }}
+          />
+        )}
+        <Profile
+          active={this.state.active}
+          setActive={this.setActive.bind(this)}
+          option={this.state.option}
+          setOption={this.setOption.bind(this)}
+          changeOption={this.changeOption.bind(this)}
+        />
         <Footer />
       </div>
     );
