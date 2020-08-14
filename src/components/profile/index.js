@@ -6,9 +6,7 @@ import Addresses from "./Addresses";
 import PaymentDetails from "./paymentDetails";
 import PersonalInfo from "./PersonalInfo";
 
-const Profile = () => {
-  const [active, setActive] = React.useState(1);
-  const [option, setOption] = React.useState(0);
+const Profile = ({ active, setActive, option, setOption, changeOption }) => {
   const [user, setUser] = React.useState({
     name: "user name",
     phone: "9876-543-210",
@@ -17,6 +15,18 @@ const Profile = () => {
   const SelectionChanged = (option) => {
     setActive(option);
     setOption(1);
+
+    if (option === 1) {
+      changeOption("My profile");
+    } else if (option === 3) {
+      changeOption("My Orders");
+    } else if (option === 4) {
+      changeOption("Addresses");
+    } else if (option === 5) {
+      changeOption("Saved Cards");
+    } else if (option === 6) {
+      changeOption("Personal Info");
+    }
   };
   return (
     <div className="profile">
@@ -25,10 +35,12 @@ const Profile = () => {
           <div className="d-none d-md-block col-12 ">
             <div className="profile-header">My Profile</div>
           </div>
-          <div className="d-block d-md-none col-12">
-            <div className="profile-header-small-ph">{user.phone}</div>
-            <div className="profile-header-small-email">{user.email}</div>
-          </div>
+          {option == 0 ? (
+            <div className="d-block d-md-none col-12">
+              <div className="profile-header-small-ph">{user.phone}</div>
+              <div className="profile-header-small-email">{user.email}</div>
+            </div>
+          ) : null}
           <div className="col-12">
             <div className="profile-main">
               <div className="container">
