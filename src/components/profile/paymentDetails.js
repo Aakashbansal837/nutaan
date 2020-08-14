@@ -24,7 +24,7 @@ const PaymentDetails = () => {
             <div className="profile-payment-head">
               <div className="container">
                 <div className="row">
-                  <div className="col-12 col-sm-12 col-md-12 col-lg-8">
+                  <div className="d-none d-md-block col-md-12 col-lg-8">
                     <div className="profile-payment-head-text">
                       Manage your saved Cards or add a new one
                     </div>
