@@ -1,0 +1,56 @@
+.combo-detail {
+  &-item {
+    &-name {
+      font-size: 1.5rem;
+      font-weight: $weight-mid;
+    }
+    &-cmb {
+      background-color: $color-red-light;
+      color: $color-red;
+      padding: 0.125rem 0.5rem;
+      font-size: 0.875rem;
+    }
+    &-disc {
+      font-size: 1rem;
+    }
+
+    &-right {
+      &-cmb {
+        font-size: 1rem;
+        color: $color-red;
+        padding-right: 1rem;
+        &-dt {
+          font-size: 0.875rem;
+          opacity: $opacity-mid;
+        }
+      }
+    }
+    &-price {
+      font-size: 1rem;
+
+      &-current {
+        font-size: 1.5rem;
+        font-weight: $weight-mid;
+        padding-right: 2rem;
+      }
+      &-prev {
+        opacity: $opacity-mid;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .combo-detail {
+    &-item {
+      &-right {
+        &-cmb {
+          font-size: 0.875rem;
+          &-dt {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,13 +1,10 @@
 .wishlist {
-  padding-top: 5rem;
+  @include PaddingNav();
   &-center {
     background-color: $color-white;
 
     &-heading {
-      margin-top: 4rem;
-      font-size: 1.5rem;
-      font-weight: $weight-mid;
-      opacity: 0.95;
+      @include Component-heading();
 
       &-count {
         font-size: 1.25rem;
@@ -47,6 +44,9 @@
     &-text {
       font-size: 0.875rem;
       line-height: 0.75rem;
+      overflow: hidden !important;
+      white-space: nowrap !important;
+      text-overflow: ellipsis !important;
     }
 
     &-button {

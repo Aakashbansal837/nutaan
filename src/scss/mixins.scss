@@ -78,3 +78,14 @@ $custom-breakpoints: (
   font-weight: $weight-light;
   opacity: $opacity-mid;
 }
+
+@mixin PaddingNav() {
+  padding-top: 5rem;
+}
+
+@mixin Component-heading() {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: $weight-mid;
+  opacity: 0.95;
+}

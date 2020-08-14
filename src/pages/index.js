@@ -1,7 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import Typography from "@material-ui/core/Typography";
-import { Button, FormControl, Select, MenuItem } from "@material-ui/core";
 
 class BasePage extends React.Component {
   constructor(props) {

@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+# /build
 
 #vs code debug.log
 debug.log

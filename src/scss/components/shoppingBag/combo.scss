@@ -1,0 +1,321 @@
+.shopping {
+  @include PaddingNav();
+
+  &-combo {
+    border: $border-card;
+    margin: 1.5rem 0rem;
+    border-radius: 0.5rem;
+
+    &-data {
+      max-height: 11rem;
+      padding-top: 1.5rem;
+
+      &-heading {
+        font-size: 1.25rem;
+        font-weight: $weight-mid;
+      }
+      &-disc {
+        font-size: 1rem;
+        font-weight: $weight-light;
+        opacity: $opacity-mid;
+      }
+      &-choice {
+        margin-top: 1rem;
+        &-txt {
+          background-color: rgba(206, 206, 206, 0.25);
+          border-radius: 2px;
+          max-width: 5rem;
+          font-size: 0.875rem;
+          padding: 0.3rem 1rem;
+          margin-right: 0.75rem;
+          font-weight: $weight-light;
+          display: inline;
+
+          &-dark {
+            font-weight: $weight-mid;
+          }
+        }
+      }
+
+      &-price {
+        text-align: right;
+        font-size: 1.25rem;
+        font-weight: $weight-mid;
+        display: block;
+      }
+
+      &-prevP {
+        display: block;
+        text-align: right;
+        font-size: 1rem;
+        font-weight: $weight-mid;
+        opacity: $opacity-light;
+      }
+    }
+
+    &-main {
+      margin-top: 1rem;
+
+      &-data {
+        padding-top: 0.75rem;
+
+        &-heading {
+          font-size: 1rem;
+          font-weight: $weight-mid;
+        }
+        &-disc {
+          font-size: 0.875rem;
+          font-weight: $weight-light;
+          opacity: $opacity-mid;
+        }
+        &-choice {
+          margin-top: 1rem;
+          &-1 {
+            margin-top: 0.3rem;
+          }
+          &-txt {
+            max-width: 5rem;
+            font-size: 0.875rem;
+            display: inline;
+            &-1 {
+              font-weight: $weight-mid;
+              opacity: $opacity-mid;
+            }
+            &-2 {
+              font-weight: $weight-heavy;
+              opacity: $opacity-heavy;
+            }
+          }
+        }
+
+        &-price {
+          text-align: right;
+          font-size: 1.25rem;
+          font-weight: $weight-mid;
+          display: block;
+        }
+
+        &-prevP {
+          display: block;
+          text-align: right;
+          font-size: 1rem;
+          font-weight: $weight-mid;
+          opacity: $opacity-light;
+        }
+      }
+    }
+
+    &-img {
+      height: 100%;
+      width: 100%;
+      @include max-ht-wd($ht: 13.5rem, $wd: 10.125rem);
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .shopping {
+    &-combo {
+      &-img {
+        border-radius: 0.2rem;
+        @include max-ht-wd($ht: 8rem, $wd: 6rem);
+      }
+      &-data {
+        padding-top: 0.2rem;
+        &-heading {
+          font-size: 0.875rem;
+        }
+        &-disc {
+          font-size: 0.75rem;
+          overflow: hidden !important;
+          white-space: nowrap !important;
+          text-overflow: ellipsis !important;
+        }
+        &-choice {
+          margin-top: 0.5rem;
+
+          &-txt {
+            font-size: 0.75rem;
+          }
+        }
+
+        &-prc {
+          margin-top: 0.8rem;
+        }
+        &-price {
+          font-size: 1rem;
+          display: inline;
+        }
+        &-prevP {
+          font-size: 0.75rem;
+          margin-left: 1rem;
+          display: inline;
+        }
+      }
+
+      &-main {
+        &-data {
+          padding-top: 0.2rem;
+          &-heading {
+            font-size: 0.875rem;
+          }
+          &-disc {
+            font-size: 0.75rem;
+            overflow: hidden !important;
+            white-space: nowrap !important;
+            text-overflow: ellipsis !important;
+          }
+          &-choice {
+            margin-top: 0.5rem;
+
+            &-txt {
+              font-size: 0.75rem;
+            }
+          }
+
+          &-prc {
+            margin-top: 0.8rem;
+          }
+          &-price {
+            font-size: 1rem;
+            display: inline;
+          }
+          &-prevP {
+            font-size: 0.75rem;
+            margin-left: 1rem;
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .shopping {
+    &-combo {
+      &-img {
+        border-bottom-left-radius: 0rem;
+      }
+      &-data {
+        &-heading {
+          font-size: 1.1rem;
+        }
+        &-disc {
+          font-size: 0.9rem;
+          overflow: hidden !important;
+          white-space: nowrap !important;
+          text-overflow: ellipsis !important;
+        }
+        &-choice {
+          &-txt {
+            font-size: 0.8rem;
+          }
+        }
+
+        &-prc {
+          margin-top: 1.5rem;
+        }
+        &-price {
+          font-size: 1rem;
+          display: inline;
+        }
+        &-prevP {
+          font-size: 0.8rem;
+          margin-left: 1rem;
+          display: inline;
+        }
+      }
+
+      &-main {
+        &-data {
+          &-heading {
+            font-size: 1.1rem;
+          }
+          &-disc {
+            font-size: 0.9rem;
+            overflow: hidden !important;
+            white-space: nowrap !important;
+            text-overflow: ellipsis !important;
+          }
+          &-choice {
+            &-txt {
+              font-size: 0.8rem;
+            }
+          }
+
+          &-prc {
+            margin-top: 1.5rem;
+          }
+          &-price {
+            font-size: 1rem;
+            display: inline;
+          }
+          &-prevP {
+            font-size: 0.8rem;
+            margin-left: 1rem;
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .shopping {
+    &-combo {
+      &-data {
+        padding-top: 1rem;
+        &-heading {
+          font-size: 1rem;
+        }
+        &-disc {
+          font-size: 0.875rem;
+        }
+        &-choice {
+          &-txt {
+            font-size: 0.75rem;
+          }
+        }
+
+        &-price {
+          font-size: 1rem;
+        }
+
+        &-prevP {
+          font-size: 0.875rem;
+        }
+      }
+
+      &-main {
+        &-data {
+          padding-top: 1rem;
+          &-heading {
+            font-size: 1rem;
+          }
+          &-disc {
+            font-size: 0.875rem;
+          }
+          &-choice {
+            &-txt {
+              font-size: 0.75rem;
+            }
+          }
+
+          &-price {
+            font-size: 1rem;
+          }
+
+          &-prevP {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}
