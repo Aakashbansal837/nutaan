@@ -25,7 +25,7 @@
 
   &-menu {
     display: flex;
-    margin-top: 1rem;
+    // margin-top: 1rem;
     flex-direction: row;
     flex: 1;
     flex-basis: auto;
@@ -124,13 +124,13 @@
     z-index: 99;
   }
   &-menu {
-    display: flex;
-    margin-top: 1rem;
-    flex-direction: column;
-    flex: 1;
-    flex-basis: auto;
-    justify-content: flex-end;
-    align-items: center;
+    // display: flex;
+    // margin-top: 1rem;
+    // flex-direction: column;
+    // flex: 1;
+    // flex-basis: auto;
+    // justify-content: flex-end;
+    // align-items: center;
 
     li {
       margin-top: 1rem;
