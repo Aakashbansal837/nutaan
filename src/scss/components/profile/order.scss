@@ -5,16 +5,19 @@
       font-size: 0.875rem;
       opacity: $opacity-mid;
       padding-top: 0.5rem;
+      @include Text-OverFlow();
     }
 
     &-filter {
       &-text {
         font-size: 0.875rem;
         padding-top: 0.5rem;
+        @include Text-OverFlow();
       }
 
       &-data {
         font-size: 0.875rem;
+        @include Text-OverFlow();
       }
     }
   }
@@ -65,13 +68,13 @@
       }
       &-disc {
         font-size: 0.875rem;
-        overflow: hidden !important;
-        white-space: nowrap !important;
-        text-overflow: ellipsis !important;
+        @include Text-OverFlow();
       }
 
       &-detail {
         font-size: 0.875rem;
+        @include Text-OverFlow();
+
         span {
           margin-right: 2rem;
         }
@@ -122,6 +125,7 @@
         &-disc {
           font-size: 0.875rem;
           margin-bottom: 1rem;
+          @include Text-OverFlow();
         }
 
         &-btn {
@@ -165,7 +169,7 @@
     &-payment {
       border: $border-card;
       border-radius: 0.5rem;
-      height: 17.875rem;
+      min-height: 17.875rem;
       margin: 1rem 0;
       &-head {
         padding: 1rem 0 0 0;
@@ -197,6 +201,25 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .profile-order {
+    &-detail {
+      &-main {
+        margin-left: -1.3rem;
+      }
+    }
+
+    &-main {
+      &-content {
+        &-img {
+          height: 100%;
+          width: 100%;
         }
       }
     }
