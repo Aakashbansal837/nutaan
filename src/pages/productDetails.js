@@ -47,6 +47,50 @@ class ProductDetails extends React.Component {
           ["xl", "10"],
         ],
         images: [Img1, Img2, Img3, Img4, Img5, Img6, Img7],
+        similarProduct: [
+          {
+            name: "BIBA",
+            disc: "Kurta with Palazzos and Dupatta",
+            img: Img1,
+            price: "₹ 1,899",
+          },
+          {
+            name: "BIBA",
+            disc: "Kurta with Palazzos and Dupatta",
+            img: Img2,
+            price: "₹ 1,899",
+          },
+          {
+            name: "BIBA",
+            disc: "Kurta with Palazzos and Dupatta",
+            img: Img3,
+            price: "₹ 1,899",
+          },
+          {
+            name: "BIBA",
+            disc: "Kurta with Palazzos and Dupatta",
+            img: Img4,
+            price: "₹ 1,899",
+          },
+          {
+            name: "BIBA",
+            disc: "Kurta with Palazzos and Dupatta",
+            img: Img5,
+            price: "₹ 1,899",
+          },
+          {
+            name: "BIBA",
+            disc: "Kurta with Palazzos and Dupatta",
+            img: Img6,
+            price: "₹ 1,899",
+          },
+          {
+            name: "BIBA",
+            disc: "Kurta with Palazzos and Dupatta",
+            img: Img7,
+            price: "₹ 1,899",
+          },
+        ],
       },
     };
   }
