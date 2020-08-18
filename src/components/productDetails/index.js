@@ -78,7 +78,7 @@ const Product = ({ item }) => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <FiveItemCorousal images={item.images} />
+            <FiveItemCorousal items={item.similarProduct} />
           </div>
         </div>
       </div>
