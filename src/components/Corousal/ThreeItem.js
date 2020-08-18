@@ -11,7 +11,12 @@ const ThreeItemCorousal = ({ images }) => {
       margin={10}
       responsiveClass="true"
       autoplay="true"
-      autoplayTimeout="2000"
+      autoplayTimeout="7000"
+      nav
+      navText={[
+        `<div class='three-nav-btn prev-slide'><i class="fa fa-chevron-left" aria-hidden="true"></i></div>`,
+        `<div class='three-nav-btn next-slide'><i class="fa fa-chevron-right" aria-hidden="true"></i></div>`,
+      ]}
       responsive={{
         0: {
           items: 1,

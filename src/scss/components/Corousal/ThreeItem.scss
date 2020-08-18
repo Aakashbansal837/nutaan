@@ -1,3 +1,45 @@
-.threeItemCorousal {
-  margin-top: 1rem;
+.three-nav-btn {
+  height: 100%;
+  position: absolute;
+  width: 3.5rem;
+  cursor: pointer;
+  top: 0px !important;
+
+  i {
+    margin-top: 12rem;
+    color: #979797;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .three-nav-btn {
+    width: 2rem;
+
+    i {
+      margin-top: 13rem;
+      font-size: 1.25rem;
+    }
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .three-nav-btn {
+    width: 2.75rem;
+
+    i {
+      margin-top: 10rem;
+      font-size: 1.75rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .three-nav-btn {
+    width: 2.75rem;
+
+    i {
+      margin-top: 8rem;
+      font-size: 1.75rem;
+    }
+  }
 }
