@@ -87,7 +87,7 @@ const ComboProduct = ({ item }) => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <FiveItemCorousel images={item.images} />
+            <FiveItemCorousel items={item.similarProduct} />
           </div>
         </div>
       </div>
