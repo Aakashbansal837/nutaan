@@ -36,7 +36,7 @@ const ComboCard = ({ data }) => {
                         {data.price}
                       </div>
                       <div className="shopping-combo-data-prevP">
-                        was &nbsp;{data.prevP}
+                        <s>was &nbsp;{data.prevP}</s>
                       </div>
                     </div>
                   </div>

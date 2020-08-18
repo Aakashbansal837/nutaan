@@ -21,9 +21,11 @@ const ProductDisc = ({ item }) => {
               {item.price}
             </span>
             <span className="product-detail-item-price-prev">
-              was
-              <strong> &nbsp;{item.prevP} &nbsp;</strong>
-              before
+              <s>
+                was
+                <strong> &nbsp;{item.prevP} &nbsp;</strong>
+                before
+              </s>
             </span>
           </div>
         </div>
