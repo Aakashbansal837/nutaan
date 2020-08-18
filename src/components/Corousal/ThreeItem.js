@@ -13,6 +13,7 @@ const ThreeItemCorousal = ({ images }) => {
       autoplay="true"
       autoplayTimeout="7000"
       nav
+      dots={true}
       navText={[
         `<div class='three-nav-btn prev-slide'><i class="fa fa-chevron-left" aria-hidden="true"></i></div>`,
         `<div class='three-nav-btn next-slide'><i class="fa fa-chevron-right" aria-hidden="true"></i></div>`,
