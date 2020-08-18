@@ -9,8 +9,13 @@ const FiveItemCorousal = ({ items }) => {
       loop
       margin={10}
       autoplay
-      autoplayTimeout="1000"
+      autoplayTimeout="5000"
       responsiveClass
+      nav
+      navText={[
+        `<div class='nav-btn prev-slide'><i class="fa fa-chevron-left" aria-hidden="true"></i></div>`,
+        `<div class='nav-btn next-slide'><i class="fa fa-chevron-right" aria-hidden="true"></i></div>`,
+      ]}
       responsive={{
         0: {
           items: 2,
