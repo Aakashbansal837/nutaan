@@ -54,3 +54,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 422px) {
+  .combo-detail {
+    &-spec {
+      &-open {
+        padding-left: 0rem !important;
+      }
+    }
+  }
+}
