@@ -99,7 +99,7 @@ const DeliveryOption = ({ ItemColor, ItemSize }) => {
             </div>
           </div>
 
-          <div className="col-6 pl-0">
+          <div className="d-none d-md-block col-md-6 col-lg-6 pl-0">
             <div className="product-detail-delivery-btn">
               <Button
                 variant="outlined"
@@ -110,7 +110,8 @@ const DeliveryOption = ({ ItemColor, ItemSize }) => {
               </Button>
             </div>
           </div>
-          <div className="col-6 pr-0">
+
+          <div className="d-none d-md-block col-md-6 col-lg-6 pr-0">
             <div className="product-detail-delivery-btn">
               <Button
                 variant="contained"
@@ -121,6 +122,7 @@ const DeliveryOption = ({ ItemColor, ItemSize }) => {
               </Button>
             </div>
           </div>
+
           <div className="col-12 px-0">
             <div className="shopping-divider"></div>
           </div>
