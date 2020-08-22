@@ -4,6 +4,7 @@ import ProductSpecs from "./ProductSpecs";
 import DeliveryOption from "./DeliveryOption";
 import DoorStepService from "./DoorstepService";
 import FiveItemCorousal from "../Corousal/FiveItem";
+import StickyProfileButton from "./StickyButtons";
 
 const ProductDisc = ({ item }) => {
   return (
@@ -77,6 +78,8 @@ const Product = ({ item }) => {
           </div>
         </div>
       </div>
+
+      <StickyProfileButton />
 
       <div className="container">
         <div className="row">
