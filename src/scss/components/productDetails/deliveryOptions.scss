@@ -112,6 +112,28 @@
     }
   }
 
+  &-btn-smallScreen {
+    height: 3rem;
+    width: 100%;
+    margin: 2rem 0 0rem 0;
+    background-color: $color-white;
+
+    &-wishlist {
+      height: 100%;
+      width: 100%;
+      color: $color-red !important;
+      border: $border-red !important;
+      border-radius: 0px !important;
+    }
+
+    &-addToBag {
+      height: 100%;
+      width: 100%;
+      background-color: $color-red !important;
+      border-radius: 0px !important;
+    }
+  }
+
   &-input {
     margin: 1rem 0;
   }
