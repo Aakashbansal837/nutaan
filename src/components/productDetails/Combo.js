@@ -4,6 +4,7 @@ import ComboSpecs from "./ComboSpecs";
 import DeliveryOption from "./DeliveryOption";
 import DoorStepService from "./DoorstepService";
 import FiveItemCorousel from "../Corousal/FiveItem";
+import StickyProfileButton from "./StickyButtons";
 
 const ComboDisc = ({ item }) => {
   return (
@@ -83,6 +84,8 @@ const ComboProduct = ({ item }) => {
           </div>
         </div>
       </div>
+
+      <StickyProfileButton />
 
       <div className="container">
         <div className="row">
