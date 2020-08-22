@@ -86,7 +86,9 @@ const Profile = ({
 
                   <div
                     className={
-                      option == 1 ? "d-block d-md-none" : "d-none col-12"
+                      option == 1
+                        ? "d-block d-md-none col-12 px-0"
+                        : "d-none col-12"
                     }
                   >
                     {active == 1 ? (
