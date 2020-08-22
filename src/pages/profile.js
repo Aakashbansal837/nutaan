@@ -14,6 +14,7 @@ class UserProfile extends React.Component {
       selectedOption: "none",
       active: 1,
       option: 0,
+      viewDetail: -1,
     };
   }
 
@@ -31,6 +32,10 @@ class UserProfile extends React.Component {
   setOption = (value) => {
     this.setState({ option: value });
   };
+
+  setviewDetail = (value) => {
+    this.setState({ viewDetail: value });
+  };
   render() {
     return (
       <div>
@@ -39,6 +44,7 @@ class UserProfile extends React.Component {
         ) : (
           <ProfileOptionNavbar
             selectedOption={this.state.selectedOption}
+            viewDetail={this.state.viewDetail}
             changeHide={(value) => {
               this.changeHide(value);
             }}
@@ -50,6 +56,8 @@ class UserProfile extends React.Component {
           option={this.state.option}
           setOption={this.setOption.bind(this)}
           changeOption={this.changeOption.bind(this)}
+          viewDetail={this.state.viewDetail}
+          setviewDetail={this.setviewDetail.bind(this)}
         />
         <Footer />
       </div>
