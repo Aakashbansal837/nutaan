@@ -20,10 +20,11 @@ const ComboSpecs = ({ data }) => {
                       </div>
                       <div className="col-12 col-sm-12 col-md-11 col-lg-11 pl-0">
                         <div
-                          className="combo-detail-spec-open-main"
-                          style={{
-                            marginLeft: active == index ? "0rem" : "1rem",
-                          }}
+                          className={
+                            active == index
+                              ? "combo-detail-spec-open-secondary"
+                              : "combo-detail-spec-open-main"
+                          }
                         >
                           <div className="container">
                             <div className="row">
@@ -125,10 +126,11 @@ const ComboSpecs = ({ data }) => {
                     <div className="row">
                       <div className="col-12 col-sm-12 col-md-11 col-lg-12 pl-0">
                         <div
-                          className="combo-detail-spec-open-main"
-                          style={{
-                            marginLeft: active == index ? "0rem" : "1rem",
-                          }}
+                          className={
+                            active == index
+                              ? "combo-detail-spec-open-secondary"
+                              : "combo-detail-spec-open-main"
+                          }
                         >
                           <div className="container">
                             <div className="row">
