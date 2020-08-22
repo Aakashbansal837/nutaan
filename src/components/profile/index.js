@@ -37,7 +37,7 @@ const Profile = ({
     }
   };
   return (
-    <div className="profile">
+    <div className={viewDetail === -1 ? "profile" : "profile-vd"}>
       <div className="container">
         <div className="row">
           <div className="d-none d-md-block col-12 ">
