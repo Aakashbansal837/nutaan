@@ -282,7 +282,7 @@ const OrderDetails = ({ item }) => {
             <Orders items={item} />
           </div>
 
-          <div className="col-12 col-sm-12 col-md-12 col-lg-6 px-0">
+          <div className="d-none d-md-block col-md-12 col-lg-6 px-0">
             <div className="profile-order-detail-delivery">
               <div className="container">
                 <div className="row">
@@ -407,6 +407,49 @@ const OrderDetails = ({ item }) => {
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 col-sm-12 d-block d-md-none px-0">
+            <div className="profile-order-detail-delivery">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12">
+                    <div className="profile-order-detail-delivery-head">
+                      Delivery information
+                    </div>
+                  </div>
+                  <div className="col-12 px-0">
+                    <div className="shopping-divider"></div>
+                  </div>
+                  <div className="col-12">
+                    <div className="profile-order-detail-delivery-main">
+                      <div className="profile-order-detail-delivery-main-title">
+                        Delivery Method
+                      </div>
+                      <div className="profile-order-detail-delivery-main-data">
+                        {item.deliveryMethod}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-12">
+                    <div className="profile-order-detail-delivery-main">
+                      <div className="profile-order-detail-delivery-main-title">
+                        Shipping Address
+                      </div>
+                      <div className="profile-order-detail-delivery-main-data">
+                        {item.detail.name} &nbsp;-&nbsp;Mobile
+                        {item.detail.phone}
+                        <br />
+                        {item.detail.address}
+                        <br />
+                        {item.detail.city},{item.detail.state}&nbsp;-&nbsp;
+                        {item.detail.pin}
                       </div>
                     </div>
                   </div>
