@@ -63,7 +63,7 @@ const Product = ({ item }) => {
 
       <div className="container">
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+          <div className="d-none d-md-block col-md-6 col-lg-6">
             <ProductSpecs data={item} />
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
@@ -72,11 +72,19 @@ const Product = ({ item }) => {
           <div className="col-12">
             <DoorStepService />
           </div>
+          <div className="col-12 col-sm-12 d-block d-md-none">
+            <ProductSpecs data={item} />
+          </div>
         </div>
       </div>
 
       <div className="container">
         <div className="row">
+          <div className="col-12">
+            <div className="product-detail-similar-product">
+              Similar Products
+            </div>
+          </div>
           <div className="col-12">
             <FiveItemCorousal items={item.similarProduct} />
           </div>
