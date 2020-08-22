@@ -5,7 +5,7 @@ import { ReactComponent as Bag } from "../../images/bag.svg";
 import { ReactComponent as Heart } from "../../images/heart.svg";
 import UserImage from "../../images/user.png";
 
-const ProfileOptionNavbar = ({ selectedOption, changeHide }) => {
+const ProfileOptionNavbar = ({ selectedOption, viewDetail, changeHide }) => {
   const [active, setActive] = React.useState(false);
   const [fade, setFade] = React.useState(false);
   return (
@@ -68,7 +68,7 @@ const ProfileOptionNavbar = ({ selectedOption, changeHide }) => {
           </ul>
         </div>
       </div>
-      <div className="d-sm-block d-md-none">
+      <div className={viewDetail === -1 ? "d-sm-block d-md-none" : "d-none"}>
         <div className="container nvbr-sm">
           <div className="row">
             <div className="col-1 ">
