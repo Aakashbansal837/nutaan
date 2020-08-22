@@ -21,7 +21,10 @@
       display: inline-block;
     }
     &-main {
-      margin: 1.5rem 0;
+      margin: 1.5rem 0 1.5rem 1rem;
+    }
+    &-secondary {
+      margin: 1.5rem 0 1.5rem 0rem;
     }
   }
 
@@ -69,12 +72,16 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .combo-detail-spec {
     &-open {
       padding-left: 1rem;
       border: $border-card-red;
       background-color: $color-red-light;
+
+      &-secondary {
+        margin: 1.5rem 0 1.5rem 1rem;
+      }
     }
     &-data {
       &-head {
