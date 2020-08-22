@@ -6,7 +6,15 @@ import Addresses from "./Addresses";
 import PaymentDetails from "./paymentDetails";
 import PersonalInfo from "./PersonalInfo";
 
-const Profile = ({ active, setActive, option, setOption, changeOption }) => {
+const Profile = ({
+  active,
+  setActive,
+  option,
+  setOption,
+  changeOption,
+  viewDetail,
+  setviewDetail,
+}) => {
   const [user, setUser] = React.useState({
     name: "user name",
     phone: "9876-543-210",
@@ -63,7 +71,10 @@ const Profile = ({ active, setActive, option, setOption, changeOption }) => {
                     {active == 1 ? (
                       <MyAccount />
                     ) : active == 3 ? (
-                      <MyOrder />
+                      <MyOrder
+                        viewDetail={viewDetail}
+                        setViewDetail={setviewDetail}
+                      />
                     ) : active == 4 ? (
                       <Addresses />
                     ) : active == 5 ? (
@@ -81,7 +92,10 @@ const Profile = ({ active, setActive, option, setOption, changeOption }) => {
                     {active == 1 ? (
                       <MyAccount />
                     ) : active == 3 ? (
-                      <MyOrder />
+                      <MyOrder
+                        viewDetail={viewDetail}
+                        setViewDetail={setviewDetail}
+                      />
                     ) : active == 4 ? (
                       <Addresses />
                     ) : active == 5 ? (
