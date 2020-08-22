@@ -1,6 +1,10 @@
 .profile {
   @include PaddingNav();
 
+  &-vd {
+    margin-top: 0rem;
+  }
+
   &-header {
     margin-top: 2rem;
     font-size: 1.5rem;
@@ -84,6 +88,11 @@
   .profile {
     &-options {
       background-color: $color-white;
+    }
+
+    &-main {
+      border: none;
+      margin-top: 0rem;
     }
   }
 }
