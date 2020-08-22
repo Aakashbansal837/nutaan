@@ -178,12 +178,81 @@ const OrderData = ({ orders, viewOrderDetails }) => {
   );
 };
 
+const Orders = ({ items }) => {
+  return (
+    <div>
+      {items.data.map((dt, index) => (
+        <div className="profile-order-main">
+          <div className="profile-order-main-content">
+            <div className="container">
+              <div className="row">
+                <div className="col-4 col-sm-3 col-md-3 col-lg-2">
+                  <div className="profile-order-main-content-img">
+                    <img src={dt.img} alt="item" />
+                  </div>
+                </div>
+                <div className="col-8 col-sm-8 col-md-8 col-lg-5 px-0">
+                  <div className="profile-order-main-content-name">
+                    {dt.name}
+                  </div>
+                  <div className="profile-order-main-content-disc">
+                    {dt.disc}
+                  </div>
+                  <div className="profile-order-main-content-detail">
+                    <span>Qty: {dt.qty}</span>
+                    <span>Size : {dt.size} </span>
+                  </div>
+                  <div className="profile-order-main-content-price">
+                    {dt.price}
+                  </div>
+                </div>
+                <div className="d-none d-md-block col-md-12 col-lg-5 pr-0">
+                  <div className="profile-order-main-content-track">
+                    <div
+                      className="profile-order-main-content-track-status"
+                      style={{
+                        color:
+                          dt.status == "Dispatched" ? "#2aa838" : "#212121",
+                      }}
+                    >
+                      {dt.status} {dt.date}
+                    </div>
+                    <div className="profile-order-main-content-track-status-disc">
+                      {dt.statusDisc}
+                    </div>
+                    <div className="profile-order-main-content-track-btn">
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-6 col-sm-6 col-md-6 col-lg-5 pl-0">
+                            <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
+                              Track Item
+                            </button>
+                          </div>
+                          <div className="col-6 col-sm-6 col-md-6 col-lg-6 pl-0">
+                            <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
+                              Request Fitting
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const OrderDetails = ({ item }) => {
   return (
     <div className="profile-order-detail-main">
       <div className="container">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 px-0">
             <div className="container">
               <div className="row">
                 <div className="col-12 col-sm-12 col-md-8 col-lg-9">
@@ -209,7 +278,11 @@ const OrderDetails = ({ item }) => {
             </div>
           </div>
 
-          <div className="col-12 col-sm-12 col-md-12 col-lg-6">
+          <div className="col-12 col-sm-12 d-block d-md-none px-0">
+            <Orders items={item} />
+          </div>
+
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6 px-0">
             <div className="profile-order-detail-delivery">
               <div className="container">
                 <div className="row">
@@ -252,7 +325,7 @@ const OrderDetails = ({ item }) => {
             </div>
           </div>
 
-          <div className="col-12 col-sm-12 col-md-12 col-lg-6">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6 px-0">
             <div className="profile-order-detail-payment">
               <div className="container">
                 <div className="row">
@@ -342,71 +415,8 @@ const OrderDetails = ({ item }) => {
             </div>
           </div>
 
-          <div className="col-12">
-            {item.data.map((dt, index) => (
-              <div className="profile-order-main">
-                <div className="profile-order-main-content">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-4 col-sm-3 col-md-3 col-lg-2">
-                        <div className="profile-order-main-content-img">
-                          <img src={dt.img} alt="item" />
-                        </div>
-                      </div>
-                      <div className="col-8 col-sm-8 col-md-8 col-lg-5 px-0">
-                        <div className="profile-order-main-content-name">
-                          {dt.name}
-                        </div>
-                        <div className="profile-order-main-content-disc">
-                          {dt.disc}
-                        </div>
-                        <div className="profile-order-main-content-detail">
-                          <span>Qty: {dt.qty}</span>
-                          <span>Size : {dt.size} </span>
-                        </div>
-                        <div className="profile-order-main-content-price">
-                          {dt.price}
-                        </div>
-                      </div>
-                      <div className="d-none d-md-block col-md-12 col-lg-5 pr-0">
-                        <div className="profile-order-main-content-track">
-                          <div
-                            className="profile-order-main-content-track-status"
-                            style={{
-                              color:
-                                dt.status == "Dispatched"
-                                  ? "#2aa838"
-                                  : "#212121",
-                            }}
-                          >
-                            {dt.status} {dt.date}
-                          </div>
-                          <div className="profile-order-main-content-track-status-disc">
-                            {dt.statusDisc}
-                          </div>
-                          <div className="profile-order-main-content-track-btn">
-                            <div className="container">
-                              <div className="row">
-                                <div className="col-6 col-sm-6 col-md-6 col-lg-5 pl-0">
-                                  <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
-                                    Track Item
-                                  </button>
-                                </div>
-                                <div className="col-6 col-sm-6 col-md-6 col-lg-6 pl-0">
-                                  <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
-                                    Request Fitting
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="d-none d-md-block col-md-12 col-lg-12 px-0">
+            <Orders items={item} />
           </div>
         </div>
       </div>
@@ -549,7 +559,7 @@ const MyOrder = ({ viewDetail, setViewDetail }) => {
               <OrderDetailsHead viewOrderDetails={setViewDetail} />
             )}
           </div>
-          <div className="col-12 ">
+          <div className="col-12 px-0">
             {viewDetail == -1 ? (
               <OrderData
                 orders={orders}
