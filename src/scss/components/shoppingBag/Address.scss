@@ -75,9 +75,7 @@
       &-fullAddr {
         font-size: 0.875rem;
         margin-top: 0.875rem;
-        overflow: hidden !important;
-        white-space: nowrap !important;
-        text-overflow: ellipsis !important;
+        @include Text-OverFlow();
       }
       &-edit {
         font-size: 0.875rem;
@@ -130,6 +128,19 @@
         font-weight: $weight-mid;
         line-height: 2rem;
         opacity: $opacity-mid;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .shopping-addr {
+    &-adr {
+      &-dt {
+        &-edit {
+          padding-top: 1.5rem;
+          text-align: left;
+        }
       }
     }
   }

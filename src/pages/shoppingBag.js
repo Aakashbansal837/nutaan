@@ -50,6 +50,7 @@ class ShoppingBag extends React.Component {
         },
       ],
       selectedAddress: {},
+      LoggedIn: false,
     };
   }
 
@@ -76,6 +77,7 @@ class ShoppingBag extends React.Component {
           addr={this.state.addr}
           ChangeSelectedAddress={this.ChangeSelectedAddress.bind(this)}
           selectedAddress={this.state.selectedAddress}
+          LoggedIn={this.state.LoggedIn}
         />
         <Footer />
       </div>

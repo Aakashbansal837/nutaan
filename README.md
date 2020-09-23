@@ -1,2 +1,1 @@
-# nutaan
-nutaan.com frontend
+# nutaan-frontend

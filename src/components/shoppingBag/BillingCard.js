@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "@material-ui/core";
+import LoginCheck from "./PopUp/LoginCheck";
 
-const NormalCard = ({ PlaceOrderClicked, OrderPlaced }) => {
+const NormalCard = ({ PlaceOrderClicked, OrderPlaced, LoggedIn }) => {
   return (
     <div className="bill">
       <div className="container">
@@ -67,7 +68,7 @@ const NormalCard = ({ PlaceOrderClicked, OrderPlaced }) => {
                   <div className="bill-btn-div">
                     {OrderPlaced ? (
                       ""
-                    ) : (
+                    ) : LoggedIn ? (
                       <Button
                         className="bill-btn-2"
                         color="secondary"
@@ -76,6 +77,8 @@ const NormalCard = ({ PlaceOrderClicked, OrderPlaced }) => {
                       >
                         Place Order
                       </Button>
+                    ) : (
+                      <LoginCheck PlaceOrderClicked={PlaceOrderClicked} />
                     )}
                   </div>
                 </div>

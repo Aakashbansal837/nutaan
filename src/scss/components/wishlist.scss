@@ -44,9 +44,7 @@
     &-text {
       font-size: 0.875rem;
       line-height: 0.75rem;
-      overflow: hidden !important;
-      white-space: nowrap !important;
-      text-overflow: ellipsis !important;
+      @include Text-OverFlow();
     }
 
     &-button {

@@ -1,0 +1,159 @@
+@mixin DeliveryOptionColorBox() {
+  width: 3.2rem;
+  height: 2.75rem;
+  display: inline-block;
+  margin-right: 0.75rem;
+  border-radius: 0.2rem;
+}
+
+@mixin DeliveryOptionSizeBox() {
+  width: 100%;
+  height: 2.75rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+
+.product-detail-delivery {
+  &-header {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: $weight-mid;
+    &-viewAll {
+      font-size: 1rem;
+      color: $color-red;
+      float: right;
+      font-weight: $weight-light;
+      cursor: pointer;
+    }
+  }
+
+  &-colorBox {
+    margin-top: 1rem;
+    max-width: 20rem;
+    &-outer {
+      @include DeliveryOptionColorBox();
+      border: $border-card;
+      padding: 0.5rem 0 0 0.5rem;
+      &-red {
+        @include DeliveryOptionColorBox();
+        border: $border-card-red;
+        padding: 0.4rem 0 0 0.4rem;
+      }
+    }
+    &-inner {
+      height: 1.5rem;
+      width: 2.1rem;
+      border-radius: 0.2rem;
+    }
+    &-viewMore {
+      margin-top: 0.5rem;
+      float: right;
+    }
+  }
+
+  &-sizeBox {
+    margin-top: 1rem;
+    max-width: 20rem;
+    &-outer {
+      display: inline-block;
+      min-width: 3.75rem;
+      margin-right: 0.75rem;
+      &-none {
+        display: inline-block;
+        min-width: 3.75rem;
+        margin-right: 0.75rem;
+        opacity: $opacity-light;
+        pointer-events: none;
+      }
+    }
+    &-upper {
+      @include DeliveryOptionSizeBox();
+      border: $border-card;
+      padding-top: 0.5rem;
+
+      &-red {
+        @include DeliveryOptionSizeBox();
+        padding-top: 0.4rem;
+        border: $border-card-red;
+      }
+    }
+    &-lower {
+      height: 1.5rem;
+      width: 100%;
+      font-size: 0.875rem;
+      border-bottom-left-radius: 0.2rem;
+      border-bottom-right-radius: 0.2rem;
+      background-color: $color-red-light;
+      text-align: center;
+      &-none {
+        opacity: 0;
+      }
+    }
+  }
+
+  &-btn {
+    height: 3rem;
+    width: 100%;
+    margin: 2rem 0 1rem 0;
+
+    &-wishlist {
+      height: 100%;
+      width: 100%;
+      color: $color-red !important;
+      border: $border-red !important;
+    }
+
+    &-addToBag {
+      height: 100%;
+      width: 100%;
+      background-color: $color-red !important;
+    }
+  }
+
+  &-btn-smallScreen {
+    height: 3rem;
+    width: 100%;
+    margin: 2rem 0 0rem 0;
+    background-color: $color-white;
+
+    &-wishlist {
+      height: 100%;
+      width: 100%;
+      color: $color-red !important;
+      border: $border-red !important;
+      border-radius: 0px !important;
+    }
+
+    &-addToBag {
+      height: 100%;
+      width: 100%;
+      background-color: $color-red !important;
+      border-radius: 0px !important;
+    }
+  }
+
+  &-input {
+    margin: 1rem 0;
+  }
+
+  &-offer {
+    margin-top: 1rem;
+    background-color: $color-red-lighter;
+    border: 1px dashed $color-red;
+    min-height: 12.5rem;
+    border-radius: 0.5rem;
+
+    &-head {
+      padding: 1rem 1rem 1rem 1rem;
+      color: $color-red;
+      font-size: 1rem;
+    }
+
+    &-data {
+      font-size: 1rem;
+      list-style-type: disc;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.combo-detail-spec {
+  &-header {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: $weight-mid;
+  }
+  &-open {
+    // max-height: 29.5rem;
+    width: 100%;
+    border: $border-card;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+
+    &-leftSlide {
+      margin: 1.5rem 0;
+      border-left: 0.4rem solid $color-red;
+      height: 90%;
+      width: 0.2rem;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      display: inline-block;
+    }
+    &-main {
+      margin: 1.5rem 0 1.5rem 1rem;
+    }
+    &-secondary {
+      margin: 1.5rem 0 1.5rem 0rem;
+    }
+  }
+
+  &-img {
+    height: 7.5rem;
+    width: 5.625rem;
+    border-radius: 0.5rem;
+  }
+  &-data {
+    &-head {
+      font-size: 1.25rem;
+      font-weight: $weight-mid;
+    }
+    &-disc {
+      font-size: 1rem;
+      max-width: 80%;
+    }
+
+    &-prc {
+      font-weight: $weight-mid;
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    &-show {
+      float: right;
+      font-size: 1rem;
+      cursor: pointer;
+      color: $color-red;
+    }
+  }
+
+  &-main {
+    &-head {
+      margin-top: 1rem;
+      font-weight: $weight-mid;
+    }
+    &-dt {
+      margin-top: 1rem;
+      opacity: $opacity-mid;
+      &-data {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .combo-detail-spec {
+    &-open {
+      padding-left: 1rem;
+      border: $border-card-red;
+      background-color: $color-red-light;
+
+      &-secondary {
+        margin: 1.5rem 0 1.5rem 1rem;
+      }
+    }
+    &-data {
+      &-head {
+        font-size: 1rem;
+      }
+      &-disc {
+        font-size: 0.875rem;
+        max-width: 100%;
+      }
+      &-prc {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .combo-detail-spec {
+    &-open {
+      border: $border-card-red;
+      background-color: $color-red-light;
+    }
+    &-data {
+      &-disc {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .combo-detail-spec {
+    &-open {
+      padding-left: 0rem;
+    }
+
+    &-img {
+      height: 6.5rem;
+      width: 4.625rem;
+    }
+    &-data {
+      &-head {
+        font-size: 1rem;
+      }
+      &-disc {
+        font-size: 0.875rem;
+        max-width: 100%;
+      }
+    }
+    &-main {
+      &-head {
+        font-size: 0.875rem;
+      }
+      &-dt {
+        font-size: 0.875rem;
+        &-data {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}

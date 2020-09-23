@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 
-const PaymentMode = ({}) => {
+const PaymentMode = () => {
   return (
     <div>
       <div className="shopping-pmt">

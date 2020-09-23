@@ -1,6 +1,6 @@
 import React from "react";
 
-const Payment = ({}) => {
+const Payment = () => {
   return (
     <div>
       <div className="shopping-addr-pay">

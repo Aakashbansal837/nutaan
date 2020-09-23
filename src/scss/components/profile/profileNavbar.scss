@@ -1,0 +1,43 @@
+.profile-navbar {
+  &-cl {
+    height: 1.3rem;
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+  &-menu {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0rem;
+    padding-left: 0rem;
+  }
+  &-text {
+    font-weight: $weight-mid;
+    margin-right: auto;
+  }
+
+  &-bag {
+    opacity: $opacity-heavy;
+  }
+  &-heart {
+    opacity: $opacity-heavy;
+  }
+
+  &-link {
+    font-weight: $weight-mid;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.5rem;
+    color: $color-black;
+    margin-right: 1rem;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
