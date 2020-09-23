@@ -1,0 +1,60 @@
+.owl-carousel .nav-btn {
+  height: 100%;
+  position: absolute;
+  width: 3.5rem;
+  cursor: pointer;
+  top: 0px !important;
+}
+
+.nav-btn {
+  i {
+    margin-top: 8rem;
+    color: #979797;
+    font-size: 2rem;
+  }
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.owl-carousel .prev-slide {
+  background-color: $color-white;
+  opacity: $opacity-mid;
+  left: 0px;
+}
+.owl-carousel .next-slide {
+  background-color: $color-white;
+  opacity: $opacity-mid;
+  right: 0px;
+}
+.owl-carousel .prev-slide:hover {
+  background-position: 0px -53px;
+}
+.owl-carousel .next-slide:hover {
+  background-position: -24px -53px;
+}
+
+@media only screen and (max-width: 600px) {
+  .owl-carousel .nav-btn {
+    width: 2rem;
+  }
+  .nav-btn {
+    i {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .owl-carousel .nav-btn {
+    width: 2.75rem;
+  }
+  .nav-btn {
+    i {
+      font-size: 1.75rem;
+    }
+  }
+}

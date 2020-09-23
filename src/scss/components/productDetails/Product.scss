@@ -1,0 +1,42 @@
+.product-detail {
+  @include PaddingNav();
+
+  &-stepper {
+    font-size: 0.875rem;
+    margin: 2rem 0;
+  }
+  &-item {
+    &-name {
+      font-size: 1.5rem;
+      font-weight: $weight-mid;
+    }
+    &-disc {
+      font-size: 1rem;
+    }
+    &-price {
+      font-size: 1rem;
+
+      &-current {
+        font-size: 1.5rem;
+        font-weight: $weight-mid;
+        padding-right: 1rem;
+      }
+      &-prev {
+        opacity: $opacity-mid;
+      }
+    }
+  }
+
+  &-similar-product {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    font-weight: $weight-mid;
+  }
+
+  &-sticky-bottom {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+  }
+}

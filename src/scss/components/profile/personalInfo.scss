@@ -1,0 +1,76 @@
+.profile-personal-info {
+  margin-top: 1rem;
+  &-disc {
+    font-size: 0.875rem;
+    opacity: $opacity-mid;
+  }
+
+  &-left {
+    margin-top: 1rem;
+    border-right: $border-card;
+  }
+  &-right {
+    margin-top: 1rem;
+  }
+
+  &-main {
+    margin: 0.5rem 0;
+
+    label {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    input {
+      width: 95%;
+
+      &::placeholder {
+        font-size: 0.875rem;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+
+      &-gender {
+        color: $color-red !important;
+        width: 100%;
+        &-1 {
+          color: $color-black;
+          width: 100%;
+        }
+      }
+    }
+    &-pwd {
+      label {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        opacity: 0;
+      }
+
+      &-btn {
+        color: $color-red !important;
+        border: $border-card !important;
+        width: 95%;
+      }
+    }
+  }
+
+  &-save {
+    margin: 1rem 0;
+    width: 95%;
+    &-btn {
+      color: $color-red !important;
+      width: 100%;
+      border: $border-card !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .profile-personal-info {
+    &-left {
+      border-right: none;
+    }
+  }
+}

@@ -1,0 +1,171 @@
+//heart checkbox
+.nt-e-heart-chk{
+    background: #ffffff !important;
+    box-shadow: 0 0 8px 0 rgba(33, 42, 57, 0.15);
+    .MuiSvgIcon-root{
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+    .icon-unchk{
+        color: rgba(34, 43, 58, 0.3);
+    }
+    .icon-chk{
+        color: #ED695F;
+    }
+}
+//simple checkbox
+.nt-e-simple-chk{
+    .MuiSvgIcon-root{
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+    .icon-unchk{
+        color: rgba(34, 43, 58, 0.3);
+    }
+    .icon-chk{
+        color: #ED695F;
+    }
+}
+
+//sort filter
+.nt-full-filter-header{
+    height: 48px;
+    position: relative;
+    margin: 0 !important;
+}
+.nt-full-filter-header-itm-ctnr{
+    @include center-all;
+    width: 100%;
+    background-color: #ffffff;
+    color: #212A39;
+    font-size: 14px;
+    line-height: 16.8px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 0.75px solid rgba(33, 42, 57, 0.25);
+    .clsoe-btn{
+        float: right;
+        text-align: right;
+        color: #ED695F;
+    }
+}
+.nt-full-filter-pd-xy{
+    padding: 12px 16px;
+}
+.nt-full-filter-pd-x{
+    padding: 0 16px;
+}
+.nt-full-filter-ctnr{
+    width: 100%;
+    display: flex
+}
+.nt-full-filter-inr-ctnr-1{
+    width: 40%;
+    background-color: rgba(218, 218, 218, 0.25);
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+}
+.nt-full-filter-key{
+    height: 40px;
+    color: #212A39;
+    font-size: 12px;
+    line-height: 14.4px;
+    text-align: left;
+    font-weight: 400;
+    border: 0.6px solid rgba(206, 206, 206, 0.25);
+    border-right: 0;
+    &.active{
+        font-weight: 600;
+        background-color: #ffffff;
+    }
+}
+.nt-full-filter-inr-ctnr-2{
+    width: 60%;
+    background-color: #ffffff;
+    height: 100%;
+    position: fixed;
+    margin-left: 40%;
+    overflow: auto;
+}
+.nt-full-filter-btn-ctnr{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 48px;
+    background-color: #ffffff;
+    border: 0.6px solid #CECECE;
+}
+.nt-full-filter-btn{
+    @include center-all;
+    color: #212A39;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+    border-right: 0.6px solid #CECECE;
+    &.apply-btn{
+        color: #ED695F;
+        border: 0;
+        border-left: 0.6px solid #CECECE;
+    }
+}
+
+
+.nt-sort-filter{
+    z-index: 9999999;
+    .MuiPaper-root{
+        background: transparent !important;
+    }
+}
+.nt-sort-filter-ctnr{
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: #fff;
+    border-radius: 16px 16px 0 0;
+    .nt-sort-filter-pd-xy{
+        padding: 12px 16px;
+    }
+    .nt-sort-filter-pd-x{
+        padding: 0 16px;
+    }
+}
+.nt-sort-filter-ttl{
+    width: 100%;
+    color: #212A39;
+    font-size: 14px;
+    line-height: 16.8px;
+    text-align: left;
+    font-weight: 600;
+}
+.nt-sort-filter-hr{
+    width: 100%;
+    margin-top: 14px;
+    border-bottom: 0.75px solid rgba(33, 42, 57, 0.25);
+}
+.nt-sort-filter-radio-ctnr{
+    width: 100%;
+    padding-bottom: 10px !important;
+}
+.nt-sort-filter-radio{
+    .MuiSvgIcon-root{
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+}
+.nt-sort-filter-radio-label{
+    color: #212A39;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+.nt-sort-filter-close{
+    height: 48px;
+    background-color: rgba(206, 206, 206, 0.25);
+    color: #212A39;
+    font-size: 12px;
+    line-height: 14.4px;
+    text-align: left;
+    font-weight: 600;
+}

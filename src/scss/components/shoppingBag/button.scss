@@ -1,0 +1,53 @@
+.shopping {
+  &-btn {
+    &-move {
+      color: $color-red !important;
+      border-radius: 0rem !important;
+      height: 3.5rem;
+      padding-top: 1rem;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: $weight-mid;
+      border-bottom-left-radius: 0.5rem !important;
+      text-align: center;
+    }
+    &-remove {
+      height: 3.5rem;
+      border-radius: 0rem !important;
+      width: 100%;
+      padding-top: 1rem;
+      font-size: 1rem;
+      text-align: center;
+      font-weight: $weight-mid;
+      border-bottom-right-radius: 0.5rem !important;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .shopping {
+    &-btn {
+      &-move {
+        height: 2.3rem;
+        padding-top: 0.5rem;
+      }
+      &-remove {
+        padding-top: 0.5rem;
+        height: 2.3rem;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .shopping {
+    &-btn {
+      &-move {
+        padding-top: 0.75rem;
+      }
+      &-remove {
+        padding-top: 0.75rem;
+      }
+    }
+  }
+}
