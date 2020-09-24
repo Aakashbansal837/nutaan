@@ -32,7 +32,7 @@ const PaymentDetails = () => {
                   <div className="col-12 col-sm-12 col-md-12 col-lg-4 px-0">
                     <div className="profile-payment-head-btn">
                       <Button
-                        variant="contained"
+                        variant="outlined"
                         color="secondary"
                         className="profile-payment-head-btn-button"
                       >
