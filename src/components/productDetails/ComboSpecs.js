@@ -33,6 +33,10 @@ const ComboSpecs = ({ data }) => {
                       style={{
                         borderColor:
                           selectedDiv == index ? "#ED695F" : "#979797",
+                        backgroundColor:
+                          selectedDiv === index
+                            ? "rgba(237, 105, 95, 0.06)"
+                            : "#FFFFFF",
                       }}
                     >
                       <div className="combo-detail-spec-sm-text">{dt.disc}</div>
