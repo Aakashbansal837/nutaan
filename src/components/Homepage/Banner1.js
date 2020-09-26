@@ -5,6 +5,7 @@ const Banner1 = (props) => {
   return (
     <a className="hmpg-bnnr-1" href="/product-details">
       <HomepageBanner
+        className="hmpg-bnnr-1-img"
         onClick={() => {
           props.history.push("/product-details");
         }}
