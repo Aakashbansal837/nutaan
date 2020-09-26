@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Navbar from "../components/common/navbar";
 import Footer from "../components/common/footer";
+import HomepageComponent from "../components/Homepage";
 
 class Homepage extends React.Component {
   constructor(props) {
@@ -11,10 +12,11 @@ class Homepage extends React.Component {
 
   render() {
     return (
-      <div className="Homepage">
+      <>
         <Navbar />
+        <HomepageComponent />
         <Footer />
-      </div>
+      </>
     );
   }
 }
