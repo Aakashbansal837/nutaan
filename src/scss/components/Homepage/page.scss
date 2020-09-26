@@ -9,4 +9,14 @@
     font-size: 0.875rem;
     padding-top: 0.25rem;
   }
+
+  &-bnnr {
+    &-1 {
+      text-decoration: none;
+
+      & :hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
