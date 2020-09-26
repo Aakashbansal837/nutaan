@@ -70,6 +70,33 @@
       }
     }
   }
+
+  &-sm {
+    overflow-x: scroll;
+    max-width: 400px;
+    &-1 {
+      max-width: 100rem;
+    }
+    &-body {
+      border: $border-card;
+      padding: 0.5rem;
+      width: 9rem;
+      margin: 1rem 0.5rem;
+      border: 1px solid $color-red;
+      border-radius: 0.2rem;
+      display: inline-block;
+    }
+    &-text {
+      font-size: 0.75rem;
+      height: 2.5rem;
+      overflow-y: hidden;
+      opacity: $opacity-heavy;
+    }
+    &-price {
+      font-size: 0.75rem;
+      font-weight: $weight-mid;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
