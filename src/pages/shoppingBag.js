@@ -30,14 +30,55 @@ class ShoppingBag extends React.Component {
           prevP: "₹ 1999",
         },
       ],
+      orderPlaced: false,
+      addr: [
+        {
+          name: "Aakash",
+          contact: "9874563210",
+          pin: "00110011",
+          fullAddr: "12/F Golden Avenue",
+          city: "YNR",
+          state: "Haryana",
+        },
+        {
+          name: "Ashu",
+          contact: "0022336688",
+          pin: "00110011",
+          fullAddr: "12/F Golden Avenue",
+          city: "YNR",
+          state: "Haryana",
+        },
+      ],
+      selectedAddress: {},
+      LoggedIn: false,
     };
   }
+
+  PlaceOrderClicked = () => {
+    this.setState({ orderPlaced: true });
+  };
+  ChangeOrderClicked = () => {
+    this.setState({ orderPlaced: false });
+  };
+  ChangeSelectedAddress = (value) => {
+    this.setState({ selectedAddress: this.state.addr[parseInt(value)] });
+    console.log("selected Addr :", this.state.selectedAddress);
+  };
 
   render() {
     return (
       <div>
         <Navbar />
-        <NormalBag items={this.state.data} />
+        <NormalBag
+          items={this.state.data}
+          ChangeOrderClicked={() => this.ChangeOrderClicked()}
+          PlaceOrderClicked={() => this.PlaceOrderClicked()}
+          OrderPlaced={this.state.orderPlaced}
+          addr={this.state.addr}
+          ChangeSelectedAddress={this.ChangeSelectedAddress.bind(this)}
+          selectedAddress={this.state.selectedAddress}
+          LoggedIn={this.state.LoggedIn}
+        />
         <Footer />
       </div>
     );

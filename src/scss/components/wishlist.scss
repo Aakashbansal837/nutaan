@@ -44,6 +44,7 @@
     &-text {
       font-size: 0.875rem;
       line-height: 0.75rem;
+      @include Text-OverFlow();
     }
 
     &-button {
