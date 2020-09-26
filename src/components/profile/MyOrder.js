@@ -1,9 +1,6 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import Img1 from "../../images/order/1.png";
-import Img2 from "../../images/order/2.png";
-import Img3 from "../../images/order/3.png";
-import Img4 from "../../images/order/4.png";
+import { imageArray } from "../../constants";
 
 const OrderDetailsHead = ({ viewOrderDetails }) => {
   return (
@@ -493,7 +490,7 @@ const MyOrder = ({ viewDetail, setViewDetail }) => {
       },
       data: [
         {
-          img: Img1,
+          img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
           name: "Nutaan",
           disc: "Women Pink Handblock Bird Print Straight Kurta",
           qty: "1",
@@ -504,7 +501,7 @@ const MyOrder = ({ viewDetail, setViewDetail }) => {
           date: "31 July 2020",
         },
         {
-          img: Img2,
+          img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
           name: "Nutaan",
           disc: "Women Pink Handblock Bird Print Straight Kurta",
           qty: "1",
@@ -540,7 +537,7 @@ const MyOrder = ({ viewDetail, setViewDetail }) => {
       },
       data: [
         {
-          img: Img3,
+          img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
           name: "Nutaan",
           disc: "Women Pink Handblock Bird Print Straight Kurta",
           qty: "1",
@@ -576,7 +573,7 @@ const MyOrder = ({ viewDetail, setViewDetail }) => {
       },
       data: [
         {
-          img: Img4,
+          img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
           name: "Nutaan",
           disc: "Women Pink Handblock Bird Print Straight Kurta",
           qty: "1",

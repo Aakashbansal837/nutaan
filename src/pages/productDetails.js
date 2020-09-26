@@ -4,13 +4,7 @@ import { connect } from "react-redux";
 import Product from "../components/productDetails";
 import Navbar from "../components/common/navbar";
 import Footer from "../components/common/footer";
-import Img1 from "../images/Wishlist/1.png";
-import Img2 from "../images/Wishlist/2.png";
-import Img3 from "../images/Wishlist/3.png";
-import Img4 from "../images/Wishlist/4.png";
-import Img5 from "../images/Wishlist/5.png";
-import Img6 from "../images/Wishlist/6.png";
-import Img7 from "../images/Wishlist/7.png";
+import { imageArray } from "../constants";
 
 class ProductDetails extends React.Component {
   constructor(props) {
@@ -46,48 +40,63 @@ class ProductDetails extends React.Component {
           ["l", "0"],
           ["xl", "10"],
         ],
-        images: [Img1, Img2, Img3, Img4, Img5, Img6, Img7],
+        images: [
+          imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
+          imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
+          imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
+          imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
+          imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
+          imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
+          imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
+        ],
         similarProduct: [
           {
             name: "BIBA",
             disc: "Kurta with Palazzos and Dupatta",
-            img: Img1,
+            img:
+              imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
             price: "₹ 1,899",
           },
           {
             name: "BIBA",
             disc: "Kurta with Palazzos and Dupatta",
-            img: Img2,
+            img:
+              imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
             price: "₹ 1,899",
           },
           {
             name: "BIBA",
             disc: "Kurta with Palazzos and Dupatta",
-            img: Img3,
+            img:
+              imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
             price: "₹ 1,899",
           },
           {
             name: "BIBA",
             disc: "Kurta with Palazzos and Dupatta",
-            img: Img4,
+            img:
+              imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
             price: "₹ 1,899",
           },
           {
             name: "BIBA",
             disc: "Kurta with Palazzos and Dupatta",
-            img: Img5,
+            img:
+              imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
             price: "₹ 1,899",
           },
           {
             name: "BIBA",
             disc: "Kurta with Palazzos and Dupatta",
-            img: Img6,
+            img:
+              imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
             price: "₹ 1,899",
           },
           {
             name: "BIBA",
             disc: "Kurta with Palazzos and Dupatta",
-            img: Img7,
+            img:
+              imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
             price: "₹ 1,899",
           },
         ],

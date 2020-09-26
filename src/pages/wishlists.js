@@ -3,38 +3,29 @@ import { connect } from "react-redux";
 import Wishlist from "../components/wishlist";
 import Navbar from "../components/common/navbar";
 import Footer from "../components/common/footer";
-import Img1 from "../images/Wishlist/1.png";
-import Img2 from "../images/Wishlist/2.png";
-import Img3 from "../images/Wishlist/3.png";
-import Img4 from "../images/Wishlist/4.png";
-import Img5 from "../images/Wishlist/5.png";
-import Img6 from "../images/Wishlist/6.png";
-import Img7 from "../images/Wishlist/7.png";
-import Img8 from "../images/Wishlist/8.png";
-import Img9 from "../images/Wishlist/9.png";
-import Img10 from "../images/Wishlist/10.png";
+import { imageArray } from "../constants";
 
 const DummyData = [
   {
-    img: Img4,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Chumbak",
     disc: "Block Printed Cotton Saree",
     price: "₹ 2,499",
   },
   {
-    img: Img5,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Biba",
     disc: "Kurta with Palazzos and Dupatta",
     price: "₹ 1,899",
   },
   {
-    img: Img7,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Chumbak",
     disc: "Block Printed Cotton Saree",
     price: "₹ 2,499",
   },
   {
-    img: Img9,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Biba",
     disc: "Kurta with Palazzos and Dupatta",
     price: "₹ 1,899",
@@ -43,73 +34,73 @@ const DummyData = [
 
 const initialData = [
   {
-    img: Img1,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Chumbak",
     disc: "Block Printed Cotton Saree",
     price: "₹ 2,499",
   },
   {
-    img: Img2,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Chumbak",
     disc: "Block Printed Cotton Saree",
     price: "₹ 2,499",
   },
   {
-    img: Img3,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Chumbak",
     disc: "Block Printed Cotton Saree",
     price: "₹ 2,499",
   },
   {
-    img: Img4,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Chumbak",
     disc: "Block Printed Cotton Saree",
     price: "₹ 2,499",
   },
   {
-    img: Img5,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Biba",
     disc: "Kurta with Palazzos and Dupatta",
     price: "₹ 1,899",
   },
   {
-    img: Img6,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Biba",
     disc: "Kurta with Palazzos and Dupatta",
     price: "₹ 1,899",
   },
   {
-    img: Img7,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Chumbak",
     disc: "Block Printed Cotton Saree",
     price: "₹ 2,499",
   },
   {
-    img: Img8,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Chumbak",
     disc: "Block Printed Cotton Saree",
     price: "₹ 2,499",
   },
   {
-    img: Img9,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Biba",
     disc: "Kurta with Palazzos and Dupatta",
     price: "₹ 1,899",
   },
   {
-    img: Img10,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Biba",
     disc: "Kurta with Palazzos and Dupatta",
     price: "₹ 1,899",
   },
   {
-    img: Img3,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Biba",
     disc: "Kurta with Palazzos and Dupatta",
     price: "₹ 1,899",
   },
   {
-    img: Img7,
+    img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
     name: "Biba",
     disc: "Kurta with Palazzos and Dupatta",
     price: "₹ 1,899",
