@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const ComboSpecs = ({ data }) => {
   const [active, setActive] = React.useState(0);
   const [selectedDiv, setSelectedDiv] = React.useState(0);
+  const [divWidth, setDivWidth] = React.useState(0);
 
   const changeBorderColor = (value) => {
     setSelectedDiv(value);
   };
+
+  useEffect(() => {
+    console.log("useEffect called");
+    var screenWidth = window.screen.width;
+    var tmp_width = data.length * 11 * 16; // div width in pixels
+    var value = screenWidth;
+    if (screenWidth > tmp_width) {
+      value = screenWidth;
+    } else {
+      value = tmp_width;
+    }
+    setDivWidth(value);
+    console.log("div , screen :", value, screenWidth);
+  }, [window.screen.width]);
   return (
     <div className="combo-detail-spec">
       <div className="container">
@@ -17,13 +32,12 @@ const ComboSpecs = ({ data }) => {
 
           {/* combo products for small and extra small screens */}
           <div className="d-block d-md-none">
-            <div
-              className="combo-detail-spec-sm"
-              style={{ width: "screen.width" }}
-            >
+            <div className="combo-detail-spec-sm">
               <div
                 className="combo-detail-spec-sm-1"
-                style={{ width: data.length * 11 + "rem" }}
+                style={{
+                  width: divWidth,
+                }}
               >
                 {data.map((dt, index) => {
                   return (
@@ -49,6 +63,7 @@ const ComboSpecs = ({ data }) => {
               </div>
             </div>
           </div>
+
           {/* combo products hidden for small screens */}
           <div className="d-none d-md-block">
             {data.map((dt, index) =>
