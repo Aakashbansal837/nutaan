@@ -9,12 +9,13 @@ import { withSnackbar } from "notistack";
 import ProductDetails from "./pages/productDetails";
 import ComboDetails from "./pages/comboDetails";
 import UserProfile from "./pages/profile";
+import Homepage from "./pages/Homepage";
 
 function Router(props) {
   return (
     <BrowserRouter>
       {/* ----Route Code---- */}
-      <Route exact path="/" component={() => <Index {...props} />} />
+      <Route exact path="/" component={() => <Homepage {...props} />} />
 
       <Route
         exact
@@ -46,7 +47,11 @@ function Router(props) {
         path="/profile"
         component={() => <UserProfile {...props} />}
       />
-      <Route exact path="/product-listing" component={() => <ProductListing {...props} />} />
+      <Route
+        exact
+        path="/product-listing"
+        component={() => <ProductListing {...props} />}
+      />
       {/* ------------------ */}
     </BrowserRouter>
   );
