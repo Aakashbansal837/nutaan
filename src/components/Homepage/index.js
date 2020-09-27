@@ -3,8 +3,9 @@ import Category from "./Category";
 import Marquee from "./Marquee";
 import FiveItemCorousal from "../Corousal/FiveItem";
 import Collection from "./Collection";
-import { landingBanner } from "../../constants";
+import { Banner2, landingBanner } from "../../constants";
 import Services from "./Services";
+import Truefit from "./Truefit";
 
 const Homepage = ({ item }) => {
   return (
@@ -22,12 +23,14 @@ const Homepage = ({ item }) => {
       {/* banner 2 here */}
       <center className="hmpg-bnnr-2">
         <a href="/combo-details">
-          <img src={landingBanner} className="hmpg-bnnr-1-img" />
+          <Banner2 className="hmpg-bnnr-2-img" />
         </a>
       </center>
 
       {/* banner 3 here */}
       <Collection />
+
+      <Truefit />
 
       <div className="container">
         <div className="row">
