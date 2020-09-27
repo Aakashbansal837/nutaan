@@ -84,7 +84,7 @@
   &-cl {
     height: 1.3rem;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.5 rem;
   }
 
   &-active {
@@ -110,7 +110,7 @@
     position: absolute;
     width: 65%;
     background-color: $color-slider;
-    clip-path: polygon(0 0, 100% 0, 45% 100%, 0% 100%);
+    // clip-path: polygon(0 0, 100% 0, 45% 100%, 0% 100%);
     z-index: 100;
   }
   &-bg {
