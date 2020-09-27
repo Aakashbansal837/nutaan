@@ -17,9 +17,11 @@ import comb3 from "../images/Web/combo-3.png";
 import wkcolor from "../images/Web/wk-color.png";
 
 import landingBannerImg from "../images/Web/Landing-Banner.png";
+import { ReactComponent as hmpgBanner } from "../images/homepage-banner.svg";
 
 export const landingBanner = landingBannerImg;
 export const colorOfWeek = wkcolor;
+export const Banner2 = hmpgBanner;
 
 export const homepageCombo = [comb1, comb2, comb3];
 
