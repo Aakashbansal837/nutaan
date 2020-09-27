@@ -1,7 +1,8 @@
 import React from "react";
+import { homepageCategory } from "../../constants";
 
 const Category = () => {
-  const ctg = [1, 1, 1, 1, 1, 1];
+  const category = homepageCategory;
   return (
     <div className="hmpg-category">
       <div className="container">
@@ -10,20 +11,17 @@ const Category = () => {
             <div className="hmpg-category-heading">Shop by Categories</div>
           </div>
 
-          {ctg.map((itm) => {
+          {category.map((itm) => {
             return (
               <div class="col-4">
                 <div class="hmpg-category-main">
                   <div class="content">
                     <a href="#">
                       <div className="content-overlay"></div>{" "}
-                      <img
-                        className="hmpg-category-main-img"
-                        src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246502/test_zoom.jpg"
-                      />
+                      <img className="hmpg-category-main-img" src={itm} />
                       <div className="content-details fadeIn-bottom">
-                        <h3 className="content-title">Khumbu Valley</h3>
-                        <p className="content-text"> most amazing place</p>
+                        <h3 className="content-title">Category</h3>
+                        <p className="content-text"> category details</p>
                       </div>
                     </a>
                   </div>
