@@ -4,6 +4,7 @@ import Marquee from "./Marquee";
 import FiveItemCorousal from "../Corousal/FiveItem";
 import Collection from "./Collection";
 import { landingBanner } from "../../constants";
+import Services from "./Services";
 
 const Homepage = ({ item }) => {
   return (
@@ -15,6 +16,7 @@ const Homepage = ({ item }) => {
           <img src={landingBanner} className="hmpg-bnnr-1-img" />
         </a>
       </div>
+      <Services />
       <Category />
 
       {/* banner 2 here */}
