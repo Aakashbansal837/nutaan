@@ -2,8 +2,8 @@ import React from "react";
 import Category from "./Category";
 import Marquee from "./Marquee";
 import FiveItemCorousal from "../Corousal/FiveItem";
-import { ReactComponent as HomepageBanner } from "../../images/homepage-banner.svg";
 import Collection from "./Collection";
+import { landingBanner } from "../../constants";
 
 const Homepage = ({ item }) => {
   return (
@@ -12,7 +12,7 @@ const Homepage = ({ item }) => {
       {/* banner top here */}
       <div className="hmpg-bnnr-1">
         <a href="/product-details">
-          <HomepageBanner className="hmpg-bnnr-1-img" />
+          <img src={landingBanner} className="hmpg-bnnr-1-img" />
         </a>
       </div>
       <Category />
@@ -20,7 +20,7 @@ const Homepage = ({ item }) => {
       {/* banner 2 here */}
       <center className="hmpg-bnnr-2">
         <a href="/combo-details">
-          <HomepageBanner className="hmpg-bnnr-2-img" />
+          <img src={landingBanner} className="hmpg-bnnr-1-img" />
         </a>
       </center>
 
