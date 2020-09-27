@@ -13,7 +13,7 @@ const Combo = () => {
 
           {homepageCombo.map((img) => {
             return (
-              <div className="col-4">
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4">
                 <div className="hmpg-combo-main">
                   <img src={img} className="hmpg-combo-main-img" />
                   <center className="hmpg-combo-main-btn">
