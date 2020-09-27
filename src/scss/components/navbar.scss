@@ -84,7 +84,7 @@
   &-cl {
     height: 1.3rem;
     width: 100%;
-    margin-top: 0.5 rem;
+    margin-top: 0.5rem;
   }
 
   &-active {
@@ -207,7 +207,28 @@
   }
 }
 
+/* small devices (mobile phones and tablets horizontal, upto 768px) */
+@media only screen and (max-width: 768px) {
+  .nvbr {
+    &-logo {
+      margin-left: 2.5rem;
+    }
+  }
+}
 /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .nvbr {
+    &-srch {
+      min-width: 10rem;
+    }
+    &-bag {
+      margin-right: 0rem;
+    }
+    &-bag-txt {
+      padding-left: 1rem;
+    }
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
   .nvbr {
     &-srch {
