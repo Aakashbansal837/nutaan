@@ -122,6 +122,28 @@
       }
     }
   }
+  &-truefit {
+    background-image: $color-true-fit;
+    width: 100%;
+    padding: 2rem 0;
+
+    &-txt {
+      &-1 {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+      }
+      &-2 {
+        font-size: 1.5rem;
+        font-weight: $weight-mid;
+        text-transform: uppercase;
+      }
+      &-3 {
+        text-shadow: -3px 8px 0 0 #0760d4;
+        color: $color-white;
+        font-size: 5.5rem;
+      }
+    }
+  }
 }
 
 .content {
