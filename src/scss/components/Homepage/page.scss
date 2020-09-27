@@ -43,8 +43,7 @@
     margin: 1rem 0;
     opacity: 0.96;
     &-icon {
-      height: 4rem;
-      width: 4rem;
+      @include max-ht-wd($ht: 4rem, $wd: 4rem);
       background-color: $color-red-lighter;
       border-radius: 0.5rem;
       margin-top: 1rem;
@@ -56,7 +55,6 @@
       }
     }
     &-main {
-      // background-color: $color-purple;
       padding: 1.5rem 0;
     }
     &-head {
