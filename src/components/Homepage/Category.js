@@ -7,13 +7,13 @@ const Category = () => {
     <div className="hmpg-category">
       <div className="container">
         <div className="row">
-          <div className="col-12 ">
+          <div className="col-12">
             <div className="hmpg-category-heading">Shop by Categories</div>
           </div>
 
           {category.map((itm) => {
             return (
-              <div class="col-4">
+              <div class="col-4 pl-0">
                 <div class="hmpg-category-main">
                   <div class="content">
                     <a href="#">
