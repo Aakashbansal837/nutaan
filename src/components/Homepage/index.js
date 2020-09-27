@@ -7,6 +7,7 @@ import { Banner2, landingBanner } from "../../constants";
 import Services from "./Services";
 import Truefit from "./Truefit";
 import Discount from "./Discount";
+import Combo from "./Combo";
 
 const Homepage = ({ item }) => {
   return (
@@ -32,6 +33,8 @@ const Homepage = ({ item }) => {
       <Collection />
 
       <Truefit />
+
+      <Combo />
 
       <Discount />
 
