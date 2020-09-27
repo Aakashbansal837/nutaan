@@ -1,11 +1,12 @@
 import { Button } from "@material-ui/core";
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { homepageCollection } from "../../constants";
 
 const Collection = () => {
   let history = useHistory();
 
-  const ctg = [1, 1, 1, 1];
+  const collection = homepageCollection;
   function ComboClick() {
     history.push("/combo-details");
   }
@@ -35,7 +36,7 @@ const Collection = () => {
           <div className="col-7">
             <div className="container">
               <div className="row">
-                {ctg.map((itm) => {
+                {collection.map((itm) => {
                   return (
                     <div class="col-6 px-1">
                       <div class="hmpg-collection-main">
@@ -44,11 +45,11 @@ const Collection = () => {
                             <div className="content-overlay"></div>{" "}
                             <img
                               className="hmpg-collection-main-img"
-                              src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246502/test_zoom.jpg"
+                              src={itm}
                             />
                             <div className="content-details fadeIn-bottom">
-                              <h3 className="content-title">Khumbu Valley</h3>
-                              <p className="content-text">most amazing place</p>
+                              <h3 className="content-title">Collection</h3>
+                              <p className="content-text">most amazing thing</p>
                             </div>
                           </a>
                         </div>
