@@ -14,16 +14,27 @@ import comb1 from "../images/Web/combo-1.png";
 import comb2 from "../images/Web/combo-2.png";
 import comb3 from "../images/Web/combo-3.png";
 
+import mobComb1 from "../images/Mob/combo-1-mob.png";
+import mobComb2 from "../images/Mob/combo-2-mob.png";
+import mobComb3 from "../images/Mob/combo-3-mob.png";
+
 import wkcolor from "../images/Web/wk-color.png";
+import wkcolorMob from "../images/Mob/wk-color-mob.png";
 
 import landingBannerImg from "../images/Web/Landing-Banner.png";
-import { ReactComponent as hmpgBanner } from "../images/homepage-banner.svg";
+import landingSmallBanner from "../images/Mob/Landing-banner-mob.png";
+import mainBanner from "../images/homepage-banner.svg";
 
-export const landingBanner = landingBannerImg;
+export const landingBanner =
+  window.screen.width > 600 ? landingBannerImg : landingSmallBanner;
+
 export const colorOfWeek = wkcolor;
-export const Banner2 = hmpgBanner;
+export const Banner2 = window.screen.width > 600 ? mainBanner : wkcolorMob;
 
-export const homepageCombo = [comb1, comb2, comb3];
+export const homepageCombo =
+  window.screen.width > 600
+    ? [comb1, comb2, comb3]
+    : [mobComb1, mobComb2, mobComb3];
 
 export const homepageCategory = [
   catImg1,

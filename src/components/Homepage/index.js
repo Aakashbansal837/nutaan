@@ -25,7 +25,7 @@ const Homepage = ({ item }) => {
       {/* banner 2 here */}
       <center className="hmpg-bnnr-2">
         <a href="/combo-details">
-          <Banner2 className="hmpg-bnnr-2-img" />
+          <img src={Banner2} className="hmpg-bnnr-2-img" />
         </a>
       </center>
 
