@@ -144,6 +144,20 @@
       }
     }
   }
+  &-discount {
+    padding: 3rem 0;
+    &-head {
+      font-size: 1.5rem;
+      font-weight: $weight-mid;
+      margin-bottom: 1rem;
+    }
+    &-main {
+      text-align: center;
+      padding: 2.5rem 0;
+      font-size: 2.5rem;
+      color: $color-white;
+    }
+  }
 }
 
 .content {
