@@ -138,11 +138,11 @@ class ComboDetails extends React.Component {
   }
   render() {
     return (
-      <div>
+      <>
         <Navbar />
         <ComboProduct item={this.state.item} />
         <Footer />
-      </div>
+      </>
     );
   }
 }

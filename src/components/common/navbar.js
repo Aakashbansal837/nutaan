@@ -70,7 +70,7 @@ const Navbar = () => {
       <div className="d-sm-block d-md-none">
         <div className="container nvbr-sm">
           <div className="row">
-            {/* <div className="col-2">
+            <div className="col-2">
               <span
                 onClick={() => {
                   setActive(!active);
@@ -79,8 +79,8 @@ const Navbar = () => {
               >
                 <NbCollapse className="nvbr-sm-cl" />
               </span>
-            </div> */}
-            <div className="col-12">
+            </div>
+            <div className="col-10">
               <center>
                 <a href="/home">
                   <Logo className="nvbr-logo" />
@@ -104,27 +104,27 @@ const Navbar = () => {
           <div className="nvbr-sm-data">
             <ul className="nvbr-sm-menu">
               <li>
-                <a href="/home" className="nvbr-sm-link">
+                <a href="/" className="nvbr-sm-link">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/categories" className="nvbr-sm-link">
-                  Categories
+                <a href="/product-listing" className="nvbr-sm-link">
+                  products
                 </a>
               </li>
               <li>
-                <a href="#" className="nvbr-sm-link">
-                  Hampers
+                <a href="/wishist" className="nvbr-sm-link">
+                  wishlist
                 </a>
               </li>
               <li>
-                <a href="#" className="nvbr-sm-link">
+                <a href="/shopping-bag" className="nvbr-sm-link">
                   Bag
                 </a>
               </li>
               <li>
-                <a href="#" className="nvbr-sm-link">
+                <a href="/profile" className="nvbr-sm-link">
                   Profile
                 </a>
               </li>

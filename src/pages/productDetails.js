@@ -105,11 +105,11 @@ class ProductDetails extends React.Component {
   }
   render() {
     return (
-      <div>
+      <>
         <Navbar />
         <Product item={this.state.item} />
         <Footer />
-      </div>
+      </>
     );
   }
 }
