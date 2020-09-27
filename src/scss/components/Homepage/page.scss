@@ -144,6 +144,39 @@
       }
     }
   }
+  &-combo {
+    &-head {
+      font-size: 1.5rem;
+      font-weight: $weight-mid;
+      margin: 2rem 0 1rem 0;
+    }
+
+    &-main {
+      width: 100%;
+      &:hover {
+        img {
+          filter: blur(0.15rem);
+          -webkit-filter: blur(0.15rem);
+          background: rgba(0, 0, 0, 0.7);
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          -moz-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+        }
+      }
+
+      &-img {
+        width: 100%;
+        z-index: 0;
+      }
+      &-btn {
+        margin: -5rem 0 3rem 0;
+        &-button {
+          background-color: $color-red !important;
+          width: 10rem;
+        }
+      }
+    }
+  }
   &-discount {
     padding: 3rem 0;
     &-head {
