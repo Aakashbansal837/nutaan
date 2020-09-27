@@ -20,7 +20,7 @@
         }
       }
       &-img {
-        height: 30rem;
+        max-height: 30rem;
         width: 100%;
       }
     }
@@ -33,9 +33,40 @@
         }
       }
       &-img {
-        height: 30rem;
+        max-height: 30rem;
         width: 90%;
       }
+    }
+  }
+
+  &-service {
+    margin: 1rem 0;
+    opacity: 0.96;
+    &-icon {
+      height: 4rem;
+      width: 4rem;
+      background-color: $color-red-lighter;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      text-align: center;
+      padding-top: 1.2rem;
+      i {
+        font-size: 1.5rem;
+        color: $color-red;
+      }
+    }
+    &-main {
+      // background-color: $color-purple;
+      padding: 1.5rem 0;
+    }
+    &-head {
+      font-size: 1.125rem;
+      font-weight: $weight-mid;
+      color: $color-purple;
+    }
+    &-disc {
+      color: $color-purple;
+      font-size: 0.875rem;
     }
   }
 
