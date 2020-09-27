@@ -207,14 +207,6 @@
   }
 }
 
-/* small devices (mobile phones and tablets horizontal, upto 768px) */
-@media only screen and (max-width: 768px) {
-  .nvbr {
-    &-logo {
-      margin-left: 2.5rem;
-    }
-  }
-}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
   .nvbr {
