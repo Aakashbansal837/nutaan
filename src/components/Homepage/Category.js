@@ -13,7 +13,7 @@ const Category = () => {
 
           {category.map((itm) => {
             return (
-              <div class="col-4 pl-0">
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 px-0">
                 <div class="hmpg-category-main">
                   <div class="content">
                     <a href="#">
