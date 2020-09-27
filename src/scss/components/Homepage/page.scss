@@ -142,7 +142,7 @@
       &-3 {
         text-shadow: -3px 8px 0 0 #0760d4;
         color: $color-white;
-        font-size: 5.5rem;
+        font-size: 4.5rem;
       }
     }
   }
@@ -184,9 +184,9 @@
     &-head {
       font-size: 1.5rem;
       font-weight: $weight-mid;
-      margin-bottom: 1rem;
     }
     &-main {
+      margin: 1rem 0;
       text-align: center;
       padding: 2.5rem 0;
       font-size: 2.5rem;
@@ -236,8 +236,15 @@
     }
     &-truefit {
       &-txt {
+        &-1 {
+          margin-top: 0;
+          font-size: 1rem;
+        }
+        &-2 {
+          font-size: 1rem;
+        }
         &-3 {
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
       }
     }
