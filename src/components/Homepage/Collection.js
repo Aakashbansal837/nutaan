@@ -14,31 +14,33 @@ const Collection = () => {
     <div className="hmpg-collection">
       <div className="container">
         <div className="row">
-          <div className="col-5">
+          <div className="col-12 col-sm-12 col-md-5 col-lg-5 px-0">
             <center className="hmpg-collection-head">Winter Collection</center>
             <center className="hmpg-collection-text">
               <center className="hmpg-collection-text-inner">
                 Shop on-trend pieces for everyday and festive occasions
               </center>
-              <center className="hmpg-collection-btn">
-                <Button
-                  className="hmpg-collection-btn-button"
-                  color="primary"
-                  variant="contained"
-                  onClick={ComboClick}
-                >
-                  View Combo
-                </Button>
-              </center>
+              <div className="d-none d-md-block">
+                <center className="hmpg-collection-btn">
+                  <Button
+                    className="hmpg-collection-btn-button"
+                    color="primary"
+                    variant="contained"
+                    onClick={ComboClick}
+                  >
+                    View Combo
+                  </Button>
+                </center>
+              </div>
             </center>
           </div>
 
-          <div className="col-7">
+          <div className="col-12 col-sm-12 col-md-7 col-lg-7 px-0">
             <div className="container">
               <div className="row">
                 {collection.map((itm) => {
                   return (
-                    <div class="col-6 px-1">
+                    <div class="col-6 ">
                       <div class="hmpg-collection-main">
                         <div class="content">
                           <a href="#">
@@ -59,6 +61,19 @@ const Collection = () => {
                 })}
               </div>
             </div>
+          </div>
+
+          <div className="d-block d-md-none col-12">
+            <center className="hmpg-collection-btn">
+              <Button
+                className="hmpg-collection-btn-button"
+                color="primary"
+                variant="contained"
+                onClick={ComboClick}
+              >
+                View Combo
+              </Button>
+            </center>
           </div>
         </div>
       </div>
