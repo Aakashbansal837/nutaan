@@ -6,6 +6,7 @@ import Collection from "./Collection";
 import { Banner2, landingBanner } from "../../constants";
 import Services from "./Services";
 import Truefit from "./Truefit";
+import Discount from "./Discount";
 
 const Homepage = ({ item }) => {
   return (
@@ -31,6 +32,8 @@ const Homepage = ({ item }) => {
       <Collection />
 
       <Truefit />
+
+      <Discount />
 
       <div className="container">
         <div className="row">
