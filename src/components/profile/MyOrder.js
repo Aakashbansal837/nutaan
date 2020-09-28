@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 import { imageArray } from "../../constants";
-
+import { ReturnProduct } from "./PopupModal";
 const OrderDetailsHead = ({ viewOrderDetails }) => {
   return (
     <div className="profile-order-head">
@@ -60,7 +60,95 @@ const OrderHead = () => {
   );
 };
 
-const OrderData = ({ orders, viewOrderDetails }) => {
+const OrderContent = ({ data, index, openParentModal }) => {
+  return (
+    <>
+      <div className="col-4 col-sm-3 col-md-3 col-lg-2">
+        <div className="profile-order-main-content-img">
+          <img src={data.img} alt="item" />
+        </div>
+      </div>
+      <div className="col-8 col-sm-8 col-md-8 col-lg-5 px-0">
+        <div className="profile-order-main-content-name">{data.name}</div>
+        <div className="profile-order-main-content-disc">{data.disc}</div>
+        <div className="profile-order-main-content-detail">
+          <span>Qty: {data.qty}</span>
+          <span>Size : {data.size} </span>
+        </div>
+        <div className="profile-order-main-content-price">{data.price}</div>
+      </div>
+
+      <div className="d-none d-md-block col-md-12 col-lg-5 pr-0">
+        <div className="profile-order-main-content-track">
+          <div
+            className="profile-order-main-content-track-status"
+            style={{
+              color: data.status == "Dispatched" ? "#2aa838" : "#212121",
+            }}
+          >
+            {data.status} {data.date}
+          </div>
+          <div className="profile-order-main-content-track-status-disc">
+            {data.statusDisc}
+          </div>
+          <div className="profile-order-main-content-track-btn">
+            <div className="container">
+              <div className="row">
+                <div className="col-6 col-sm-6 col-md-6 col-lg-5 pl-0">
+                  <div class="btn-group">
+                    <button
+                      className="btn btn-outline-secondary profile-order-main-content-track-btn-button dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Track Item
+                    </button>
+
+                    <div className="dropdown-menu dropdown-menu-right">
+                      <button
+                        className="dropdown-item"
+                        type="button"
+                        data-toggle="modal"
+                        data-target="#returnProductModal"
+                        onClick={() =>
+                          openParentModal("returnProductModal", index)
+                        }
+                      >
+                        Return
+                      </button>
+                      <button
+                        className="dropdown-item"
+                        type="button"
+                        data-toggle="modal"
+                        data-target="#returnProductModal"
+                        onClick={() =>
+                          openParentModal("returnProductModal", index)
+                        }
+                      >
+                        Exchange
+                      </button>
+                      <button className="dropdown-item" type="button">
+                        Cancel return
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-6 col-sm-6 col-md-6 col-lg-6 pl-0">
+                  <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
+                    Request Fitting
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const OrderData = ({ orders, openOrderModal, viewOrderDetails }) => {
   return (
     <div>
       {orders.map((or, index) => (
@@ -104,60 +192,11 @@ const OrderData = ({ orders, viewOrderDetails }) => {
             <div className="profile-order-main-content">
               <div className="container">
                 <div className="row">
-                  <div className="col-4 col-sm-3 col-md-3 col-lg-2">
-                    <div className="profile-order-main-content-img">
-                      <img src={dt.img} alt="item" />
-                    </div>
-                  </div>
-                  <div className="col-8 col-sm-8 col-md-8 col-lg-5 px-0">
-                    <div className="profile-order-main-content-name">
-                      {dt.name}
-                    </div>
-                    <div className="profile-order-main-content-disc">
-                      {dt.disc}
-                    </div>
-                    <div className="profile-order-main-content-detail">
-                      <span>Qty: {dt.qty}</span>
-                      <span>Size : {dt.size} </span>
-                    </div>
-                    <div className="profile-order-main-content-price">
-                      {dt.price}
-                    </div>
-                  </div>
-
-                  <div className="d-none d-md-block col-md-12 col-lg-5 pr-0">
-                    <div className="profile-order-main-content-track">
-                      <div
-                        className="profile-order-main-content-track-status"
-                        style={{
-                          color:
-                            dt.status == "Dispatched" ? "#2aa838" : "#212121",
-                        }}
-                      >
-                        {dt.status} {dt.date}
-                      </div>
-                      <div className="profile-order-main-content-track-status-disc">
-                        {dt.statusDisc}
-                      </div>
-                      <div className="profile-order-main-content-track-btn">
-                        <div className="container">
-                          <div className="row">
-                            <div className="col-6 col-sm-6 col-md-6 col-lg-5 pl-0">
-                              <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
-                                Track Item
-                              </button>
-                            </div>
-                            <div className="col-6 col-sm-6 col-md-6 col-lg-6 pl-0">
-                              <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
-                                Request Fitting
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
+                  <OrderContent
+                    data={dt}
+                    index={index}
+                    openParentModal={openOrderModal}
+                  />
                   <div className="col-12 ">
                     <div
                       className={
@@ -175,7 +214,7 @@ const OrderData = ({ orders, viewOrderDetails }) => {
   );
 };
 
-const Orders = ({ items }) => {
+const Orders = ({ items, opendetailsModal }) => {
   return (
     <div>
       {items.data.map((dt, index) => (
@@ -183,58 +222,11 @@ const Orders = ({ items }) => {
           <div className="profile-order-main-content">
             <div className="container">
               <div className="row">
-                <div className="col-4 col-sm-3 col-md-3 col-lg-2">
-                  <div className="profile-order-main-content-img">
-                    <img src={dt.img} alt="item" />
-                  </div>
-                </div>
-                <div className="col-8 col-sm-8 col-md-8 col-lg-5 px-0">
-                  <div className="profile-order-main-content-name">
-                    {dt.name}
-                  </div>
-                  <div className="profile-order-main-content-disc">
-                    {dt.disc}
-                  </div>
-                  <div className="profile-order-main-content-detail">
-                    <span>Qty: {dt.qty}</span>
-                    <span>Size : {dt.size} </span>
-                  </div>
-                  <div className="profile-order-main-content-price">
-                    {dt.price}
-                  </div>
-                </div>
-                <div className="d-none d-md-block col-md-12 col-lg-5 pr-0">
-                  <div className="profile-order-main-content-track">
-                    <div
-                      className="profile-order-main-content-track-status"
-                      style={{
-                        color:
-                          dt.status == "Dispatched" ? "#2aa838" : "#212121",
-                      }}
-                    >
-                      {dt.status} {dt.date}
-                    </div>
-                    <div className="profile-order-main-content-track-status-disc">
-                      {dt.statusDisc}
-                    </div>
-                    <div className="profile-order-main-content-track-btn">
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-6 col-sm-6 col-md-6 col-lg-5 pl-0">
-                            <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
-                              Track Item
-                            </button>
-                          </div>
-                          <div className="col-6 col-sm-6 col-md-6 col-lg-6 pl-0">
-                            <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
-                              Request Fitting
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <OrderContent
+                  data={dt}
+                  index={index}
+                  openParentModal={opendetailsModal}
+                />
               </div>
             </div>
           </div>
@@ -244,7 +236,7 @@ const Orders = ({ items }) => {
   );
 };
 
-const OrderDetails = ({ item }) => {
+const OrderDetails = ({ item, openOrderModal }) => {
   return (
     <div className="profile-order-detail-main">
       <div className="container">
@@ -276,7 +268,7 @@ const OrderDetails = ({ item }) => {
           </div>
 
           <div className="col-12 col-sm-12 d-block d-md-none px-0">
-            <Orders items={item} />
+            <Orders items={item} opendetailsModal={openOrderModal} />
           </div>
 
           <div className="d-none d-md-block col-md-12 col-lg-6 px-0">
@@ -456,7 +448,7 @@ const OrderDetails = ({ item }) => {
           </div>
 
           <div className="d-none d-md-block col-md-12 col-lg-12 px-0">
-            <Orders items={item} />
+            <Orders items={item} opendetailsModal={openOrderModal} />
           </div>
         </div>
       </div>
@@ -586,10 +578,14 @@ const MyOrder = ({ viewDetail, setViewDetail }) => {
       ],
     },
   ];
+  const [modalId, setModalId] = React.useState("");
 
-  // const [viewDetail, setViewDetail] = React.useState(-1);
+  const openModal = (m_id, index) => {
+    setModalId(m_id);
+  };
   return (
     <div className="profile-order">
+      <ReturnProduct productId={modalId} />
       <div className="container">
         <div className="row">
           <div className="col-12 px-0">
@@ -603,10 +599,14 @@ const MyOrder = ({ viewDetail, setViewDetail }) => {
             {viewDetail == -1 ? (
               <OrderData
                 orders={orders}
+                openOrderModal={openModal}
                 viewOrderDetails={(value) => setViewDetail(value)}
               />
             ) : (
-              <OrderDetails item={viewDetail == -1 ? {} : orders[viewDetail]} />
+              <OrderDetails
+                item={viewDetail == -1 ? {} : orders[viewDetail]}
+                openOrderModal={openModal}
+              />
             )}
           </div>
         </div>
