@@ -71,6 +71,13 @@ const ColorRejected = ({ option }) => {
   );
 };
 const SizeRejected = ({ option }) => {
+  const [sizeSelected, setSizeSelected] = React.useState();
+  const ItemSize = [
+    ["s", "5"],
+    ["m", "2"],
+    ["l", "0"],
+    ["xl", "10"],
+  ];
   return (
     <div className="ppup-rpo">
       <div className="container">
@@ -79,6 +86,50 @@ const SizeRejected = ({ option }) => {
             <div className="ppup-rpo-opt">Selected Option</div>
             <div className="ppup-rpo-opt-txt">{option}</div>
           </div>
+
+          <div className="col-12">
+            <div className="ppup-rpo-clr-head">Select a size</div>
+          </div>
+          <div className="col-12">
+            <div className="ppup-rpo-clr-colorBox">
+              {ItemSize.map((dt, index) => {
+                if (index > 3) {
+                  return null;
+                } else {
+                  return (
+                    <div
+                      className={
+                        dt[1] == 0
+                          ? "ppup-rpo-sizeBox-outer-none"
+                          : "ppup-rpo-sizeBox-outer"
+                      }
+                    >
+                      <div
+                        className={
+                          sizeSelected === index
+                            ? "ppup-rpo-sizeBox-upper-red"
+                            : "ppup-rpo-sizeBox-upper"
+                        }
+                        onClick={() => setSizeSelected(index)}
+                      >
+                        {dt[0]}
+                      </div>
+                      <div
+                        className={
+                          dt[1] > 5 || dt[1] == 0
+                            ? "ppup-rpo-sizeBox-lower-none"
+                            : "ppup-rpo-sizeBox-lower"
+                        }
+                      >
+                        {dt[1]} LEFT
+                      </div>
+                    </div>
+                  );
+                }
+              })}
+            </div>
+          </div>
+
           <div className="col-12">
             <PickupOption />
           </div>
