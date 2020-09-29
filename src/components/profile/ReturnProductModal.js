@@ -3,14 +3,18 @@ import { PopUpOrderContent } from "./MyOrderComponents";
 import { Button } from "@material-ui/core";
 
 const ColorRejected = () => {
-  return <div></div>;
+  return <div className="ppup-rpo"> color rejected</div>;
 };
 const SizeRejected = () => {
-  return <div></div>;
+  return <div className="ppup-rpo"> size rejected</div>;
+};
+const OtherOptions = () => {
+  return <div className="ppup-rpo"> other options</div>;
 };
 
 const WhyReturnproduct = () => {
   const [backtoSelection, setBacktoSelection] = React.useState(false);
+  const [selectedOption, setSelectedOption] = React.useState(-1);
 
   const exchangeOptions = [
     "I don’t like this color/variant",
@@ -19,10 +23,12 @@ const WhyReturnproduct = () => {
   ];
   const backToselectionClicked = () => {
     setBacktoSelection(false);
+    setSelectedOption(-1);
   };
 
-  const optionClicked = () => {
+  const optionClicked = (value) => {
     setBacktoSelection(true);
+    setSelectedOption(value);
   };
   return (
     <div className="container">
@@ -30,7 +36,7 @@ const WhyReturnproduct = () => {
         <div className={"col-12  " + (backtoSelection ? "d-block" : "d-none")}>
           <div onClick={() => backToselectionClicked()} className="ppup-rp-bk">
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            &nbsp;Back to selection
+            &nbsp;&nbsp;&nbsp;Back to selection
           </div>
         </div>
 
@@ -40,13 +46,14 @@ const WhyReturnproduct = () => {
           </div>
         </div>
 
+        {/* exchange product options here */}
         {exchangeOptions.map((op, index) => {
           return (
             <div className={backtoSelection ? "d-none" : "col-12"}>
               <div
                 className="ppup-rp-dt"
                 style={{ opacity: index == 2 ? 0.5 : 1 }}
-                onClick={() => optionClicked()}
+                onClick={() => optionClicked(index)}
               >
                 <i class="fa fa-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;
                 {op}
@@ -54,6 +61,32 @@ const WhyReturnproduct = () => {
             </div>
           );
         })}
+
+        {/* if first option selected */}
+
+        <div className="col-12">
+          {selectedOption === 0 ? (
+            <ColorRejected />
+          ) : selectedOption == 1 ? (
+            <SizeRejected />
+          ) : selectedOption == 2 ? (
+            <OtherOptions />
+          ) : null}
+        </div>
+
+        {/* confirm exchange button */}
+        <div className="col-12">
+          <div className="ppup-rp-btn">
+            <Button
+              className="ppup-rp-btn-button"
+              variant="contained"
+              color="secondary"
+              data-dismiss="modal"
+            >
+              Confirm Exchange
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -87,6 +120,7 @@ const RequestForFitting = () => {
               className="ppup-rf-btn-button"
               variant="outlined"
               color="secondary"
+              data-dismiss="modal"
             >
               Request Fitting
             </Button>
@@ -97,7 +131,7 @@ const RequestForFitting = () => {
   );
 };
 
-export const ReturnProduct = ({ productId, selectedData }) => {
+export const ReturnProductModal = ({ productId, selectedData }) => {
   return (
     <div
       className="modal fade"
