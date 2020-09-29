@@ -16,7 +16,6 @@
 
 // profile return popup
 .ppup {
-  min-width: 25rem;
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid #cecece;
   border-radius: 6px;
@@ -202,6 +201,16 @@
 
       &-confirm {
         font-size: 0.875rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ppup {
+    &-rf {
+      &-head {
         margin-top: 1rem;
       }
     }
