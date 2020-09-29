@@ -10,16 +10,50 @@ const SizeRejected = () => {
 };
 
 const WhyReturnproduct = () => {
-  const [optionSelected, setOptionSelected] = React.useState(true);
+  const [backtoSelection, setBacktoSelection] = React.useState(false);
+
+  const exchangeOptions = [
+    "I don’t like this color/variant",
+    "Size doesn’t fit",
+    "Any other reason",
+  ];
+  const backToselectionClicked = () => {
+    setBacktoSelection(false);
+  };
+
+  const optionClicked = () => {
+    setBacktoSelection(true);
+  };
   return (
     <div className="container">
       <div className="row">
-        <div className={"col-12 " + (optionSelected ? "d-block" : "d-none")}>
-          <span>
+        <div className={"col-12  " + (backtoSelection ? "d-block" : "d-none")}>
+          <div onClick={() => backToselectionClicked()} className="ppup-rp-bk">
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
             &nbsp;Back to selection
-          </span>
+          </div>
         </div>
+
+        <div className={backtoSelection ? "d-none" : " col-12"}>
+          <div className="ppup-rp-head">
+            Why do you want to return this product?
+          </div>
+        </div>
+
+        {exchangeOptions.map((op, index) => {
+          return (
+            <div className={backtoSelection ? "d-none" : "col-12"}>
+              <div
+                className="ppup-rp-dt"
+                style={{ opacity: index == 2 ? 0.5 : 1 }}
+                onClick={() => optionClicked()}
+              >
+                <i class="fa fa-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;
+                {op}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
