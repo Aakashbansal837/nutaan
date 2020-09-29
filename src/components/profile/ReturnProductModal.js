@@ -2,14 +2,107 @@ import React from "react";
 import { PopUpOrderContent } from "./MyOrderComponents";
 import { Button } from "@material-ui/core";
 
-const ColorRejected = () => {
-  return <div className="ppup-rpo"> color rejected</div>;
+const PickupOption = () => {
+  return (
+    <>
+      <div className="ppup-rpo-pkup-addr">
+        Confirm pickup address
+        <span className="ppup-rpo-pkup-addr-right">Change</span>
+      </div>
+      <div className="ppup-rpo-pkup-addr-adr">Abbie Wilson – 98765543210</div>
+      <div className="ppup-rpo-pkup-addr-adr-txt">
+        12/F Golden Avenue
+        <br />
+        Salt Lake City, Ohio - 123456
+      </div>
+      <div className="ppup-rpo-pkup-confirm">
+        <input type="checkbox" /> I confirm the product is unused
+      </div>
+    </>
+  );
 };
-const SizeRejected = () => {
-  return <div className="ppup-rpo"> size rejected</div>;
+
+const ColorRejected = ({ option }) => {
+  const [selected, setSelected] = React.useState();
+  const ItemColor = ["#FF6060", "#77E0C9", "#79CCEC", "#FF9956"];
+  return (
+    <div className="ppup-rpo">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="ppup-rpo-opt">Selected Option</div>
+            <div className="ppup-rpo-opt-txt">{option}</div>
+          </div>
+          <div className="col-12">
+            <div className="ppup-rpo-clr-head">Pick a Color</div>
+          </div>
+          <div className="col-12">
+            <div className="ppup-rpo-clr-colorBox">
+              {ItemColor.map((clr, index) => {
+                if (index > 3) {
+                  return null;
+                } else {
+                  return (
+                    <div
+                      className={
+                        selected === index
+                          ? "ppup-rpo-clr-colorBox-outer-red"
+                          : "ppup-rpo-clr-colorBox-outer"
+                      }
+                      onClick={() => setSelected(index)}
+                    >
+                      <div
+                        className="ppup-rpo-clr-colorBox-inner"
+                        style={{ backgroundColor: clr }}
+                      ></div>
+                    </div>
+                  );
+                }
+              })}
+            </div>
+          </div>
+
+          <div className="col-12">
+            <PickupOption />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
-const OtherOptions = () => {
-  return <div className="ppup-rpo"> other options</div>;
+const SizeRejected = ({ option }) => {
+  return (
+    <div className="ppup-rpo">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="ppup-rpo-opt">Selected Option</div>
+            <div className="ppup-rpo-opt-txt">{option}</div>
+          </div>
+          <div className="col-12">
+            <PickupOption />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const OtherOptions = ({ option }) => {
+  return (
+    <div className="ppup-rpo">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="ppup-rpo-opt">Selected Option</div>
+            <div className="ppup-rpo-opt-txt">{option}</div>
+          </div>
+          <div className="col-12">
+            <PickupOption />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 const WhyReturnproduct = () => {
@@ -66,11 +159,11 @@ const WhyReturnproduct = () => {
 
         <div className="col-12">
           {selectedOption === 0 ? (
-            <ColorRejected />
+            <ColorRejected option={exchangeOptions[selectedOption]} />
           ) : selectedOption == 1 ? (
-            <SizeRejected />
+            <SizeRejected option={exchangeOptions[selectedOption]} />
           ) : selectedOption == 2 ? (
-            <OtherOptions />
+            <OtherOptions option={exchangeOptions[selectedOption]} />
           ) : null}
         </div>
 
