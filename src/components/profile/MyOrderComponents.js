@@ -77,7 +77,7 @@ export const OrderContent = ({ data, openParentModal }) => {
         <div className="profile-order-main-content-price">{data.price}</div>
       </div>
 
-      <div className="d-none d-md-block col-md-12 col-lg-5 pr-0">
+      <div className="col-12 col-sm-12 col-md-12 col-lg-5 pr-0">
         <div className="profile-order-main-content-track">
           <div
             className="profile-order-main-content-track-status"
@@ -94,43 +94,41 @@ export const OrderContent = ({ data, openParentModal }) => {
             <div className="container">
               <div className="row">
                 <div className="col-6 col-sm-6 col-md-6 col-lg-5 pl-0">
-                  <div class="btn-group">
-                    <button
-                      className="btn btn-outline-secondary profile-order-main-content-track-btn-button dropdown-toggle"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Track Item
-                    </button>
+                  <button
+                    className="btn btn-outline-secondary dropdown-toggle profile-order-main-content-track-btn-button "
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Track Item
+                  </button>
 
-                    <div className="dropdown-menu dropdown-menu-right">
-                      <button
-                        className="dropdown-item"
-                        type="button"
-                        data-toggle="modal"
-                        data-target="#returnProductModal"
-                        onClick={() =>
-                          openParentModal("returnProductModal", data)
-                        }
-                      >
-                        Return
-                      </button>
-                      <button
-                        className="dropdown-item"
-                        type="button"
-                        data-toggle="modal"
-                        data-target="#returnProductModal"
-                        onClick={() =>
-                          openParentModal("returnProductModal", data)
-                        }
-                      >
-                        Exchange
-                      </button>
-                      <button className="dropdown-item" type="button">
-                        Cancel return
-                      </button>
-                    </div>
+                  <div className="dropdown-menu dropdown-menu-right">
+                    <button
+                      className="dropdown-item"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#returnProductModal"
+                      onClick={() =>
+                        openParentModal("returnProductModal", data)
+                      }
+                    >
+                      Return
+                    </button>
+                    <button
+                      className="dropdown-item"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#returnProductModal"
+                      onClick={() =>
+                        openParentModal("returnProductModal", data)
+                      }
+                    >
+                      Exchange
+                    </button>
+                    <button className="dropdown-item" type="button">
+                      Cancel return
+                    </button>
                   </div>
                 </div>
                 <div className="col-6 col-sm-6 col-md-6 col-lg-6 pl-0">
@@ -164,7 +162,7 @@ export const PopUpOrderContent = ({ data }) => {
         <div className="profile-order-main-content-price">{data.price}</div>
       </div>
 
-      <div className="d-none d-md-block col-md-12 col-lg-5 pr-0">
+      <div className="col-12 col-sm-12 col-md-12 col-lg-5 pr-0">
         <div className="profile-order-main-content-track">
           <div
             className="profile-order-main-content-track-status"
