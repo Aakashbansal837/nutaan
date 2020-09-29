@@ -1,6 +1,6 @@
 import React from "react";
 import { imageArray } from "../../constants";
-import { ReturnProduct } from "./PopupModal";
+import { ReturnProductModal } from "./ReturnProductModal";
 import {
   OrderHead,
   OrderDetails,
@@ -139,7 +139,7 @@ const MyOrder = ({ viewDetail, setViewDetail }) => {
   };
   return (
     <div className="profile-order">
-      <ReturnProduct productId={modalId} selectedData={modalData} />
+      <ReturnProductModal productId={modalId} selectedData={modalData} />
       <div className="container">
         <div className="row">
           <div className="col-12 px-0">
