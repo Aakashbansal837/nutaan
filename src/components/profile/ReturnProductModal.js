@@ -217,21 +217,25 @@ const WhyReturnproduct = () => {
             <OtherOptions option={exchangeOptions[selectedOption]} />
           ) : null}
         </div>
-
-        {/* confirm exchange button */}
-        <div className="col-12">
-          <div className="ppup-rp-btn">
-            <Button
-              className="ppup-rp-btn-button"
-              variant="contained"
-              color="secondary"
-              data-dismiss="modal"
-            >
-              Confirm Exchange
-            </Button>
-          </div>
+        <div className="d-none d-md-block col-12">
+          <ExchangeButton />
         </div>
       </div>
+    </div>
+  );
+};
+/* confirm exchange button */
+const ExchangeButton = () => {
+  return (
+    <div className="ppup-rp-btn">
+      <Button
+        className="ppup-rp-btn-button"
+        variant="contained"
+        color="secondary"
+        data-dismiss="modal"
+      >
+        Confirm Exchange
+      </Button>
     </div>
   );
 };
@@ -257,6 +261,9 @@ const RequestForFitting = () => {
             <br />
             3. Gte fitting done at home
           </div>
+        </div>
+        <div className="d-block d-md-none col-12">
+          <ExchangeButton />
         </div>
         <div className="col-12">
           <div className="ppup-rf-btn">
@@ -314,10 +321,10 @@ export const ReturnProductModal = ({ productId, selectedData }) => {
           <div className="ppup-options">
             <div className="container">
               <div className="row">
-                <div className="col-6">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                   <WhyReturnproduct />
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                   <RequestForFitting />
                 </div>
               </div>
