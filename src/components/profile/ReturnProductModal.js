@@ -1,6 +1,7 @@
 import React from "react";
 import { PopUpOrderContent } from "./MyOrderComponents";
 import { Button } from "@material-ui/core";
+import { StitchingImg } from "../../constants";
 
 const PickupOption = () => {
   return (
@@ -250,7 +251,9 @@ const RequestForFitting = () => {
           </div>
         </div>
         <div className="col-5">
-          <div className="ppup-rf-img"></div>
+          <div className="ppup-rf-img">
+            <img src={StitchingImg} alt="request fitting" />
+          </div>
         </div>
         <div className="col-7">
           <div className="ppup-rf-txt-red">How does it work?</div>
