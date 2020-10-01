@@ -50,7 +50,7 @@ const StepperButtons = ({ stepReached, StepperBtnClick }) => {
   );
 };
 
-const ServiceType = () => {
+const ServiceType = ({ serviceClicked }) => {
   const images = [SizeFittingImg, StitchingImg, AlterationImg];
   return (
     <div className="prf-st">
@@ -63,7 +63,10 @@ const ServiceType = () => {
             return (
               <div className="col-4">
                 <div className="prf-st-select">
-                  <button className="btn prf-st-select-btn">
+                  <button
+                    className="btn prf-st-select-btn"
+                    onClick={() => serviceClicked()}
+                  >
                     <img
                       className="prf-st-select-img"
                       src={img}
@@ -134,7 +137,7 @@ export const RequestFittingModal = ({ selectedData }) => {
                 </div>
                 <div className="col-12 col-sm-12 col-md-7 col-lg-8 pl-0">
                   {step === 0 ? (
-                    <ServiceType />
+                    <ServiceType serviceClicked={continueButtonClicked} />
                   ) : step === 1 ? (
                     <AddressSelect />
                   ) : step === 2 ? (
