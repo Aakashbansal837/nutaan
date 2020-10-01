@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@material-ui/core";
+import { SizeFittingImg, StitchingImg, AlterationImg } from "../../constants";
 
 const RequestFittingContent = ({ data }) => {
   return (
@@ -7,9 +8,9 @@ const RequestFittingContent = ({ data }) => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <center className="prf-content-img">
+            <div className="prf-content-img">
               <img src={data.img} alt="item" />
-            </center>
+            </div>
           </div>
           <div className="col-12">
             <div className="prf-content-name">{data.name}</div>
@@ -50,16 +51,42 @@ const StepperButtons = ({ stepReached, StepperBtnClick }) => {
 };
 
 const ServiceType = () => {
-  return <div></div>;
+  const images = [SizeFittingImg, StitchingImg, AlterationImg];
+  return (
+    <div className="prf-st">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="prf-st-head">Pick a Service</div>
+          </div>
+          {images.map((img) => {
+            return (
+              <div className="col-4">
+                <div className="prf-st-select">
+                  <button className="btn prf-st-select-btn">
+                    <img
+                      className="prf-st-select-img"
+                      src={img}
+                      alt="placeholder"
+                    />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
 };
 const AddressSelect = () => {
-  return <div></div>;
+  return <div> selected div is address</div>;
 };
 const BookSlot = () => {
-  return <div></div>;
+  return <div> selected div is bookslot</div>;
 };
 const Payment = () => {
-  return <div></div>;
+  return <div> selected div is payment</div>;
 };
 
 export const RequestFittingModal = ({ selectedData }) => {
@@ -69,12 +96,9 @@ export const RequestFittingModal = ({ selectedData }) => {
     setStep(value);
   };
   const continueButtonClicked = () => {
-    console.log("continue :", step);
     setStep(step + 1);
   };
   const submitButtonClicked = () => {
-    console.log("submit :", step);
-
     setStep(0);
   };
   return (
@@ -105,10 +129,22 @@ export const RequestFittingModal = ({ selectedData }) => {
           <div className="prf">
             <div className="container">
               <div className="row">
-                <div className="col-4">
+                <div className="col-12 col-sm-12 col-md-5 col-lg-4 pr-0">
                   <RequestFittingContent data={selectedData} />
                 </div>
-                <div className="col-8"></div>
+                <div className="col-12 col-sm-12 col-md-7 col-lg-8 pl-0">
+                  {step === 0 ? (
+                    <ServiceType />
+                  ) : step === 1 ? (
+                    <AddressSelect />
+                  ) : step === 2 ? (
+                    <BookSlot />
+                  ) : step === 3 ? (
+                    <Payment />
+                  ) : null}
+                </div>
+
+                {/* bottom continue / confirm btn */}
                 <div className="col-12">
                   <div className="container">
                     <div className="row">
