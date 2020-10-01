@@ -282,14 +282,14 @@ const RequestForFitting = () => {
   );
 };
 
-export const ReturnProductModal = ({ productId, selectedData }) => {
+export const ReturnProductModal = ({ selectedData }) => {
   return (
     <div
       className="modal fade"
-      id={productId}
+      id="returnProductModal"
       tabindex="-1"
       role="dialog"
-      aria-labelledby={productId + "Title"}
+      aria-labelledby="returnProductModalTitle"
       aria-hidden="true"
     >
       <div
