@@ -109,9 +109,7 @@ export const OrderContent = ({ data, openParentModal }) => {
                       type="button"
                       data-toggle="modal"
                       data-target="#returnProductModal"
-                      onClick={() =>
-                        openParentModal("returnProductModal", data)
-                      }
+                      onClick={() => openParentModal(data)}
                     >
                       Return
                     </button>
@@ -120,9 +118,7 @@ export const OrderContent = ({ data, openParentModal }) => {
                       type="button"
                       data-toggle="modal"
                       data-target="#returnProductModal"
-                      onClick={() =>
-                        openParentModal("returnProductModal", data)
-                      }
+                      onClick={() => openParentModal(data)}
                     >
                       Exchange
                     </button>
@@ -132,7 +128,13 @@ export const OrderContent = ({ data, openParentModal }) => {
                   </div>
                 </div>
                 <div className="col-6 col-sm-6 col-md-6 col-lg-6 pl-0">
-                  <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
+                  <button
+                    className="btn btn-outline-secondary profile-order-main-content-track-btn-button"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#requestFitting"
+                    onClick={() => openParentModal(data)}
+                  >
                     Request Fitting
                   </button>
                 </div>
