@@ -1,0 +1,217 @@
+@mixin ReturnProductPopupColorBox() {
+  width: 3.2rem;
+  height: 2.75rem;
+  display: inline-block;
+  margin-right: 0.75rem;
+  border-radius: 0.2rem;
+}
+@mixin ReturnProductPopupSizeBox() {
+  width: 100%;
+  height: 2.75rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+
+// profile return popup
+.ppup {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #cecece;
+  border-radius: 6px;
+  padding: 1rem 0;
+  margin: 1rem;
+
+  &-modal-dialog {
+    max-width: 50rem;
+  }
+
+  //   request-fitting
+  &-rf {
+    &-head {
+      font-weight: $weight-mid;
+    }
+    &-img {
+      height: 7.5rem;
+      width: 6.875rem;
+      margin: 1rem 0;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &-txt {
+      font-size: 0.875rem;
+      opacity: $opacity-mid;
+
+      &-red {
+        margin-top: 1rem;
+        color: $color-red;
+        font-size: 0.875rem;
+        font-weight: $weight-mid;
+      }
+    }
+    &-btn {
+      width: 100%;
+      margin-bottom: 2rem;
+      &-button {
+        width: 100%;
+        border-color: $color-red !important;
+        color: $color-red !important;
+      }
+    }
+  }
+
+  //   return product
+  &-rp {
+    &-bk {
+      cursor: pointer;
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+      font-weight: $weight-mid;
+    }
+    &-head {
+      font-weight: $weight-mid;
+      margin-bottom: 1rem;
+    }
+    &-dt {
+      font-size: 0.875rem;
+      padding: 0.5rem;
+      border: $border-card;
+      margin: 0.25rem 0;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    &-btn {
+      margin: 1rem 0;
+      width: 100%;
+      &-button {
+        background-color: $color-red !important;
+        width: 100%;
+      }
+    }
+  }
+
+  //   return product option menu
+  &-rpo {
+    border: $border-card;
+    padding: 1rem 0;
+    border-radius: 0.25rem;
+
+    &-opt {
+      font-size: 0.875rem;
+      opacity: $opacity-mid;
+      &-txt {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-clr {
+      &-head {
+        font-size: 0.875rem;
+        font-weight: $weight-mid;
+      }
+
+      &-colorBox {
+        margin-top: 1rem;
+        max-width: 20rem;
+        &-outer {
+          @include ReturnProductPopupColorBox();
+          border: $border-card;
+          padding: 0.5rem 0 0 0.5rem;
+          &-red {
+            @include ReturnProductPopupColorBox();
+            border: $border-card-red;
+            padding: 0.4rem 0 0 0.4rem;
+          }
+        }
+        &-inner {
+          height: 1.5rem;
+          width: 2.1rem;
+          border-radius: 0.2rem;
+        }
+      }
+    }
+
+    &-sizeBox {
+      margin-top: 1rem;
+      max-width: 20rem;
+      &-outer {
+        display: inline-block;
+        min-width: 3.75rem;
+        margin-right: 0.75rem;
+        &-none {
+          display: inline-block;
+          min-width: 3.75rem;
+          margin-right: 0.75rem;
+          opacity: $opacity-light;
+          pointer-events: none;
+        }
+      }
+      &-upper {
+        @include DeliveryOptionSizeBox();
+        border: $border-card;
+        padding-top: 0.5rem;
+
+        &-red {
+          @include DeliveryOptionSizeBox();
+          padding-top: 0.4rem;
+          border: $border-card-red;
+        }
+      }
+      &-lower {
+        height: 1.5rem;
+        width: 100%;
+        font-size: 0.875rem;
+        border-bottom-left-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+        background-color: $color-red-light;
+        text-align: center;
+        &-none {
+          opacity: 0;
+        }
+      }
+    }
+
+    &-pkup {
+      &-addr {
+        font-size: 0.875rem;
+        font-weight: $weight-mid;
+        margin: 1rem 0;
+
+        &-right {
+          float: right;
+          font-size: 0.875rem;
+          color: $color-red;
+          cursor: pointer;
+        }
+
+        &-adr {
+          font-size: 0.875rem;
+          font-weight: $weight-mid;
+
+          &-txt {
+            font-size: 0.875rem;
+            opacity: $opacity-mid;
+          }
+        }
+      }
+
+      &-confirm {
+        font-size: 0.875rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ppup {
+    &-rf {
+      &-head {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

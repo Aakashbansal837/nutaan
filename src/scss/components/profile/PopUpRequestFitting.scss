@@ -1,0 +1,108 @@
+// profile request fitting
+
+@mixin makeSkewDiv($skew: null) {
+  -webkit-transform: skewX($skew);
+  -moz-transform: skewX($skew);
+  -ms-transform: skewX($skew);
+  -o-transform: skewX($skew);
+  transform: skewX($skew);
+}
+.prf {
+  &-content {
+    min-height: 24.5rem;
+    border: $border-card;
+    &-img {
+      margin: 1rem auto 2rem auto;
+      padding: 0 1rem;
+      @include max-ht-wd($ht: 15rem, $wd: 12.5rem);
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &-name {
+      font-size: 0.875rem;
+      font-weight: $weight-mid;
+    }
+    &-disc {
+      font-size: 0.875rem;
+      //   @include Text-OverFlow();
+    }
+
+    &-price {
+      margin: 0.5rem 0;
+      font-size: 0.875rem;
+      font-weight: $weight-mid;
+    }
+  }
+
+  &-stepper {
+    &-btn {
+      display: inline-block;
+      margin: 0 0.1rem;
+      @include makeSkewDiv($skew: -15deg);
+
+      &-button {
+        @include makeSkewDiv($skew: -15deg);
+        span {
+          font-size: 0.75rem !important;
+          @include makeSkewDiv($skew: 30deg);
+        }
+        &-red {
+          @include makeSkewDiv($skew: -15deg);
+          span {
+            @include makeSkewDiv($skew: 30deg);
+            font-size: 0.75rem !important;
+          }
+          background-color: $color-red !important;
+        }
+      }
+    }
+  }
+
+  &-main {
+    &-btn {
+      width: 100%;
+      margin: 1rem 0;
+      &-button {
+        width: 100%;
+        color: $color-red !important;
+        border-color: $color-red !important;
+      }
+    }
+  }
+}
+
+//profile fitting service type
+.prf-st {
+  border: $border-card;
+  min-height: 24.5rem;
+
+  &-head {
+    font-weight: $weight-mid;
+    margin: 1rem 0 1rem 1rem;
+  }
+
+  &-select {
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+    height: 14.4375rem;
+    max-width: 11.3125rem;
+    border: $border-card;
+    border-radius: 6px;
+    &-btn {
+      height: 100%;
+      width: 100%;
+    }
+    &-img {
+      height: 100%;
+      width: 100%;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

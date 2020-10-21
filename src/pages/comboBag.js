@@ -3,9 +3,7 @@ import { connect } from "react-redux";
 import ComboBG from "../components/shoppingBag/comboBag";
 import Navbar from "../components/common/navbar";
 import Footer from "../components/common/footer";
-import Img9 from "../images/Wishlist/9.png";
-import Img7 from "../images/Wishlist/7.png";
-
+import { imageArray } from "../constants";
 class ComboBag extends React.Component {
   constructor(props) {
     super(props);
@@ -21,14 +19,16 @@ class ComboBag extends React.Component {
           pack: [
             {
               name: "Rust Orange",
-              img: Img7,
+              img:
+                imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
               disc: "Women Pink Handblock Bird Print Straight Kurta",
               size: "M",
               price: "₹ 1799",
             },
             {
               name: "Rust Orange",
-              img: Img9,
+              img:
+                imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
               disc: "Women Pink Handblock Bird Print Straight Kurta",
               size: "M",
               price: "₹ 1799",
@@ -39,7 +39,7 @@ class ComboBag extends React.Component {
       normal: [
         {
           name: "Rust Orange",
-          img: Img7,
+          img: imageArray[Math.floor(Math.random() * (imageArray.length - 1))],
           disc: "Women Pink Handblock Bird Print Straight Kurta",
           size: "M",
           qty: "1",
