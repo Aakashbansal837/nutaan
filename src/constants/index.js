@@ -25,6 +25,16 @@ import landingBannerImg from "../images/Web/Landing-Banner.png";
 import landingSmallBanner from "../images/Mob/Landing-banner-mob.png";
 import mainBanner from "../images/homepage-banner.svg";
 
+import Stitching from "../images/Stitching.svg";
+import SizeFitting from "../images/Size-fitting.svg";
+import Alteration from "../images/Alteration.svg";
+import HowDoesitWork from "../images/How-does-it-work-mob.svg";
+
+export const StitchingImg = Stitching;
+export const SizeFittingImg = SizeFitting;
+export const AlterationImg = Alteration;
+export const HowDoesitWorkImg = HowDoesitWork;
+
 export const landingBanner =
   window.screen.width > 600 ? landingBannerImg : landingSmallBanner;
 

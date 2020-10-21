@@ -7,9 +7,10 @@ import {
   OrderDetailsHead,
   OrderData,
 } from "./MyOrderComponents";
+import { RequestFittingModal } from "./RequestFittingModal";
 
 const MyOrder = ({ viewDetail, setViewDetail }) => {
-  const orders = [
+  const [orders, setOrders] = React.useState([
     {
       id: "#404-786836",
       placedOn: "26 July 2020",
@@ -129,17 +130,17 @@ const MyOrder = ({ viewDetail, setViewDetail }) => {
         },
       ],
     },
-  ];
-  const [modalId, setModalId] = React.useState("");
+  ]);
   const [modalData, setModalData] = React.useState({});
 
-  const openModal = (m_id, selectedData) => {
-    setModalId(m_id);
+  const openModal = (selectedData) => {
     setModalData(selectedData);
   };
   return (
     <div className="profile-order">
-      <ReturnProductModal productId={modalId} selectedData={modalData} />
+      <ReturnProductModal selectedData={modalData} />
+      <RequestFittingModal selectedData={modalData} />
+
       <div className="container">
         <div className="row">
           <div className="col-12 px-0">

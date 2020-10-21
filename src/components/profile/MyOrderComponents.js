@@ -109,9 +109,7 @@ export const OrderContent = ({ data, openParentModal }) => {
                       type="button"
                       data-toggle="modal"
                       data-target="#returnProductModal"
-                      onClick={() =>
-                        openParentModal("returnProductModal", data)
-                      }
+                      onClick={() => openParentModal(data)}
                     >
                       Return
                     </button>
@@ -120,9 +118,7 @@ export const OrderContent = ({ data, openParentModal }) => {
                       type="button"
                       data-toggle="modal"
                       data-target="#returnProductModal"
-                      onClick={() =>
-                        openParentModal("returnProductModal", data)
-                      }
+                      onClick={() => openParentModal(data)}
                     >
                       Exchange
                     </button>
@@ -132,53 +128,16 @@ export const OrderContent = ({ data, openParentModal }) => {
                   </div>
                 </div>
                 <div className="col-6 col-sm-6 col-md-6 col-lg-6 pl-0">
-                  <button className="btn btn-outline-secondary profile-order-main-content-track-btn-button">
+                  <button
+                    className="btn btn-outline-secondary profile-order-main-content-track-btn-button"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#requestFitting"
+                    onClick={() => openParentModal(data)}
+                  >
                     Request Fitting
                   </button>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-export const PopUpOrderContent = ({ data }) => {
-  return (
-    <>
-      <div className="col-4 col-sm-3 col-md-3 col-lg-2">
-        <div className="profile-order-main-content-img">
-          <img src={data.img} alt="item" />
-        </div>
-      </div>
-      <div className="col-8 col-sm-8 col-md-8 col-lg-5 px-0">
-        <div className="profile-order-main-content-name">{data.name}</div>
-        <div className="profile-order-main-content-disc">{data.disc}</div>
-        <div className="profile-order-main-content-detail">
-          <span>Qty: {data.qty}</span>
-          <span>Size : {data.size} </span>
-        </div>
-        <div className="profile-order-main-content-price">{data.price}</div>
-      </div>
-
-      <div className="col-12 col-sm-12 col-md-12 col-lg-5 pr-0">
-        <div className="profile-order-main-content-track">
-          <div
-            className="profile-order-main-content-track-status"
-            style={{
-              color: data.status == "Dispatched" ? "#2aa838" : "#212121",
-            }}
-          >
-            {data.status} {data.date}
-          </div>
-          <div className="profile-order-main-content-track-status-disc">
-            {data.statusDisc}
-          </div>
-          <div className="profile-order-main-content-track-btn">
-            <div className="container">
-              <div className="row">
-                <div className="col-6 col-sm-6 col-md-6 col-lg-5 pl-0"></div>
               </div>
             </div>
           </div>
